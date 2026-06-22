@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Życie z bólem — blog o neuralgii, neuropatii i życiu z przewlekłym bólem</title>
-<meta name="description" content="Blog dla osób żyjących z neuralgią i neuropatią nerwu trójdzielnego oraz przewlekłym bólem. Wiedza, wsparcie i nadzieja — od osoby, która rozumie. Nie jesteś sama/sam.">
-<link rel="canonical" href="https://zyciezbolem.pl/">
+<title>{{KATEGORIA}} — Życie z bólem</title>
+<meta name="description" content="Artykuły w kategorii: {{KATEGORIA}} — na blogu Życie z bólem o neuralgii i neuropatii nerwu trójdzielnego.">
+<link rel="canonical" href="{{CANONICAL}}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Życie z bólem — RSS" href="/feed.xml">
 <link rel="stylesheet" href="/styl.css">
@@ -23,31 +23,20 @@
   </nav>
 </header>
 
-<section class="hero">
+<div class="artykul-naglowek">
   <div class="kontener">
-    <h1>Nie jesteś sama. Nie jesteś sam.</h1>
-    <p>Blog o życiu z neuralgią i neuropatią nerwu trójdzielnego oraz z przewlekłym bólem. Znajdziesz tu wiedzę, zrozumienie i nadzieję — od osoby, która idzie tą samą drogą.</p>
+    <div class="okruszki"><a href="/index.html">Start</a> › <a href="/index.html#artykuly">Artykuły</a> › Kategoria</div>
+    <h1 style="color:var(--akcent-ciemny); margin:0;">{{KATEGORIA}}</h1>
+    <p class="artykul-meta">{{LICZBA}} artykułów w tej kategorii</p>
   </div>
-</section>
+</div>
 
-{{KATEGORIE}}
-
-<section id="artykuly">
+<section>
   <div class="kontener">
     <div class="kafelki">
-{{KARTY}}
+{{KAFELKI}}
     </div>
-    {{PAGINACJA}}
-  </div>
-</section>
-
-<section class="newsletter">
-  <div class="kontener waska" style="text-align:center;">
-    <h3 class="nl-tytul">Zostań w kontakcie</h3>
-    <p class="nl-opis">Raz na jakiś czas wysyłam wartościowe treści o życiu z bólem nerwu trójdzielnego. Bez spamu — wypiszesz się jednym kliknięciem.</p>
-    <div class="ml-embedded" data-form="jpYDCc"></div>
-    <p class="nl-zgoda">Zapisując się, wyrażasz zgodę na otrzymywanie wiadomości e‑mail i akceptujesz <a href="/polityka-prywatnosci.html" style="color:#fff; text-decoration:underline;">Politykę prywatności</a>. Wypiszesz się w każdej chwili jednym kliknięciem.</p>
-    <p class="nl-fb"><a href="https://www.facebook.com/profile.php?id=61580805009675" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg> Albo dołącz do społeczności na Facebooku →</a></p>
+    <p style="text-align:center; margin-top:30px;"><a class="btn btn-poboczny" href="/index.html#artykuly">← Wszystkie artykuły</a></p>
   </div>
 </section>
 
@@ -75,7 +64,6 @@
     <div class="dol">© 2026 Życie z bólem · Treści autorskie · <a href="/polityka-prywatnosci.html" style="color:#a9c4bd;">Polityka prywatności</a></div>
   </div>
 </footer>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Życie z bólem","url":"https://zyciezbolem.pl/","inLanguage":"pl-PL"},{"@type":"Organization","name":"Życie z bólem","url":"https://zyciezbolem.pl/","logo":"https://zyciezbolem.pl/favicon.svg","sameAs":["https://www.facebook.com/profile.php?id=61580805009675"]}]}</script>
 <script src="/szukaj.js" defer></script>
 </body>
 </html>

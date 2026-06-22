@@ -37,6 +37,12 @@
     { "label": "kwas alfa-liponowy", "pattern": "alfa-liponow" },
     { "label": "dziennik bólu", "pattern": "dziennik" }
   ],
+  "kategorie": [
+    { "label": "Leki i suplementy", "slug": "leki-i-suplementy", "pattern": "karbamazepin|gabapentyn|pregabalin|naltrekson|\\bldn\\b|liponow|witamin|suplement|tabletk|dawk|botulin|magnez|opioid|amitryptylin|duloksetyn|kapsaicyn" },
+    { "label": "Leczenie i zabiegi", "slug": "leczenie-i-zabiegi", "pattern": "leczeni|zabieg|operac|termolez|mikrodekompres|\\bmvd\\b|blokad|gamma|neuromodulac|ablacj|chirurg|rizotom|stymulac|nakłu" },
+    { "label": "Objawy i diagnoza", "slug": "objawy-i-diagnoza", "pattern": "objaw|diagnoz|rozpozna|rezonans|\\bmri\\b|badani|symptom|napadow|allodyni|przeczulic|drętwien|kłując|elektryczn|piek(ą|a)cy" },
+    { "label": "Życie z bólem", "slug": "zycie-z-bolem", "pattern": "codzienn|emocj|akcept|samotn|wsparci|depresj|relacj|nadziej|świąt|świet|rodzin|psych|zmęcz|lęk|strach|moja droga|moja histori" }
+  ],
   "faqs": [
     {
       "q": "Czym jest neuralgia nerwu trójdzielnego?",

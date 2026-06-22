@@ -12,7 +12,12 @@ content:
       template: '{fields.tytul}.md'
       field: create
     view:
+      fields: [tytul, data]
       primary: tytul
+      sort: [data, tytul]
+      default:
+        sort: data
+        order: desc
     fields:
       - name: tytul
         label: Tytuł

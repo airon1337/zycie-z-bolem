@@ -10,6 +10,7 @@ $oldDir = Join-Path $siteDir "artykuly"
 if (Test-Path $oldDir) { Remove-Item $oldDir -Recurse -Force }
 Get-ChildItem -Path $siteDir -Filter '*.html' -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^\d{3}-' } | Remove-Item -Force
 Get-ChildItem -Path $siteDir -Filter 'tag-*.html' -ErrorAction SilentlyContinue | Remove-Item -Force
+Get-ChildItem -Path $siteDir -Filter 'kategoria-*.html' -ErrorAction SilentlyContinue | Remove-Item -Force
 Get-ChildItem -Path $siteDir -Filter 'artykuly-*.html' -ErrorAction SilentlyContinue | Remove-Item -Force
 # czyszczenie starych zdjec (podfolder img oraz pliki NNN-...jpg w katalogu glownym)
 $oldImg = Join-Path $siteDir "img"
@@ -28,6 +29,7 @@ $tplIndex   = Get-Content -Raw -Encoding UTF8 (Join-Path $tpls "index-szablon.ht
 $tplCard    = Get-Content -Raw -Encoding UTF8 (Join-Path $tpls "karta-szablon.html")
 $tplTag     = Get-Content -Raw -Encoding UTF8 (Join-Path $tpls "tag-szablon.html")
 $tplLista   = Get-Content -Raw -Encoding UTF8 (Join-Path $tpls "lista-szablon.html")
+$tplKat     = Get-Content -Raw -Encoding UTF8 (Join-Path $tpls "kategoria-szablon.html")
 $faq        = (Get-Content -Raw -Encoding UTF8 (Join-Path $PSScriptRoot "faq.json")) | ConvertFrom-Json
 $titles     = (Get-Content -Raw -Encoding UTF8 (Join-Path $PSScriptRoot "titles.json")) | ConvertFrom-Json
 
@@ -95,6 +97,20 @@ function Get-Tags([string]$textRaw) {
     }
     if ($tags.Count -gt 8) { $tags = $tags[0..7] }
     return $tags
+}
+
+function Get-Category([string]$textRaw) {
+    $textLower = $textRaw.ToLower()
+    $best = $null; $bestScore = 0
+    foreach ($c in $script:faq.kategorie) {
+        $cnt = ([regex]::Matches($textLower, $c.pattern)).Count
+        if ($cnt -gt $bestScore) { $bestScore = $cnt; $best = $c }
+    }
+    if ($null -eq $best) {
+        $best = $script:faq.kategorie | Where-Object { $_.slug -eq 'zycie-z-bolem' } | Select-Object -First 1
+        if ($null -eq $best -and $script:faq.kategorie.Count -gt 0) { $best = $script:faq.kategorie[-1] }
+    }
+    return $best
 }
 
 function Build-Kafelek($it) {
@@ -367,6 +383,7 @@ function Get-Excerpt([string]$md) {
 
 $items = @()
 $tagMap = @{}
+$catMap = @{}
 foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Name -ne "index.md" } | Sort-Object Name)) {
     $raw = Get-Content -Raw -Encoding UTF8 $f.FullName
     $title = ""
@@ -383,6 +400,30 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $slug = $f.BaseName
     $bodyHtml = Convert-Md $raw
     $bodyHtml = Auto-Link $bodyHtml $slug
+    # spis tresci: nadaj id naglowkom h2 i zbierz liste
+    $toc = New-Object System.Collections.Generic.List[string]
+    $hMatches = [regex]::Matches($bodyHtml, '<h2>(.*?)</h2>')
+    $hi = 0
+    foreach ($hm in $hMatches) {
+        $plain = [regex]::Replace($hm.Groups[1].Value, '<[^>]+>', '')
+        $hid = Tag-Slug $plain
+        if ([string]::IsNullOrEmpty($hid)) { $hid = "sekcja" }
+        $hid = $hid + "-" + $hi
+        $orig = $hm.Value
+        $newH = '<h2 id="' + $hid + '">' + $hm.Groups[1].Value + '</h2>'
+        $pos = $bodyHtml.IndexOf($orig)
+        if ($pos -ge 0) { $bodyHtml = $bodyHtml.Substring(0, $pos) + $newH + $bodyHtml.Substring($pos + $orig.Length) }
+        $toc.Add($hid + "`t" + $plain)
+        $hi++
+    }
+    $spisHtml = ""
+    if ($false -and $toc.Count -ge 3) {  # spis tresci na razie wylaczony
+        $sbS = New-Object System.Text.StringBuilder
+        [void]$sbS.Append('<nav class="spis" aria-label="Spis tresci"><div class="spis-tytul">W tym artykule</div><ul>')
+        foreach ($e in $toc) { $pp = $e -split "`t", 2; [void]$sbS.Append('<li><a href="#').Append($pp[0]).Append('">').Append((Esc $pp[1])).Append('</a></li>') }
+        [void]$sbS.Append('</ul></nav>')
+        $spisHtml = $sbS.ToString()
+    }
     $excerpt  = Get-Excerpt $raw
     $minutes  = Get-Minutes $raw
     $extras   = Build-Extras $raw
@@ -417,7 +458,16 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $dt = [datetime]::MinValue
     [void][datetime]::TryParse($date, [ref]$dt)
     $tags = Get-Tags $raw
-    $thisItem = [PSCustomObject]@{ slug = $slug; title = $title; date = $date; dt = $dt; excerpt = $excerpt; minutes = $minutes; img = $imgWeb; tags = $tags }
+    $cat = Get-Category $raw
+    $katLabel = if ($cat) { $cat.label } else { "" }
+    $katSlug  = if ($cat) { $cat.slug } else { "" }
+    $thisItem = [PSCustomObject]@{ slug = $slug; title = $title; date = $date; dt = $dt; excerpt = $excerpt; minutes = $minutes; img = $imgWeb; tags = $tags; kategoria = $katLabel; katSlug = $katSlug }
+    if ($katSlug -ne "") {
+        if (-not $catMap.ContainsKey($katSlug)) { $catMap[$katSlug] = [PSCustomObject]@{ label = $katLabel; items = (New-Object System.Collections.Generic.List[object]) } }
+        $catMap[$katSlug].items.Add($thisItem)
+    }
+    $katHtml = ""
+    if ($katSlug -ne "") { $katHtml = '<div class="artykul-kat">Kategoria: <a class="kat-label" href="/kategoria-' + $katSlug + '.html">' + (Esc $katLabel) + '</a></div>' }
 
     # tagi (klikalne chipy + mapa tag -> artykuly)
     $slowaHtml = ""
@@ -439,8 +489,10 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $page = $page.Replace("{{DATA}}", (Esc $date))
     $page = $page.Replace("{{ZAJAWKA}}", (Esc $excerpt))
     $page = $page.Replace("{{CZYTANIE}}", [string]$minutes)
+    $page = $page.Replace("{{KATEGORIA}}", $katHtml)
     $page = $page.Replace("{{OGIMAGE}}", $ogTag)
     $page = $page.Replace("{{OBRAZEK}}", $imgTag)
+    $page = $page.Replace("{{SPIS}}", $spisHtml)
     $page = $page.Replace("{{SLOWA}}", $slowaHtml)
     $canonical = $DOMENA + "/" + $slug + ".html"
     $aobj = [ordered]@{ "@context"="https://schema.org"; "@type"="BlogPosting"; "headline"=$title; "description"=$excerpt; "author"=[ordered]@{ "@type"="Person"; "name"="Natalia" }; "publisher"=[ordered]@{ "@type"="Organization"; "name"=$siteName }; "mainEntityOfPage"=$canonical }
@@ -467,6 +519,16 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
 
 # karty na stronie glownej, najnowsze na gorze
 $itemsSorted = $items | Sort-Object dt -Descending
+
+# pasek kategorii na strone glowna (tylko te, ktore maja artykuly)
+$katPills = ""
+$sbK = New-Object System.Text.StringBuilder
+foreach ($kc in $faq.kategorie) {
+    if ($catMap.ContainsKey($kc.slug)) {
+        [void]$sbK.Append('<a class="kat-pill" href="/kategoria-' + $kc.slug + '.html">').Append((Esc $kc.label)).Append('</a>')
+    }
+}
+if ($sbK.Length -gt 0) { $katPills = '<div class="kontener"><div class="kat-pasek">' + $sbK.ToString() + '</div></div>' }
 
 # indeks wyszukiwarki (tytul, slug, zajawka)
 $searchData = @()
@@ -514,6 +576,7 @@ for ($p = 1; $p -le $pages; $p++) {
     if ($p -eq 1) {
         $index = $tplIndex
         $index = $index.Replace("{{LICZBA}}", [string]$total)
+        $index = $index.Replace("{{KATEGORIE}}", $katPills)
         $index = $index.Replace("{{KARTY}}", $cards.ToString())
         $index = $index.Replace("{{PAGINACJA}}", $pag)
         $index | Out-File -Encoding UTF8 (Join-Path $siteDir "index.html")
@@ -542,6 +605,22 @@ foreach ($tag in $tagMap.Keys) {
     $tagCount++
 }
 
+# strony kategorii
+$katCount = 0
+foreach ($cslug in $catMap.Keys) {
+    $centry = $catMap[$cslug]
+    $clist = $centry.items | Sort-Object dt -Descending
+    $ckf = New-Object System.Text.StringBuilder
+    foreach ($it in $clist) { [void]$ckf.Append((Build-Kafelek $it) + "`n") }
+    $cp = $tplKat
+    $cp = $cp.Replace("{{KATEGORIA}}", (Esc $centry.label))
+    $cp = $cp.Replace("{{CANONICAL}}", $DOMENA + "/kategoria-" + $cslug + ".html")
+    $cp = $cp.Replace("{{LICZBA}}", [string]$clist.Count)
+    $cp = $cp.Replace("{{KAFELKI}}", $ckf.ToString())
+    $cp | Out-File -Encoding UTF8 (Join-Path $siteDir ("kategoria-" + $cslug + ".html"))
+    $katCount++
+}
+
 # --- sitemap.xml ---
 $sm = New-Object System.Text.StringBuilder
 [void]$sm.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n")
@@ -552,6 +631,7 @@ foreach ($u in @("/", "/dla-ciebie.html", "/o-mnie.html", "/dziennik-bolu.html",
 for ($p = 2; $p -le $pages; $p++) { [void]$sm.Append('<url><loc>' + $DOMENA + "/artykuly-" + $p + ".html" + '</loc></url>' + "`n") }
 foreach ($it in $itemsSorted) { [void]$sm.Append('<url><loc>' + $DOMENA + "/" + $it.slug + ".html" + '</loc></url>' + "`n") }
 foreach ($tag in $tagMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/tag-" + (Tag-Slug $tag) + ".html" + '</loc></url>' + "`n") }
+foreach ($cslug in $catMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/kategoria-" + $cslug + ".html" + '</loc></url>' + "`n") }
 [void]$sm.Append('</urlset>' + "`n")
 $enc = New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $siteDir "sitemap.xml"), $sm.ToString(), $enc)

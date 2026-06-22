@@ -32,16 +32,23 @@
     <div class="okruszki"><a href="/index.html">Start</a> › <a href="/index.html#artykuly">Artykuły</a> › {{TYTUL}}</div>
     <h1 style="color:var(--akcent-ciemny); font-size:clamp(1.7rem,4vw,2.4rem); line-height:1.2; margin:0;">{{TYTUL}}</h1>
     <div class="artykul-meta">Autorka: <a href="/o-mnie.html">Natalia</a> · Data: {{DATA}} · <span class="czas-czytania"><svg class="ikona" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>{{CZYTANIE}} min czytania</span></div>
+    {{KATEGORIA}}
   </div>
 </div>
 
 <article class="artykul-tresc">
   <div class="kontener waska">
     {{OBRAZEK}}
+    {{SPIS}}
     {{TRESC}}
     <div class="disclaimer">⚠️ Treść ma charakter wyłącznie edukacyjny i wynika z osobistego doświadczenia oraz lektury. Nie zastępuje konsultacji, diagnozy ani leczenia. W razie silnego bólu lub niepokojących objawów skontaktuj się z lekarzem.</div>
     {{FAQ}}
     {{SLOWA}}
+    <div class="udostepnij">
+      <span class="udostepnij-label">Podobał Ci się artykuł? Udostępnij:</span>
+      <a class="udostepnij-btn fb" href="https://www.facebook.com/sharer/sharer.php?u={{CANONICAL}}" target="_blank" rel="noopener">Facebook</a>
+      <button class="udostepnij-btn kopiuj" type="button" onclick="navigator.clipboard.writeText('{{CANONICAL}}'); this.textContent='Skopiowano link ✓'">Kopiuj link</button>
+    </div>
     {{POWIAZANE}}
     <div class="cta-dziennik">
       <div class="cta-tresc">

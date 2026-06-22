@@ -406,3 +406,27 @@ blockquote.cytat {
 /* ---------- Powiazane artykuly ---------- */
 .powiazane { margin-top: 44px; border-top: 1px solid var(--obwodka); padding-top: 28px; }
 .powiazane h2 { font-size: 1.5rem; color: var(--akcent-ciemny); margin: 0 0 18px; }
+
+/* ---------- Spis tresci ---------- */
+.spis { background: var(--akcent-jasny); border: 1px solid var(--obwodka); border-radius: var(--radius); padding: 16px 20px; margin: 0 0 28px; }
+.spis-tytul { font-weight: 700; color: var(--akcent-ciemny); font-size: .92rem; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+.spis ul { margin: 0; padding-left: 18px; }
+.spis li { margin: 4px 0; }
+.spis a { color: var(--akcent-ciemny); text-decoration: none; }
+.spis a:hover { text-decoration: underline; }
+
+/* ---------- Udostepnij ---------- */
+.udostepnij { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 34px 0 0; padding-top: 22px; border-top: 1px solid var(--obwodka); }
+.udostepnij-label { font-weight: 600; color: var(--tekst); margin-right: 4px; }
+.udostepnij-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; font-size: .92rem; font-weight: 600; cursor: pointer; border: 1px solid var(--obwodka); background: var(--tlo-karta); color: var(--akcent-ciemny); font-family: inherit; }
+.udostepnij-btn.fb { background: #0b5ed7; color: #fff; border-color: #0b5ed7; text-decoration: none; }
+.udostepnij-btn.fb:hover { background: #0a53be; }
+.udostepnij-btn.kopiuj:hover { background: var(--akcent-jasny); }
+
+/* ---------- Kategorie ---------- */
+.kat-pasek { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 8px 0 0; }
+.kat-pill { background: var(--akcent-jasny); color: var(--akcent-ciemny); padding: 9px 18px; border-radius: 999px; font-size: .95rem; font-weight: 600; border: 1px solid var(--obwodka); }
+.kat-pill:hover { background: var(--akcent); color: #fff; text-decoration: none; }
+.artykul-kat { margin-top: 12px; font-size: .9rem; color: var(--tekst-jasny); }
+.artykul-kat .kat-label { display: inline-block; background: var(--akcent-jasny); color: var(--akcent-ciemny); padding: 3px 12px; border-radius: 999px; font-weight: 600; margin-left: 4px; }
+.artykul-kat .kat-label:hover { background: var(--akcent); color: #fff; text-decoration: none; }
