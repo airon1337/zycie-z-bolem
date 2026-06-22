@@ -1,3 +1,7 @@
+media:
+  input: zdjecia
+  output: /zdjecia
+
 content:
   - name: artykuly
     label: Artykuły
@@ -20,6 +24,10 @@ content:
         options:
           format: yyyy-MM-dd
         required: true
+      - name: obraz
+        label: Okładka (zdjęcie)
+        type: image
+        required: false
       - name: body
         label: Treść artykułu
         type: rich-text

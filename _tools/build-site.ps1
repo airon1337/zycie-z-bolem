@@ -15,6 +15,11 @@ Get-ChildItem -Path $siteDir -Filter 'artykuly-*.html' -ErrorAction SilentlyCont
 $oldImg = Join-Path $siteDir "img"
 if (Test-Path $oldImg) { Remove-Item $oldImg -Recurse -Force }
 Get-ChildItem -Path $siteDir -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^\d{3}-.*\.(jpg|jpeg|png|webp|svg)$' } | Remove-Item -Force
+# kopiuj folder zdjec do site\zdjecia (serwowane pod /zdjecia/)
+$srcZdj = Join-Path $base "zdjecia"
+$dstZdj = Join-Path $siteDir "zdjecia"
+if (Test-Path $dstZdj) { Remove-Item $dstZdj -Recurse -Force }
+if (Test-Path $srcZdj) { Copy-Item $srcZdj $dstZdj -Recurse -Force }
 $DOMENA = "https://zyciezbolem.pl"
 $siteName = "Z" + [char]0x017C + "ycie z b" + [char]0x00F3 + "lem"
 
@@ -382,21 +387,26 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $minutes  = Get-Minutes $raw
     $extras   = Build-Extras $raw
 
-    # zdjecie artykulu (jesli jest w eksporcie FB) — plasko w katalogu glownym
+    # okladka artykulu: 1) z panelu (frontmatter obraz), 2) zdjecie po numerze, 3) generowana SVG
     $num = if ($slug -match '^(\d{3})-') { $matches[1] } else { "" }
     $imgWeb = ""; $imgTag = ""; $ogTag = ""
-    if ($num -ne "" -and $imgMap.ContainsKey($num)) {
+    $fmImg = ""
+    if ($raw -match '(?m)^obraz:\s*"?([^"\r\n]+?)"?\s*$') { $fmImg = $matches[1].Trim() }
+    if ($fmImg -ne "") {
+        if ($fmImg -notmatch '^/') { $fmImg = "/" + $fmImg }
+        $imgWeb = $fmImg
+    }
+    elseif ($num -ne "" -and $imgMap.ContainsKey($num)) {
         $disk = $imgMap[$num]
         if (Test-Path $disk) {
             $ext = [System.IO.Path]::GetExtension($disk)
-            $destName = $slug + $ext
-            Copy-Item $disk (Join-Path $siteDir $destName) -Force
-            $imgWeb = "/" + $destName
-            $imgTag = '<img class="artykul-foto" src="' + $imgWeb + '" alt="' + (Esc $title) + '" loading="lazy">'
-            $ogTag = '<meta property="og:image" content="' + $DOMENA + $imgWeb + '">'
+            $imgWeb = "/zdjecia/" + $num + $ext
         }
     }
-    if ($imgTag -eq "") {
+    if ($imgWeb -ne "") {
+        $imgTag = '<img class="artykul-foto" src="' + $imgWeb + '" alt="' + (Esc $title) + '" loading="lazy">'
+        $ogTag = '<meta property="og:image" content="' + $DOMENA + $imgWeb + '">'
+    } else {
         $coverName = $slug + ".svg"
         Make-Cover $title $raw (Join-Path $siteDir $coverName)
         $imgWeb = "/" + $coverName
