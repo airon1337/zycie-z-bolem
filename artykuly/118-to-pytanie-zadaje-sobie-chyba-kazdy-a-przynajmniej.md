@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "To pytanie zadaje sobie chyba każdy, a przynajmniej ja zadaję je sobie co jakiś czas, ale..."
 data: 2026-05-22
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

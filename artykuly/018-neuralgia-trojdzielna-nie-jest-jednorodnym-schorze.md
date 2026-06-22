@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Neuralgia trójdzielna nie jest jednorodnym schorzeniem – może być napadowa, przewlekła, id..."
 data: 2025-09-30
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

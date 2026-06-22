@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Neuropatia nerwu trójdzielnego (neuropatia n"
 data: 2025-10-18
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

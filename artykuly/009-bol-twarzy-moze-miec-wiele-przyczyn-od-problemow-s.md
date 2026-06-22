@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból twarzy może mieć wiele przyczyn – od problemów stomatologicznych, po zwykłą nadwrażliw..."
 data: 2025-09-25
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Większość z nas nawet nie zdaje sobie sprawy, jak wiele w naszym codziennym funkcjonowaniu..."
 data: 2025-09-25
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

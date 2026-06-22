@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Hasło „cukier krzepi” to jedno z najbardziej rozpoznawalnych sloganów w historii Polski"
 data: 2026-03-30
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

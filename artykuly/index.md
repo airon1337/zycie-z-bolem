@@ -1,4 +1,4 @@
-﻿# Indeks artykulow (z fanpage 'Zycie z bolem')
+# Indeks artykulow (z fanpage 'Zycie z bolem')
 
 - 2025-09-17 - [Hej, mam na imię Natalia i od 2014 roku żyję z przewlekłym bólem spowodowanym uszkodzeniem...](001-hej-mam-na-imie-natalia-i-od-2014-roku-zyje-z-prze.md)
 - 2025-09-18 - [Ból w naturalnych warunkach pełni ważną rolę – ostrzega nas przed urazem i skłania do ochr...](002-bol-w-naturalnych-warunkach-pelni-wazna-role-ostrz.md)

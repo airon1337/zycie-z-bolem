@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Codzienność z neuralgią – kiedy zwyczajne czynności stają się walką"
 data: 2025-09-24
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

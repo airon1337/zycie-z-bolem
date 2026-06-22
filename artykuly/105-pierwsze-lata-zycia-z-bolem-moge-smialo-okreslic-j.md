@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Pierwsze lata życia z bólem mogę śmiało określić jako „średniowiecze na kartach mojej pryw..."
 data: 2026-03-30
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

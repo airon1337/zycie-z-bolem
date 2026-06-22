@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból przewlekły to nie tylko problem w ciele"
 data: 2025-10-19
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Cześć"
 data: 2026-02-04
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

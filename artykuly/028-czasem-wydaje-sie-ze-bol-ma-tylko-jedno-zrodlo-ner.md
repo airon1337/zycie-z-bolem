@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Czasem wydaje się, że ból ma tylko jedno źródło – nerw"
 data: 2025-10-06
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

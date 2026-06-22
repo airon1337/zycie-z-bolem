@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Leczenie neuralgii i neuropatii nerwu trójdzielnego rozpoczyna się od farmakoterapii"
 data: 2025-09-26
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

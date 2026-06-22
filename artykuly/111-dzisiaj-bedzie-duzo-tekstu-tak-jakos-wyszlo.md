@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dzisiaj będzie dużo tekstu, tak jakoś wyszło"
 data: 2026-04-13
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

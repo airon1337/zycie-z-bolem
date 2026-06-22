@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Na wstępie małe, ale ważne zastrzeżenie: nie jestem lekarzem"
 data: 2026-02-07
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

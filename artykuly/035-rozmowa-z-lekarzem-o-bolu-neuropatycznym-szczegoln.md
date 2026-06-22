@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Rozmowa z lekarzem o bólu neuropatycznym – szczególnie o bólu nerwu trójdzielnego – może b..."
 data: 2025-10-12
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

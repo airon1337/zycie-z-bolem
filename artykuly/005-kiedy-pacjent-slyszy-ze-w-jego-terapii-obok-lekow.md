@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Kiedy pacjent słyszy, że w jego terapii – obok leków przeciwpadaczkowych – pojawiają się l..."
 data: 2025-09-24
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

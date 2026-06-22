@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Witajcie"
 data: 2026-04-27
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

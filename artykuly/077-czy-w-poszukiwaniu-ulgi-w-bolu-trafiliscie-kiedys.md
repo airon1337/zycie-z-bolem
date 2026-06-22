@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Czy w poszukiwaniu ulgi w bólu trafiliście kiedyś na ashwagandhę"
 data: 2025-12-30
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

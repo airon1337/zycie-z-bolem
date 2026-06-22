@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból twarzy to jedno z tych doświadczeń, które wymyka się prostym definicjom"
 data: 2026-02-27
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

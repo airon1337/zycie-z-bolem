@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Neuropatia nerwu trójdzielnego to uszkodzenie włókien tego nerwu prowadzące do przewlekłeg..."
 data: 2025-10-11
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

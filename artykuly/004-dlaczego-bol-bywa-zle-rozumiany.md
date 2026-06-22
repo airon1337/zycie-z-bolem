@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dlaczego ból bywa źle rozumiany"
 data: 2025-09-24
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Byłam niespełna 25-latką kiedy moje życie zatrzymało się w miejscu"
 data: 2025-12-04
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

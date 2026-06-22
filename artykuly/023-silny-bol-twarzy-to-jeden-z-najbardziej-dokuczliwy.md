@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Silny ból twarzy to jeden z najbardziej dokuczliwych i mylących objawów w medycynie"
 data: 2025-10-03
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból twarzy związany z uszkodzeniem nerwu trójdzielnego może mieć różne oblicza — od napado..."
 data: 2025-10-16
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

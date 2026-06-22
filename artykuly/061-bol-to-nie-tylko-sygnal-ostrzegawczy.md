@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból to nie tylko sygnał ostrzegawczy"
 data: 2025-11-12
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

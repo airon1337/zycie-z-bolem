@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "We Wrocławskim Uniwersyteckim Centrum Stomatologicznym pacjenci cierpiący na bóle stawów s..."
 data: 2026-01-28
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Neuralgia nerwu pośredniego (neuralgia nerwu Wrisberga, ang"
 data: 2025-10-16
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dobrze wiemy, że nie każdy ból jest taki sam"
 data: 2025-10-10
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

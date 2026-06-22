@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Czym jest depresja maskowana – i dlaczego tak łatwo ją przeoczyć"
 data: 2025-11-05
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

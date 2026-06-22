@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Na ten moment dowody naukowe są jeszcze ograniczone, ale istnieją mniejsze badania i opisy..."
 data: 2025-10-03
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

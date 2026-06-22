@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Tekst ten jest efektem obserwacji grup zrzeszających osoby dotknięte zaburzeniem pracy ner..."
 data: 2026-02-20
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

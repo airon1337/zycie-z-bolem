@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból neuropatyczny, w tym neuralgia trójdzielna, należy do najbardziej dokuczliwych i trudn..."
 data: 2025-09-27
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "W poszukiwaniu skutecznych, bezpiecznych i nieuzależniających metod łagodzenia bólu coraz..."
 data: 2025-10-30
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

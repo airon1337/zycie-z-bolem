@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Diagnostyka neuralgii trójdzielnej"
 data: 2025-10-15
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

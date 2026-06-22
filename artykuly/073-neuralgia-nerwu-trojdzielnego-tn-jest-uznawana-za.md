@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Neuralgia nerwu trójdzielnego (TN) jest uznawana za jeden z najbardziej dotkliwych rodzajó..."
 data: 2025-12-08
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Kolejny ciekawy artykuł o neuralgii nerwu trójdzielnego — ale znów o jej klasycznej postac..."
 data: 2026-02-10
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

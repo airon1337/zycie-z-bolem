@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dziś obchodzimy Światowy Dzień Oddechu – najprostszego, a zarazem jednego z najpotężniejsz..."
 data: 2026-04-10
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

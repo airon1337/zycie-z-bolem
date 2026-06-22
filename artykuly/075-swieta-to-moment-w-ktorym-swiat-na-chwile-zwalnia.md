@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Święta to moment, w którym świat na chwilę zwalnia"
 data: 2025-12-24
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Cześć moi drodzy"
 data: 2025-12-23
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Na czym polega termolezja pulsacyjna"
 data: 2025-09-30
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

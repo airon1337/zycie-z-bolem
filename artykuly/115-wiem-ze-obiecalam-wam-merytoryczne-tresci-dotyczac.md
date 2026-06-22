@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Wiem, że obiecałam Wam merytoryczne treści dotyczące supli, ale praca nad tym tematem okaz..."
 data: 2026-05-13
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Leczenie neuralgii nerwu trójdzielnego często wymaga połączenia kilku metod – leków, zabie..."
 data: 2025-09-24
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

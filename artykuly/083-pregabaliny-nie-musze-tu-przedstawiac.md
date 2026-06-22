@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Pregabaliny nie muszę tu przedstawiać"
 data: 2026-02-05
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

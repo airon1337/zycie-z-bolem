@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Neuralgia trójdzielna oraz przewlekły ból neuropatyczny po zabiegach stomatologicznych to..."
 data: 2025-11-16
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

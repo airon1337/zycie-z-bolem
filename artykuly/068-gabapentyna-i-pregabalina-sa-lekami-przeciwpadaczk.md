@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Gabapentyna i pregabalina są lekami przeciwpadaczkowymi często stosowanymi w leczeniu neur..."
 data: 2025-11-28
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

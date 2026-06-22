@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "PTNP to przewlekły ból neuropatyczny twarzy i jamy ustnej, który powstaje w wyniku uszkodz..."
 data: 2025-12-29
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

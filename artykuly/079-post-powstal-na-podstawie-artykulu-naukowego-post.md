@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Post powstał na podstawie artykułu naukowego Post-traumatic Trigeminal Neuropathic Pain: F..."
 data: 2026-01-02
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

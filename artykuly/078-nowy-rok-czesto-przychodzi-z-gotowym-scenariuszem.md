@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Nowy Rok często przychodzi z gotowym scenariuszem: noworoczne postanowienia, cele, zmiany"
 data: 2025-12-31
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

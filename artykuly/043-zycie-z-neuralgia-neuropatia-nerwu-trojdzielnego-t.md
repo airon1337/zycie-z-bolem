@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Życie z neuralgią/neuropatią nerwu trójdzielnego to codzienna konfrontacja z bólem, który..."
 data: 2025-10-16
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

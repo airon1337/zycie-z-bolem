@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Zespół Eagle’a stanowi rzadką przyczynę bólu w obrębie gardła, szyi, żuchwy i ucha"
 data: 2026-06-05
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

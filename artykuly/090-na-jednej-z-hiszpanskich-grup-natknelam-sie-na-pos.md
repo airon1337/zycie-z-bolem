@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Na jednej z hiszpańskich grup natknęłam się na post o treści"
 data: 2026-02-18
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

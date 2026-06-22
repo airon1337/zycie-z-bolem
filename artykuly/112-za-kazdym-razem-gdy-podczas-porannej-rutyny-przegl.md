@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Za każdym razem, gdy podczas porannej rutyny przeglądam wiadomości ze świata medycyny (i n..."
 data: 2026-04-16
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

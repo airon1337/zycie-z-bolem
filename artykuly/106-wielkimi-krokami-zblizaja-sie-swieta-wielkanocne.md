@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Wielkimi krokami zbliżają się Święta Wielkanocne"
 data: 2026-04-04
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dziś chciałabym poruszyć temat, który siedzi nam wszystkim w głowach, a o którym rzadko mó..."
 data: 2026-05-21
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

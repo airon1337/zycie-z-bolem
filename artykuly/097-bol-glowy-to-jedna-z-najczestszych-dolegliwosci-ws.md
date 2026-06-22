@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból głowy to jedna z najczęstszych dolegliwości współczesnego człowieka"
 data: 2026-03-05
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

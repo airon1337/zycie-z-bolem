@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Wielu z nas zaczęło swoją drogę diagnostyczną od gabinetu stomatologicznego"
 data: 2025-10-02
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

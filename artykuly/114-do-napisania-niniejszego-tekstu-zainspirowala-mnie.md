@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Do napisania niniejszego tekstu zainspirowała mnie koleżanka, która przesłała mi wpis z je..."
 data: 2026-05-05
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

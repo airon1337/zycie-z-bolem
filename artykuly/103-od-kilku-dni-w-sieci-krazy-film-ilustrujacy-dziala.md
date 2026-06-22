@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Od kilku dni w sieci krąży film ilustrujący działanie nerwu trójdzielnego - jednego z najw..."
 data: 2026-03-29
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dziś mój artykuł został udostępniony na dwóch portalach informacyjnych – w Płocku i Lublin..."
 data: 2026-02-19
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Codzienność z neuralgią nerwu trójdzielnego czy innym bólem neuropatycznym, to nieustanne..."
 data: 2025-10-06
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból w naturalnych warunkach pełni ważną rolę – ostrzega nas przed urazem i skłania do ochr..."
 data: 2025-09-18
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

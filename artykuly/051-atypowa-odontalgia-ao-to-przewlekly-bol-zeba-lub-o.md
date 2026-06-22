@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Atypowa odontalgia (AO) to przewlekły ból zęba lub okolicy zęba (lub miejsce po ekstrakcji..."
 data: 2025-10-20
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

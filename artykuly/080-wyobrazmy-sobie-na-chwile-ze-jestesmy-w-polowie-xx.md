@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Wyobraźmy sobie na chwilę, że jesteśmy w połowie XX wieku"
 data: 2026-01-03
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

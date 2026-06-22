@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dziś chciałabym podzielić się z Wami kolejną metodą, która może wspierać osoby żyjące z pr..."
 data: 2025-11-26
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

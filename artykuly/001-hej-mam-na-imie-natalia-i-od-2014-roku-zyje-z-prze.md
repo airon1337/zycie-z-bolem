@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Hej, mam na imię Natalia i od 2014 roku żyję z przewlekłym bólem spowodowanym uszkodzeniem..."
 data: 2025-09-17
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ostatnio dotarła do mnie bardzo smutna wiadomość"
 data: 2026-03-10
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

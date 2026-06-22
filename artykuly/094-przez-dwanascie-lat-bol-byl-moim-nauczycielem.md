@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Przez dwanaście lat ból był moim nauczycielem"
 data: 2026-02-25
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

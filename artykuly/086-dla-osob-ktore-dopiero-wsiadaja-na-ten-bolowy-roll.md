@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Dla osób, które dopiero wsiadają na ten bólowy rollercoaster – krótkie wyjaśnienie, czym j..."
 data: 2026-02-13
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

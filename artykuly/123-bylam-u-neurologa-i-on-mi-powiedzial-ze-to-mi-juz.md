@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "„Byłam u neurologa i on mi powiedział, że to mi już w głowie siedzi\""
 data: 2026-06-06
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

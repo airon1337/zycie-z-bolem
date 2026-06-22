@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból przewlekły neuropatyczny"
 data: 2025-09-23
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Wiele osób żyjących z przewlekłym bólem — w tym bólem nerwu trójdzielnego — zauważa, że na..."
 data: 2025-11-21
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

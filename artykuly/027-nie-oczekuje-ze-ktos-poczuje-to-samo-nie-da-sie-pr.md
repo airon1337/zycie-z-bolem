@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Nie oczekuję, że ktoś poczuje to samo Nie da się przecież poczuć bólu, który jest czyjś —..."
 data: 2025-10-05
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból to jedno z najbardziej podstawowych, a zarazem najbardziej złożonych ludzkich doznań"
 data: 2025-11-03
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

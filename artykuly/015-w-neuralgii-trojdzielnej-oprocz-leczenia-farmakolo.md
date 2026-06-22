@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "W neuralgii trójdzielnej oprócz leczenia farmakologicznego i specjalistycznego wsparcia, w..."
 data: 2025-09-27
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

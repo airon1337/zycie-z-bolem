@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "7 października 2025 roku już po raz ósmy obchodzimy"
 data: 2025-10-07
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

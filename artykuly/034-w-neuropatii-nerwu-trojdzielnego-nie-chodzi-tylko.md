@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "W neuropatii nerwu trójdzielnego nie chodzi tylko o sam nerw"
 data: 2025-10-12
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'

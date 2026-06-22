@@ -1,4 +1,4 @@
-﻿---
+---
 tytul: "Ból, którego nie widać, bywa jednym z najtrudniejszych do zrozumienia przez otoczenie"
 data: 2026-02-18
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
