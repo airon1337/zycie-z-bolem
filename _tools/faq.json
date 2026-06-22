@@ -1,0 +1,107 @@
+{
+  "faqHeading": "Najczęstsze pytania (FAQ)",
+  "uiPrev": "← Poprzednia",
+  "uiNext": "Następna →",
+  "links": [
+    { "pattern": "witamin\\w* b",                                "slug": "025-chociaz-witaminy-z-grupy-b-zwlaszcza-b12-i-b6-odgr" },
+    { "pattern": "kwas\\w* alfa-liponow\\w*|alfa-liponow\\w*",   "slug": "116-dzis-pod-lupe-pragne-wziac-kwas-alfa-liponowy-ala" },
+    { "pattern": "naltrekson\\w*|ldn",                            "slug": "066-low-dose-naltrexone-ldn-wzbudza-coraz-wieksze-zain" },
+    { "pattern": "gabapentyn\\w*",                                "slug": "068-gabapentyna-i-pregabalina-sa-lekami-przeciwpadaczk" },
+    { "pattern": "pregabalin\\w*",                                "slug": "068-gabapentyna-i-pregabalina-sa-lekami-przeciwpadaczk" },
+    { "pattern": "karbamazepin\\w*",                              "slug": "109-jakis-czas-temu-napisalam-posty-o-gabapentynie-i-p" },
+    { "pattern": "ashwagandh\\w*",                                "slug": "077-czy-w-poszukiwaniu-ulgi-w-bolu-trafiliscie-kiedys" },
+    { "pattern": "termolezj\\w*",                                 "slug": "019-na-czym-polega-termolezja-pulsacyjna" },
+    { "pattern": "blokad\\w*",                                    "slug": "016-blokady-w-neuralgii-nerwu-trojdzielnego-to-szybki" },
+    { "pattern": "popółpa\\w*|półpa\\w*",                         "slug": "119-neuralgia-nerwu-trojdzielnego-po-polpascu-stanowi" },
+    { "pattern": "zespół eagle\\w*|eagle",                        "slug": "122-zespol-eagle-a-stanowi-rzadka-przyczyne-bolu-w-obr" },
+    { "pattern": "atypow\\w* odontalgi\\w*|odontalgi\\w*",        "slug": "051-atypowa-odontalgia-ao-to-przewlekly-bol-zeba-lub-o" },
+    { "pattern": "językowo-gardłow\\w*",                          "slug": "044-neuralgia-nerwu-jezykowo-gardlowego-ang" },
+    { "pattern": "potyliczn\\w*",                                 "slug": "093-neuralgia-potyliczna-przez-wiele-lat-byla-okreslan" },
+    { "pattern": "depresj\\w* maskowan\\w*",                      "slug": "059-czym-jest-depresja-maskowana-i-dlaczego-tak-latwo" },
+    { "pattern": "dziennik\\w* b\\w*|dzienniczek\\w* b\\w*",      "slug": "dziennik-bolu" }
+  ],
+  "keywords": [
+    { "label": "neuralgia nerwu trójdzielnego", "pattern": "neuralgia" },
+    { "label": "neuropatia", "pattern": "neuropat" },
+    { "label": "ból neuropatyczny", "pattern": "neuropatyczn" },
+    { "label": "ból przewlekły", "pattern": "przewlek" },
+    { "label": "nerw trójdzielny", "pattern": "trójdzieln" },
+    { "label": "karbamazepina", "pattern": "karbamazepin" },
+    { "label": "gabapentyna", "pattern": "gabapentyn" },
+    { "label": "pregabalina", "pattern": "pregabalin" },
+    { "label": "konflikt naczyniowo-nerwowy", "pattern": "naczyniowo-nerwow" },
+    { "label": "mikrodekompresja (MVD)", "pattern": "mikrodekompresj|mvd" },
+    { "label": "rezonans magnetyczny", "pattern": "rezonans|mri" },
+    { "label": "stwardnienie rozsiane", "pattern": "stwardnienie rozsian" },
+    { "label": "półpasiec", "pattern": "półpas|półpaśc" },
+    { "label": "kwas alfa-liponowy", "pattern": "alfa-liponow" },
+    { "label": "dziennik bólu", "pattern": "dziennik" }
+  ],
+  "faqs": [
+    {
+      "q": "Czym jest neuralgia nerwu trójdzielnego?",
+      "a": "Neuralgia nerwu trójdzielnego to przewlekły zespół bólowy twarzy. Objawia się napadami nagłego, bardzo silnego, zwykle jednostronnego bólu — często opisywanego jak porażenie prądem; pojedynczy napad trwa od kilku sekund do około dwóch minut.",
+      "triggers": ["neuralgia", "trójdzieln"]
+    },
+    {
+      "q": "Czym różni się neuralgia od neuropatii?",
+      "a": "W uproszczeniu: neuralgia to przede wszystkim napadowy ból wzdłuż nerwu, zwykle bez utraty czucia, a neuropatia to uszkodzenie nerwu, które częściej daje ból stały oraz drętwienie i ubytek czucia.",
+      "triggers": ["neuropat"]
+    },
+    {
+      "q": "Czy zwykłe leki przeciwbólowe pomagają w bólu neuropatycznym?",
+      "a": "Zazwyczaj nie. Ból neuropatyczny słabo reaguje na paracetamol czy leki przeciwzapalne; stosuje się leki działające na nerwy, na przykład przeciwpadaczkowe, jak karbamazepina.",
+      "triggers": ["neuropatyczn", "przeciwból"]
+    },
+    {
+      "q": "Jak działa karbamazepina w neuralgii nerwu trójdzielnego?",
+      "a": "Karbamazepina to lek pierwszego wyboru w neuralgii nerwu trójdzielnego; u dużej części pacjentów pozwala uzyskać kontrolę bólu. Wymaga stopniowego dobierania dawki i kontroli lekarskiej.",
+      "triggers": ["karbamazepin"]
+    },
+    {
+      "q": "Czym różnią się gabapentyna i pregabalina?",
+      "a": "To leki przeciwpadaczkowe stosowane w bólu neuropatycznym. Różnią się m.in. sposobem wchłaniania i dawkowaniem; o doborze i dawce decyduje lekarz.",
+      "triggers": ["gabapentyn", "pregabalin"]
+    },
+    {
+      "q": "Co to jest konflikt naczyniowo-nerwowy?",
+      "a": "To najczęstsza przyczyna klasycznej neuralgii nerwu trójdzielnego — naczynie krwionośne uciska korzeń nerwu u podstawy mózgu, co uszkadza jego osłonkę i wywołuje ból.",
+      "triggers": ["naczyniowo-nerwow"]
+    },
+    {
+      "q": "Na czym polega mikrodekompresja naczyniowa (MVD)?",
+      "a": "To zabieg neurochirurgiczny, w którym odsuwa się naczynie uciskające nerw trójdzielny. U kwalifikujących się pacjentów daje najtrwalszy efekt; decyzję podejmuje zespół leczący.",
+      "triggers": ["mikrodekompresj", "mvd"]
+    },
+    {
+      "q": "Po co wykonuje się rezonans magnetyczny (MRI)?",
+      "a": "MRI pomaga wykryć konflikt naczyniowo-nerwowy oraz wykluczyć inne przyczyny bólu, takie jak guz czy stwardnienie rozsiane. Samo rozpoznanie neuralgii jest jednak głównie kliniczne.",
+      "triggers": ["rezonans", "mri"]
+    },
+    {
+      "q": "Czym jest neuralgia popółpaścowa?",
+      "a": "To przewlekły ból nerwu po przebytym półpaścu, wynikający z uszkodzenia nerwu przez wirusa. Jest odrębną jednostką i bywa trudna w leczeniu.",
+      "triggers": ["półpas", "półpaśc"]
+    },
+    {
+      "q": "Czy kwas alfa-liponowy (ALA) pomaga w neuropatii?",
+      "a": "Część osób stosuje ALA wspomagająco, ale dowody są ograniczone i pochodzą głównie z badań nad neuropatią cukrzycową. Traktuje się go jako uzupełnienie, a nie terapię o potwierdzonej skuteczności; zawsze skonsultuj to z lekarzem.",
+      "triggers": ["alfa-liponow"]
+    },
+    {
+      "q": "Co to jest dziennik bólu i po co go prowadzić?",
+      "a": "To zapis napadów bólu: kiedy się pojawiają, co je wywołuje, jak długo trwają i jakie leki przyjmujesz. Bardzo pomaga lekarzowi w postawieniu diagnozy i dobraniu leczenia.",
+      "triggers": ["dziennik"]
+    },
+    {
+      "q": "Do jakiego lekarza zgłosić się z bólem twarzy?",
+      "a": "Przede wszystkim do neurologa; w razie kwalifikacji do zabiegu — do neurochirurga. Przy podejrzeniu przyczyny stomatologicznej warto też wykluczyć ją u dentysty.",
+      "triggers": ["neurolog", "diagnoz"]
+    },
+    {
+      "q": "Czy neuralgia nerwu trójdzielnego jest wyleczalna?",
+      "a": "U wielu osób ból można skutecznie kontrolować lekami lub zabiegami, a mikrodekompresja daje u kwalifikujących się pacjentów najtrwalszy efekt. Przebieg bywa różny — z okresami remisji i nawrotami; decyzje podejmuje się z lekarzem.",
+      "triggers": ["wyleczal", "leczenie"]
+    }
+  ]
+}

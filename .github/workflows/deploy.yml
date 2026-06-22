@@ -1,0 +1,26 @@
+name: Buduj i publikuj strone
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Zbuduj strone (PowerShell)
+        shell: pwsh
+        run: |
+          ./_tools/build-site.ps1
+          ./_tools/package.ps1
+
+      - name: Opublikuj na Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy publish --project-name=zyciezbolem --branch=main
