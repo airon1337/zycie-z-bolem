@@ -29,6 +29,7 @@
     { "label": "karbamazepina", "pattern": "karbamazepin" },
     { "label": "gabapentyna", "pattern": "gabapentyn" },
     { "label": "pregabalina", "pattern": "pregabalin" },
+    { "label": "LDN (naltrekson)", "pattern": "naltrekson|\\bldn\\b" },
     { "label": "konflikt naczyniowo-nerwowy", "pattern": "naczyniowo-nerwow" },
     { "label": "mikrodekompresja (MVD)", "pattern": "mikrodekompresj|mvd" },
     { "label": "rezonans magnetyczny", "pattern": "rezonans|mri" },

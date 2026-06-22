@@ -582,16 +582,41 @@ $searchData = @()
 foreach ($it in $itemsSorted) { $searchData += [ordered]@{ t = $it.title; s = $it.slug; e = $it.excerpt } }
 ($searchData | ConvertTo-Json -Depth 3) | Out-File -Encoding UTF8 (Join-Path $siteDir "search-index.json")
 
-# --- powiazane artykuly (po wspolnych tagach) ---
+# --- powiazane artykuly (wazone wspolne tagi: rzadkie/specyficzne tagi liczą się wiecej) ---
 $relHead = "Powi" + [char]0x105 + "zane artyku" + [char]0x142 + "y"
 $encR = New-Object System.Text.UTF8Encoding($false)
+# czestotliwosc tagow w calym zbiorze (do wagi IDF) - tag rzadki = waga wysoka
+$tagFreq = @{}
+foreach ($it in $items) { foreach ($t in $it.tags) { if ($tagFreq.ContainsKey($t)) { $tagFreq[$t]++ } else { $tagFreq[$t] = 1 } } }
+$Ntot = [Math]::Max(1, $items.Count)
+# mapa tag(label) -> wzorzec oraz zbior tagow wystepujacych w TYTULE kazdego artykulu (mocny sygnal tematu)
+$kwMap = @{}
+foreach ($k in $faq.keywords) { $kwMap[$k.label] = $k.pattern }
+$titleTags = @{}
+foreach ($it in $items) {
+    $set = New-Object System.Collections.Generic.HashSet[string]
+    $tl = $it.title.ToLower()
+    foreach ($t in $it.tags) {
+        $pat = $kwMap[$t]
+        if ($pat -and [regex]::IsMatch($tl, $pat)) { [void]$set.Add($t) }
+    }
+    $titleTags[$it.slug] = $set
+}
+$titleBoost = 8.0   # duzo wieksza waga gdy wspolny tag jest w tytule
 foreach ($it in $items) {
     $scored = @()
     foreach ($other in $items) {
         if ($other.slug -eq $it.slug) { continue }
-        $shared = 0
-        foreach ($t in $it.tags) { if ($other.tags -contains $t) { $shared++ } }
-        if ($shared -gt 0) { $scored += [PSCustomObject]@{ it = $other; shared = $shared } }
+        $score = 0.0
+        foreach ($t in $it.tags) {
+            if ($other.tags -contains $t) {
+                $f = $tagFreq[$t]; if ($f -lt 1) { $f = 1 }
+                $w = [Math]::Log((($Ntot + 1.0) / $f))
+                if ($titleTags[$other.slug].Contains($t) -or $titleTags[$it.slug].Contains($t)) { $w *= $titleBoost }
+                $score += $w
+            }
+        }
+        if ($score -gt 0) { $scored += [PSCustomObject]@{ it = $other; shared = $score } }
     }
     $top = @($scored | Sort-Object @{Expression={$_.shared};Descending=$true}, @{Expression={$_.it.dt};Descending=$true} | Select-Object -First 3)
     $relHtml = ""
