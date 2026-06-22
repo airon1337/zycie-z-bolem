@@ -1,10 +1,9 @@
 ---
-tytul: "LDN i ból przewlekły. Czy niskodawkowy naltrekson może pomóc osobom z neuropatią nerwu trójdzielnego?"
-data: "2026-06-22T00:00"
-zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
-status: gotowy-do-recenzji
+tytul: LDN i ból przewlekły. Czy niskodawkowy naltrekson może pomóc osobom z
+  neuropatią nerwu trójdzielnego?
+data: 2026-06-22T00:00
+fb: https://www.facebook.com/zyciezbolem/posts/pfbid0c96yrphogChUxyJv4dh46Bv7QLFi7Y3EjszhKbuAxjRYnCh8WkYzjMhhwNDjc7bdl?__cft__[0]=AZaDEJPSA1g5beUAhhjwgLohFxmxLRfAkO-1wspYLqGBBr3PMPyVUGQ7IoMJrUwCdZfG3McYOJqSVmEEMkq1W7yW1I-QUpNcUBL4Izq4W3fh-q_A5db4IcoVZAvbQxIMTQARy9_oU1GPo6YTjZEtu-Qz8Jt9jUOyrL9STB1RM-Wmqw&__tn__=%2CO%2CP-R
 ---
-
 # LDN i ból przewlekły. Czy niskodawkowy naltrekson może pomóc osobom z neuropatią nerwu trójdzielnego?
 
 *Data publikacji: 2026-06-22*
@@ -111,10 +110,10 @@ Ten tekst nie jest poradą medyczną ani zachętą do samodzielnego leczenia. To
 
 Bibliografia:
 
-Skuteczność niskodawkowego naltreksonu u nastolatka z młodzieńczą fibromialgią trudno poddającą się leczeniu – opis przypadku, A. M. Łotowska-Ręczmień https://bolczasopismo.pl/article/556212/pl
+Skuteczność niskodawkowego naltreksonu u nastolatka z młodzieńczą fibromialgią trudno poddającą się leczeniu – opis przypadku, A. M. Łotowska-Ręczmień [https://bolczasopismo.pl/article/556212/pl](https://bolczasopismo.pl/article/556212/pl)
 
-Terapia naltreksonem w niskiej dawce - skuteczność i bezpieczeństwo terapii stosowanej poza wskazaniami, E. Mundzik-Janczarska, A. Stańczak https://www.ptfarm.pl/download/...
+Terapia naltreksonem w niskiej dawce - skuteczność i bezpieczeństwo terapii stosowanej poza wskazaniami, E. Mundzik-Janczarska, A. Stańczak [https://www.ptfarm.pl/download/](https://www.ptfarm.pl/download/)...
 
-Use of low-dose naltrexone in the management of posttraumatic trigeminal neuropathic pain: a retrospective case series, S. Ananthan, G. Heir, O. Korczeniewska https://pubmed.ncbi.nlm.nih.gov/40590142/
+Use of low-dose naltrexone in the management of posttraumatic trigeminal neuropathic pain: a retrospective case series, S. Ananthan, G. Heir, O. Korczeniewska [https://pubmed.ncbi.nlm.nih.gov/40590142/](https://pubmed.ncbi.nlm.nih.gov/40590142/)
 
-The use of low-dose naltrexone (LDN) as a novel anti-inflammatory treatment for chronic pain, J. Younger, L. Parkitny, David McLain https://pubmed.ncbi.nlm.nih.gov/24526250/
+The use of low-dose naltrexone (LDN) as a novel anti-inflammatory treatment for chronic pain, J. Younger, L. Parkitny, David McLain [https://pubmed.ncbi.nlm.nih.gov/24526250/](https://pubmed.ncbi.nlm.nih.gov/24526250/)
