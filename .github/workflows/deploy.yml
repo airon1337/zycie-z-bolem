@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+  schedule:
+    - cron: '5 * * * *'
 
 jobs:
   build-deploy:
@@ -12,13 +14,27 @@ jobs:
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
 
+      - name: Czy publikowac (harmonogram)
+        id: gate
+        shell: pwsh
+        run: |
+          if ($env:GITHUB_EVENT_NAME -eq 'schedule') {
+            $d = (& ./_tools/check-due.ps1 | Select-Object -Last 1).ToString().Trim()
+          } else {
+            $d = 'true'
+          }
+          "deploy=$d" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          Write-Host "deploy=$d (event=$($env:GITHUB_EVENT_NAME))"
+
       - name: Zbuduj strone (PowerShell)
+        if: steps.gate.outputs.deploy == 'true'
         shell: pwsh
         run: |
           ./_tools/build-site.ps1
           ./_tools/package.ps1
 
       - name: Opublikuj na Cloudflare Pages
+        if: steps.gate.outputs.deploy == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

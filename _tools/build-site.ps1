@@ -35,6 +35,21 @@ $titles     = (Get-Content -Raw -Encoding UTF8 (Join-Path $PSScriptRoot "titles.
 
 $bullet = [char]0x2022
 $zrHead = [char]0x179 + "r" + [char]0x00F3 + "d" + [char]0x142 + "a"  # "Zrodla" z polskimi znakami
+# markery naglowka sekcji zrodel (linia bedaca samym wyrazem) - porownanie -contains jest case-insensitive
+$srcMarkers = @(
+    'Bibliografia',
+    'Bibliography',
+    'Zrodla',
+    'Zrodlo',
+    ([char]0x179 + 'r' + [char]0x00F3 + 'd' + [char]0x142 + 'a'),  # Zrodla z pl znakami
+    ([char]0x179 + 'r' + [char]0x00F3 + 'd' + [char]0x142 + 'o')   # Zrodlo z pl znakami
+)
+
+# czas "teraz" w strefie polskiej (do publikacji zaplanowanej)
+$tzPL = $null
+foreach ($tzId in @('Europe/Warsaw','Central European Standard Time')) { try { $tzPL = [System.TimeZoneInfo]::FindSystemTimeZoneById($tzId); break } catch {} }
+if (-not $tzPL) { $tzPL = [System.TimeZoneInfo]::Utc }
+$nowPL = [System.TimeZoneInfo]::ConvertTimeFromUtc([DateTime]::UtcNow, $tzPL)
 
 # --- mapa zdjec artykulow (artykul NNN -> plik w folderze zdjecia\) ---
 $imgMap = @{}
@@ -48,6 +63,11 @@ if (Test-Path $imgDir) {
 function Esc([string]$s) {
     if ($null -eq $s) { return "" }
     return ($s -replace '&','&amp;' -replace '<','&lt;' -replace '>','&gt;')
+}
+
+function NFKC([string]$s) {
+    if ([string]::IsNullOrEmpty($s)) { return $s }
+    return $s.Normalize([System.Text.NormalizationForm]::FormKC)
 }
 
 function Contains-Q($list, $qtext) {
@@ -243,6 +263,7 @@ function Convert-Md([string]$md) {
     $para = New-Object System.Collections.Generic.List[string]
     $ol = $false; $olLi = $false; $ul = $false
     $srcShown = $false
+    $inSources = $false
 
     $bulletPat = '^(\*|\-|' + [regex]::Escape([string]$bullet) + ')\s+(.+)$'
 
@@ -265,6 +286,21 @@ function Convert-Md([string]$md) {
         }
 
         if ($t -eq "") {
+            continue
+        }
+        # wykrycie naglowka sekcji zrodel: linia bedaca samym wyrazem Bibliografia/Zrodla/Zrodlo (+ opcjonalny :)
+        $tClean = ($t -replace '\s*:\s*$', '').Trim()
+        if (-not $inSources -and ($srcMarkers -contains $tClean)) {
+            if ($ul) { [void]$sb.Append("</ul>`n"); $ul=$false }
+            if ($olLi) { [void]$sb.Append("</li>`n"); $olLi=$false }
+            if ($ol) { [void]$sb.Append("</ol>`n"); $ol=$false }
+            [void]$sb.Append('<p class="zrodla-naglowek">').Append((Esc $tClean)).Append(":</p>`n")
+            $inSources = $true; $srcShown = $true
+            continue
+        }
+        # w trybie zrodel kazda niepusta linia to pozycja bibliografii
+        if ($inSources) {
+            [void]$sb.Append('<p class="zrodlo-link">').Append((Inline $t)).Append("</p>`n")
             continue
         }
         if ($t -match '^#\s' -or $t -match '^\*Data publikacji') { continue }
@@ -395,7 +431,11 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $numKey = if ($f.BaseName -match '^(\d{3})-') { $matches[1] } else { "" }
     if ($numKey -ne "" -and ($titles.PSObject.Properties.Name -contains $numKey)) { $title = $titles.$numKey }
     $date = ""
-    if ($raw -match '(?m)^data:\s*(\S+)') { $date = $matches[1] }
+    if ($raw -match '(?m)^data:\s*"?([^"\r\n]+?)"?\s*$') { $date = $matches[1].Trim() }
+    $dt = [datetime]::MinValue
+    [void][datetime]::TryParse($date, [ref]$dt)
+    if ($dt -ne [datetime]::MinValue -and $dt -gt $nowPL) { continue }   # zaplanowany na przyszlosc — pomijamy do czasu publikacji
+    $dateDisplay = if ($dt -ne [datetime]::MinValue) { $dt.ToString('yyyy-MM-dd') } else { $date }
 
     $slug = $f.BaseName
     $bodyHtml = Convert-Md $raw
@@ -455,8 +495,6 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
         $ogTag = '<meta property="og:image" content="' + $DOMENA + $imgWeb + '">'
     }
 
-    $dt = [datetime]::MinValue
-    [void][datetime]::TryParse($date, [ref]$dt)
     $tags = Get-Tags $raw
     $cat = Get-Category $raw
     $katLabel = if ($cat) { $cat.label } else { "" }
@@ -486,7 +524,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
 
     $page = $tplArticle
     $page = $page.Replace("{{TYTUL}}", (Esc $title))
-    $page = $page.Replace("{{DATA}}", (Esc $date))
+    $page = $page.Replace("{{DATA}}", (Esc $dateDisplay))
     $page = $page.Replace("{{ZAJAWKA}}", (Esc $excerpt))
     $page = $page.Replace("{{CZYTANIE}}", [string]$minutes)
     $page = $page.Replace("{{KATEGORIA}}", $katHtml)

@@ -24,10 +24,12 @@ content:
         type: string
         required: true
       - name: data
-        label: Data publikacji
+        label: Data i godzina publikacji
         type: date
+        description: "Ustaw przyszłą datę i godzinę, aby zaplanować publikację (np. 2026-06-25T18:00). Artykuł pojawi się automatycznie po nadejściu tego terminu."
         options:
-          format: yyyy-MM-dd
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
         required: true
       - name: obraz
         label: Okładka (zdjęcie)
