@@ -538,7 +538,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     if ($raw -match '(?m)^fb:\s*"?([^"\r\n]+?)"?\s*$') { $fmFb = $matches[1].Trim() }
     $fbHtml = ""
     if ($fmFb -match '^https?://') {
-        $fbHtml = '<div class="fb-post"><a class="fb-post-btn" href="' + (Esc $fmFb) + '" target="_blank" rel="noopener">Skomentuj na Facebooku ' + [char]0x2192 + '</a></div>'
+        $fbHtml = '<a class="udostepnij-btn fb" href="' + (Esc $fmFb) + '" target="_blank" rel="noopener">Skomentuj na FB</a>'
     }
     $page = $page.Replace("{{FBPOST}}", $fbHtml)
     $canonical = $DOMENA + "/" + $slug + ".html"
