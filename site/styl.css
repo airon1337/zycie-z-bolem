@@ -402,3 +402,7 @@ blockquote.cytat {
 .artykul-tresc a.fb-przycisk, .artykul-tresc a.fb-przycisk:hover { color: #fff; }
 .artykul-tresc a.btn-poboczny { color: var(--akcent-ciemny); }
 .artykul-tresc a.btn-poboczny:hover { color: var(--akcent-ciemny); }
+
+/* ---------- Powiazane artykuly ---------- */
+.powiazane { margin-top: 44px; border-top: 1px solid var(--obwodka); padding-top: 28px; }
+.powiazane h2 { font-size: 1.5rem; color: var(--akcent-ciemny); margin: 0 0 18px; }

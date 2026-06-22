@@ -416,10 +416,10 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
 
     $dt = [datetime]::MinValue
     [void][datetime]::TryParse($date, [ref]$dt)
-    $thisItem = [PSCustomObject]@{ slug = $slug; title = $title; date = $date; dt = $dt; excerpt = $excerpt; minutes = $minutes; img = $imgWeb }
+    $tags = Get-Tags $raw
+    $thisItem = [PSCustomObject]@{ slug = $slug; title = $title; date = $date; dt = $dt; excerpt = $excerpt; minutes = $minutes; img = $imgWeb; tags = $tags }
 
     # tagi (klikalne chipy + mapa tag -> artykuly)
-    $tags = Get-Tags $raw
     $slowaHtml = ""
     if ($tags.Count -gt 0) {
         $sbT = New-Object System.Text.StringBuilder
@@ -447,8 +447,16 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     if ($date -ne "") { $aobj["datePublished"] = $date }
     if ($imgWeb -ne "") { $aobj["image"] = $DOMENA + $imgWeb } else { $aobj["image"] = $DOMENA + "/placeholder.svg" }
     $articleLd = '<script type="application/ld+json">' + ($aobj | ConvertTo-Json -Depth 6) + '</script>'
+    $bcArt = "Artyku" + [char]0x142 + "y"
+    $bcObj = [ordered]@{ "@context"="https://schema.org"; "@type"="BreadcrumbList"; "itemListElement"=@(
+        [ordered]@{ "@type"="ListItem"; "position"=1; "name"="Start"; "item"=$DOMENA + "/" },
+        [ordered]@{ "@type"="ListItem"; "position"=2; "name"=$bcArt; "item"=$DOMENA + "/index.html" },
+        [ordered]@{ "@type"="ListItem"; "position"=3; "name"=$title }
+    ) }
+    $bcLd = '<script type="application/ld+json">' + ($bcObj | ConvertTo-Json -Depth 6) + '</script>'
     $page = $page.Replace("{{CANONICAL}}", $canonical)
     $page = $page.Replace("{{ARTICLE_JSONLD}}", $articleLd)
+    $page = $page.Replace("{{BREADCRUMB_JSONLD}}", $bcLd)
     $page = $page.Replace("{{FAQ}}", $extras.faq)
     $page = $page.Replace("{{FAQ_JSONLD}}", $extras.ld)
     $page = $page.Replace("{{TRESC}}", $bodyHtml)
@@ -464,6 +472,34 @@ $itemsSorted = $items | Sort-Object dt -Descending
 $searchData = @()
 foreach ($it in $itemsSorted) { $searchData += [ordered]@{ t = $it.title; s = $it.slug; e = $it.excerpt } }
 ($searchData | ConvertTo-Json -Depth 3) | Out-File -Encoding UTF8 (Join-Path $siteDir "search-index.json")
+
+# --- powiazane artykuly (po wspolnych tagach) ---
+$relHead = "Powi" + [char]0x105 + "zane artyku" + [char]0x142 + "y"
+$encR = New-Object System.Text.UTF8Encoding($false)
+foreach ($it in $items) {
+    $scored = @()
+    foreach ($other in $items) {
+        if ($other.slug -eq $it.slug) { continue }
+        $shared = 0
+        foreach ($t in $it.tags) { if ($other.tags -contains $t) { $shared++ } }
+        if ($shared -gt 0) { $scored += [PSCustomObject]@{ it = $other; shared = $shared } }
+    }
+    $top = @($scored | Sort-Object @{Expression={$_.shared};Descending=$true}, @{Expression={$_.it.dt};Descending=$true} | Select-Object -First 3)
+    $relHtml = ""
+    if ($top.Count -gt 0) {
+        $sbR = New-Object System.Text.StringBuilder
+        [void]$sbR.Append('<section class="powiazane"><h2>').Append($relHead).Append('</h2><div class="kafelki">')
+        foreach ($r in $top) { [void]$sbR.Append((Build-Kafelek $r.it)) }
+        [void]$sbR.Append('</div></section>')
+        $relHtml = $sbR.ToString()
+    }
+    $fp = Join-Path $siteDir ($it.slug + ".html")
+    if (Test-Path $fp) {
+        $c = [System.IO.File]::ReadAllText($fp)
+        $c = $c.Replace("{{POWIAZANE}}", $relHtml)
+        [System.IO.File]::WriteAllText($fp, $c, $encR)
+    }
+}
 
 $PER = 24
 $total = $itemsSorted.Count
@@ -519,6 +555,33 @@ foreach ($tag in $tagMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/tag
 [void]$sm.Append('</urlset>' + "`n")
 $enc = New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $siteDir "sitemap.xml"), $sm.ToString(), $enc)
+
+# --- RSS feed.xml ---
+$rss = New-Object System.Text.StringBuilder
+[void]$rss.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n")
+[void]$rss.Append('<rss version="2.0"><channel>')
+[void]$rss.Append('<title>').Append((Esc $siteName)).Append('</title>')
+[void]$rss.Append('<link>').Append($DOMENA).Append('/</link>')
+[void]$rss.Append('<description>Blog o zyciu z neuralgia i neuropatia nerwu trojdzielnego.</description>')
+[void]$rss.Append('<language>pl-pl</language>')
+$rcnt = 0
+foreach ($it in $itemsSorted) {
+    if ($rcnt -ge 30) { break }
+    $u = $DOMENA + "/" + $it.slug + ".html"
+    [void]$rss.Append('<item>')
+    [void]$rss.Append('<title>').Append((Esc $it.title)).Append('</title>')
+    [void]$rss.Append('<link>').Append($u).Append('</link>')
+    [void]$rss.Append('<guid isPermaLink="true">').Append($u).Append('</guid>')
+    $dd = [datetime]::MinValue
+    if ([datetime]::TryParse($it.date, [ref]$dd)) {
+        [void]$rss.Append('<pubDate>').Append($dd.ToUniversalTime().ToString("r", [System.Globalization.CultureInfo]::InvariantCulture)).Append('</pubDate>')
+    }
+    [void]$rss.Append('<description>').Append((Esc $it.excerpt)).Append('</description>')
+    [void]$rss.Append('</item>')
+    $rcnt++
+}
+[void]$rss.Append('</channel></rss>')
+[System.IO.File]::WriteAllText((Join-Path $siteDir "feed.xml"), $rss.ToString(), (New-Object System.Text.UTF8Encoding($false)))
 
 Write-Output ("Wygenerowano stron artykulow: " + $items.Count)
 Write-Output ("Wygenerowano stron tagow: " + $tagCount)
