@@ -491,6 +491,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $page = $page.Replace("{{CZYTANIE}}", [string]$minutes)
     $page = $page.Replace("{{KATEGORIA}}", $katHtml)
     $page = $page.Replace("{{OGIMAGE}}", $ogTag)
+    $page = $page.Replace("{{TWIMAGE}}", '<meta name="twitter:image" content="' + $DOMENA + $imgWeb + '">')
     $page = $page.Replace("{{OBRAZEK}}", $imgTag)
     $page = $page.Replace("{{SPIS}}", $spisHtml)
     $page = $page.Replace("{{SLOWA}}", $slowaHtml)
