@@ -404,13 +404,13 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
         }
     }
     if ($imgWeb -ne "") {
-        $imgTag = '<img class="artykul-foto" src="' + $imgWeb + '" alt="' + (Esc $title) + '" loading="lazy">'
+        $imgTag = '<img class="artykul-foto" src="' + $imgWeb + '" alt="' + (Esc $title) + '" fetchpriority="high" loading="eager">'
         $ogTag = '<meta property="og:image" content="' + $DOMENA + $imgWeb + '">'
     } else {
         $coverName = $slug + ".svg"
         Make-Cover $title $raw (Join-Path $siteDir $coverName)
         $imgWeb = "/" + $coverName
-        $imgTag = '<img class="artykul-foto" src="' + $imgWeb + '" alt="' + (Esc $title) + '" loading="lazy">'
+        $imgTag = '<img class="artykul-foto" src="' + $imgWeb + '" alt="' + (Esc $title) + '" fetchpriority="high" loading="eager">'
         $ogTag = '<meta property="og:image" content="' + $DOMENA + $imgWeb + '">'
     }
 
