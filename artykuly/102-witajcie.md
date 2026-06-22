@@ -1,6 +1,6 @@
 ---
 tytul: "Witajcie,"
-data: 2026-03-24
+data: "2026-03-24T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

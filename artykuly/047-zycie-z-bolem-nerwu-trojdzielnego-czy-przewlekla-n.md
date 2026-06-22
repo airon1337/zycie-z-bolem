@@ -1,6 +1,6 @@
 ---
 tytul: "Życie z bólem nerwu trójdzielnego czy przewlekłą neuropatią to wyzwanie nie tylko fizyczne..."
-data: 2025-10-16
+data: "2025-10-16T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

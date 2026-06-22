@@ -1,6 +1,6 @@
 ---
 tytul: "Wiem, że obiecałam Wam merytoryczne treści dotyczące supli, ale praca nad tym tematem okaz..."
-data: 2026-05-13
+data: "2026-05-13T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

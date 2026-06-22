@@ -1,6 +1,6 @@
 ---
 tytul: "Przez dwanaście lat ból był moim nauczycielem"
-data: 2026-02-25
+data: "2026-02-25T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

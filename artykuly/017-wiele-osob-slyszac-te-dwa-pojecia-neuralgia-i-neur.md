@@ -1,6 +1,6 @@
 ---
 tytul: "Wiele osób słysząc te dwa pojęcia – neuralgia i neuropatia – czuje się zagubionych"
-data: 2025-09-29
+data: "2025-09-29T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

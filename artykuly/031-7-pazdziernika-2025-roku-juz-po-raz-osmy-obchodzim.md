@@ -1,6 +1,6 @@
 ---
 tytul: "7 października 2025 roku już po raz ósmy obchodzimy"
-data: 2025-10-07
+data: "2025-10-07T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

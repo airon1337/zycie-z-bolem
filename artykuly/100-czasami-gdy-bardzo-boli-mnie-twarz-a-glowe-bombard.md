@@ -1,6 +1,6 @@
 ---
 tytul: "Czasami, gdy bardzo boli mnie twarz, a głowę bombardują doznania trudne do zniesienia, lub..."
-data: 2026-03-11
+data: "2026-03-11T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

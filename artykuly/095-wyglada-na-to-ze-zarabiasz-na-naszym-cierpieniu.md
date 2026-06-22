@@ -1,6 +1,6 @@
 ---
 tytul: Wygląda na to, że zarabiasz na naszym cierpieniu
-data: 2026-02-26
+data: "2026-02-26T00:00"
 ---
 # "Wygląda na to, że zarabiasz na naszym cierpieniu
 

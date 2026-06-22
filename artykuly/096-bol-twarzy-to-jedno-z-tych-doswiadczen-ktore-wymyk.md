@@ -1,6 +1,6 @@
 ---
 tytul: "Ból twarzy to jedno z tych doświadczeń, które wymyka się prostym definicjom"
-data: 2026-02-27
+data: "2026-02-27T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 link_zrodlowy: https://www.hellozdrowie.pl/dr-n-med-bartosz-kudlinski-najgorszy-jest-bol-przewlekly-dlugoterminowy-skradajacy-sie-wiszacy-na-plecach/?utm_source=facebook&utm_medium=social&utm_campaign=organic
 status: szkic

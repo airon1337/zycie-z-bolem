@@ -1,6 +1,6 @@
 ---
 tytul: "Historycznie rzecz ujmując, pierwsze próby wyjaśnienia mechanizmu bólu w neuralgii trójdzi..."
-data: 2025-10-15
+data: "2025-10-15T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

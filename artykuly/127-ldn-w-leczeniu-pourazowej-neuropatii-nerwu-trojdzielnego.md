@@ -1,6 +1,6 @@
 ---
 tytul: "LDN w leczeniu pourazowej neuropatii nerwu trójdzielnego"
-data: 2026-06-19
+data: "2026-06-19T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: gotowy-do-recenzji
 ---

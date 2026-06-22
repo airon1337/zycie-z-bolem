@@ -1,6 +1,6 @@
 ---
 tytul: "„Byłam u neurologa i on mi powiedział, że to mi już w głowie siedzi\""
-data: 2026-06-06
+data: "2026-06-06T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

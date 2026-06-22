@@ -1,6 +1,6 @@
 ---
 tytul: "Na tej stronie pragnę udostępniać treści o NEUROPATII NERWU TRÓJDZIELNEGO oraz życiu z prz..."
-data: 2026-06-17
+data: "2026-06-17T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Temat akceptacji życia z bólem przewlekłym od dawna przerabiam w głowie"
-data: 2026-05-30
+data: "2026-05-30T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

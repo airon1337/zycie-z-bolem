@@ -1,6 +1,6 @@
 ---
 tytul: "Neuropatia nerwu trójdzielnego (neuropatia n"
-data: 2025-10-18
+data: "2025-10-18T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

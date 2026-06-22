@@ -1,6 +1,6 @@
 ---
 tytul: "Zabieg termolezji pulsacyjnej odbywał się w warunkach sali zabiegowej, z pełnym monitorowa..."
-data: 2025-10-02
+data: "2025-10-02T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

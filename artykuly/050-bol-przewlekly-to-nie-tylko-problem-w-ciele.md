@@ -1,6 +1,6 @@
 ---
 tytul: "Ból przewlekły to nie tylko problem w ciele"
-data: 2025-10-19
+data: "2025-10-19T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Czasem budzę się z poczuciem, że „dziś będzie dobrze”, a ból i tak się pojawia"
-data: 2025-10-06
+data: "2025-10-06T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

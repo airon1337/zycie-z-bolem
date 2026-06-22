@@ -1,6 +1,6 @@
 ---
 tytul: "Ból nerwu trójdzielnego potrafi zmienić wszystko"
-data: 2025-10-12
+data: "2025-10-12T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Do dzisiejszego postu zmotywowała mnie moja droga Sis trójdzielna, która mierzy się z trud..."
-data: 2026-06-17
+data: "2026-06-17T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

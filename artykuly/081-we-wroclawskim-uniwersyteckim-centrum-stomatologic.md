@@ -1,6 +1,6 @@
 ---
 tytul: "We Wrocławskim Uniwersyteckim Centrum Stomatologicznym pacjenci cierpiący na bóle stawów s..."
-data: 2026-01-28
+data: "2026-01-28T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 link_zrodlowy: https://cowzdrowiu.pl/aktualnosci/post/polski-lek-z-wlasnej-krwi-na-bol-stawu-skroniowo-zuchwowego
 status: szkic

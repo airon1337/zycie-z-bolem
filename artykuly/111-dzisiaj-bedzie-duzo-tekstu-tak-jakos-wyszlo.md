@@ -1,6 +1,6 @@
 ---
 tytul: "Dzisiaj będzie dużo tekstu, tak jakoś wyszło"
-data: 2026-04-13
+data: "2026-04-13T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

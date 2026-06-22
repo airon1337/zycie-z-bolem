@@ -1,6 +1,6 @@
 ---
 tytul: "Artykuł przygotowalam na podstawie analizy publikacji „Trigeminal Neuropathy” autorstwa Ka..."
-data: 2026-06-15
+data: "2026-06-15T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

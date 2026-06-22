@@ -1,6 +1,6 @@
 ---
 tytul: "Dziś, w Dniu Zakochanych, chcę podzielić się z Wami czymś więcej niż tradycyjnymi życzenia..."
-data: 2026-02-14
+data: "2026-02-14T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

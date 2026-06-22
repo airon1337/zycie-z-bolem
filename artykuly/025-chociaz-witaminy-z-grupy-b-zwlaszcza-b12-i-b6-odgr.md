@@ -1,6 +1,6 @@
 ---
 tytul: "Chociaż witaminy z grupy B, zwłaszcza B12 i B6, odgrywają istotną rolę w funkcjonowaniu uk..."
-data: 2025-10-03
+data: "2025-10-03T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

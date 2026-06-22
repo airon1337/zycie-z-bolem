@@ -1,6 +1,6 @@
 ---
 tytul: "Neuralgia nerwu trójdzielnego uchodzi za jedną z najbardziej bolesnych dolegliwości"
-data: 2025-09-27
+data: "2025-09-27T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

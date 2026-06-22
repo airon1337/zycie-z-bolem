@@ -1,6 +1,6 @@
 ---
 tytul: "Są dni, kiedy ból przychodzi wcześniej niż świt"
-data: 2025-11-18
+data: "2025-11-18T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

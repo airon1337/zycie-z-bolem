@@ -1,6 +1,6 @@
 ---
 tytul: "Low Dose Naltrexone (LDN) wzbudza coraz większe zainteresowanie pacjentów z różnymi chorob..."
-data: 2025-11-24
+data: "2025-11-24T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Dziś pod lupę pragnę wziąć kwas alfa-liponowy (ALA)"
-data: 2026-05-15
+data: "2026-05-15T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

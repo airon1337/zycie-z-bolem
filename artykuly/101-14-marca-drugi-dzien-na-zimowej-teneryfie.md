@@ -1,6 +1,6 @@
 ---
 tytul: "14 marca Drugi dzień na zimowej Teneryfie."
-data: 2026-03-17
+data: "2026-03-17T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

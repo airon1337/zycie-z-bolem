@@ -1,6 +1,6 @@
 ---
 tytul: "Wyobraźmy sobie na chwilę, że jesteśmy w połowie XX wieku"
-data: 2026-01-03
+data: "2026-01-03T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

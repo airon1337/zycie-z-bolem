@@ -1,6 +1,6 @@
 ---
 tytul: "Ból nerwu trójdzielnego to jeden z najbardziej dokuczliwych i trudnych do zniesienia rodza..."
-data: 2025-10-03
+data: "2025-10-03T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

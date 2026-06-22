@@ -1,6 +1,6 @@
 ---
 tytul: "Choć moim głównym obszarem zainteresowania pozostaje nerw trójdzielny oraz ból, jaki pojaw..."
-data: 2026-04-09
+data: "2026-04-09T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

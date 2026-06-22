@@ -1,6 +1,6 @@
 ---
 tytul: "Ból, którego nie widać, bywa jednym z najtrudniejszych do zrozumienia przez otoczenie"
-data: 2026-02-18
+data: "2026-02-18T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 link_zrodlowy: https://news.uhhospitals.org/news-releases/articles/2025/12/uh-treats-patients-with-the-onerf-trigeminal-nerve-ablation-system
 status: szkic

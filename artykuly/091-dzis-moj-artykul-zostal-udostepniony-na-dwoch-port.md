@@ -1,6 +1,6 @@
 ---
 tytul: "Dziś mój artykuł został udostępniony na dwóch portalach informacyjnych – w Płocku i Lublin..."
-data: 2026-02-19
+data: "2026-02-19T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 link_zrodlowy: https://infoplocktv.pl/2026/02/18/to-nie-stres-to-nie-zab-to-jeden-z-najbardziej-wyniszczajacych-bolow-znanych-medycynie/
 status: szkic

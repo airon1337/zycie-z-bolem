@@ -1,6 +1,6 @@
 ---
 tytul: "Cześć moi drodzy"
-data: 2025-12-23
+data: "2025-12-23T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

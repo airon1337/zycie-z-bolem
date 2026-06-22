@@ -1,6 +1,6 @@
 ---
 tytul: "Ostatnio dotarła do mnie bardzo smutna wiadomość"
-data: 2026-03-10
+data: "2026-03-10T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

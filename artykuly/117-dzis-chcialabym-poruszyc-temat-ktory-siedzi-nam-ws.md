@@ -1,6 +1,6 @@
 ---
 tytul: "Dziś chciałabym poruszyć temat, który siedzi nam wszystkim w głowach, a o którym rzadko mó..."
-data: 2026-05-21
+data: "2026-05-21T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

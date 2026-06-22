@@ -1,6 +1,6 @@
 ---
 tytul: "Neuralgia trójdzielna jest jedną z najstarszych opisywanych chorób neurologicznych dotyczą..."
-data: 2025-10-15
+data: "2025-10-15T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

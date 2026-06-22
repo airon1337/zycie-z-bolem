@@ -1,6 +1,6 @@
 ---
 tytul: "Neuralgia nerwu trójdzielnego nie zawsze wygląda tak samo"
-data: 2025-11-05
+data: "2025-11-05T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

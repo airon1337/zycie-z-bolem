@@ -1,6 +1,6 @@
 ---
 tytul: "LDN i ból przewlekły. Czy niskodawkowy naltrekson może pomóc osobom z neuropatią nerwu trójdzielnego?"
-data: 2026-06-22
+data: "2026-06-22T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: gotowy-do-recenzji
 ---

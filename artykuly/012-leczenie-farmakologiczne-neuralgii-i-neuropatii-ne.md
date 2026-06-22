@@ -1,6 +1,6 @@
 ---
 tytul: "Leczenie farmakologiczne neuralgii i neuropatii nerwu trójdzielnego opiera się głównie na..."
-data: 2025-09-26
+data: "2025-09-26T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

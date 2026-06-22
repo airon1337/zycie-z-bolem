@@ -1,6 +1,6 @@
 ---
 tytul: "Życie z bólem przewlekłym to doświadczenie, którego nie da się w pełni zrozumieć, dopóki s..."
-data: 2025-10-24
+data: "2025-10-24T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

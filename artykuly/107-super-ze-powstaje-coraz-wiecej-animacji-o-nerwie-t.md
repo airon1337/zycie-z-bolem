@@ -1,6 +1,6 @@
 ---
 tytul: "Super, że powstaje coraz więcej animacji o nerwie trójdzielnym"
-data: 2026-04-08
+data: "2026-04-08T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

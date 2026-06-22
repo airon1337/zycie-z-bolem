@@ -1,6 +1,6 @@
 ---
 tytul: "W neuralgii i neuropatii nerwu trójdzielnego ból potrafi pojawić się nagle, intensywnie i..."
-data: 2025-12-02
+data: "2025-12-02T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Do napisania niniejszego tekstu zainspirowała mnie koleżanka, która przesłała mi wpis z je..."
-data: 2026-05-05
+data: "2026-05-05T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

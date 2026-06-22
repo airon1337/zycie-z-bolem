@@ -1,6 +1,6 @@
 ---
 tytul: "Jeszcze kilkanaście lat temu sądzono, że mózg dorosłego człowieka jest strukturą w dużej m..."
-data: 2026-02-15
+data: "2026-02-15T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

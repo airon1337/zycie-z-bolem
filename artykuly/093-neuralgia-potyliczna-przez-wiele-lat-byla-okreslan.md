@@ -1,6 +1,6 @@
 ---
 tytul: "Neuralgia potyliczna przez wiele lat była określana jako choroba Arnolda"
-data: 2026-02-22
+data: "2026-02-22T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

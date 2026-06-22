@@ -1,6 +1,6 @@
 ---
 tytul: "Życie z bólem nerwu trójdzielnego to coś, czego trudno komukolwiek wytłumaczyć"
-data: 2025-10-05
+data: "2025-10-05T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

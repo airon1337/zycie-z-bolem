@@ -1,6 +1,6 @@
 ---
 tytul: "Neuralgia nerwu trójdzielnego po półpaścu stanowi jedną z najbardziej złożonych postaci bó..."
-data: 2026-05-26
+data: "2026-05-26T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

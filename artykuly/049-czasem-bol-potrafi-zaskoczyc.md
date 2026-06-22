@@ -1,6 +1,6 @@
 ---
 tytul: "Czasem ból potrafi zaskoczyć"
-data: 2025-10-19
+data: "2025-10-19T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

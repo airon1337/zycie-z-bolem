@@ -1,6 +1,6 @@
 ---
 tytul: "Pregabaliny nie muszę tu przedstawiać"
-data: 2026-02-05
+data: "2026-02-05T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

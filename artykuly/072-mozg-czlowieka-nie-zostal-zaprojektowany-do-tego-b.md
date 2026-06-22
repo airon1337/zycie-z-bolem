@@ -1,6 +1,6 @@
 ---
 tytul: "Mózg człowieka nie został zaprojektowany do tego, byśmy czuli się spokojni i szczęśliwi"
-data: 2025-12-08
+data: "2025-12-08T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

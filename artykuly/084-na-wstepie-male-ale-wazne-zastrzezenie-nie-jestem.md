@@ -1,6 +1,6 @@
 ---
 tytul: "Na wstępie małe, ale ważne zastrzeżenie: nie jestem lekarzem"
-data: 2026-02-07
+data: "2026-02-07T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

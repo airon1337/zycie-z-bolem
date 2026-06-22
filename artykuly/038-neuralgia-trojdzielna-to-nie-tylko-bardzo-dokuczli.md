@@ -1,6 +1,6 @@
 ---
 tytul: "Neuralgia trójdzielna to nie tylko bardzo dokuczliwa choroba, ale również ważny problem zd..."
-data: 2025-10-15
+data: "2025-10-15T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Jakiś czas temu napisałam posty o gabapentynie i pregabalinie, więc przyszedł czas na karb..."
-data: 2026-04-10
+data: "2026-04-10T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

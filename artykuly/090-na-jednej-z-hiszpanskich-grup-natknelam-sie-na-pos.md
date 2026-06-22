@@ -1,6 +1,6 @@
 ---
 tytul: "Na jednej z hiszpańskich grup natknęłam się na post o treści"
-data: 2026-02-18
+data: "2026-02-18T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 link_zrodlowy: https://pubmed.ncbi.nlm.nih.gov/40639955/
 status: szkic

@@ -1,6 +1,6 @@
 ---
 tytul: "Ból neuropatyczny nie jest zwykłym bólem"
-data: 2025-11-29
+data: "2025-11-29T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

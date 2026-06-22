@@ -1,6 +1,6 @@
 ---
 tytul: "Blokady w neuralgii nerwu trójdzielnego to szybki i często skuteczny sposób na złagodzenie..."
-data: 2025-09-29
+data: "2025-09-29T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---

@@ -1,6 +1,6 @@
 ---
 tytul: "Kolejny ciekawy artykuł o neuralgii nerwu trójdzielnego — ale znów o jej klasycznej postac..."
-data: 2026-02-10
+data: "2026-02-10T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 link_zrodlowy: https://www.bbc.com/news/articles/c5y2z2v964zo?at_medium=social&at_link_id=1C7ED1CC-00EC-11F1-B072-9629E1443A50&at_link_type=web_link&at_link_origin=BBC_Wales_News&at_bbc_team=editorial&at_campaign=Social_Flow&at_ptr_name=facebook_page&at_format=image&at_campaign_type=owned
 status: szkic

@@ -1,6 +1,6 @@
 ---
 tytul: "Wiele osób, które zmagają się z przewlekłym bólem – w tym z bólem nerwu trójdzielnego – za..."
-data: 2025-11-14
+data: "2025-11-14T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---
