@@ -430,3 +430,11 @@ blockquote.cytat {
 .artykul-kat { margin-top: 12px; font-size: .9rem; color: var(--tekst-jasny); }
 .artykul-kat .kat-label { display: inline-block; background: var(--akcent-jasny); color: var(--akcent-ciemny); padding: 3px 12px; border-radius: 999px; font-weight: 600; margin-left: 4px; }
 .artykul-kat .kat-label:hover { background: var(--akcent); color: #fff; text-decoration: none; }
+
+/* ---------- Box o autorce (pod artykulem) ---------- */
+.autor-box { display: flex; gap: 18px; align-items: center; background: var(--akcent-jasny); border: 1px solid var(--obwodka); border-radius: var(--radius); padding: 18px 22px; margin: 34px 0 0; }
+.autor-foto { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: var(--cien); }
+.autor-tresc strong { display: block; color: var(--akcent-ciemny); font-size: 1.05rem; margin-bottom: 4px; }
+.autor-tresc p { margin: 0; color: var(--tekst); font-size: .96rem; line-height: 1.5; }
+.autor-tresc a { color: var(--akcent-ciemny); font-weight: 600; }
+@media (max-width: 600px) { .autor-box { flex-direction: column; text-align: center; } }
