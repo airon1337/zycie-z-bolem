@@ -35,6 +35,11 @@ content:
         label: Okładka (zdjęcie)
         type: image
         required: false
+      - name: fb
+        label: Link do posta na Facebooku (opcjonalnie)
+        type: string
+        description: "Wklej tu adres posta z Facebooka, jeśli chcesz, by pod artykułem pojawił się przycisk 'Skomentuj na Facebooku'. Zostaw puste, aby przycisku nie było."
+        required: false
       - name: body
         label: Treść artykułu
         type: rich-text

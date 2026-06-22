@@ -533,6 +533,14 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $page = $page.Replace("{{OBRAZEK}}", $imgTag)
     $page = $page.Replace("{{SPIS}}", $spisHtml)
     $page = $page.Replace("{{SLOWA}}", $slowaHtml)
+    # opcjonalny przycisk do posta na Facebooku (frontmatter: fb). Brak pola = brak przycisku.
+    $fmFb = ""
+    if ($raw -match '(?m)^fb:\s*"?([^"\r\n]+?)"?\s*$') { $fmFb = $matches[1].Trim() }
+    $fbHtml = ""
+    if ($fmFb -match '^https?://') {
+        $fbHtml = '<div class="fb-post"><a class="fb-post-btn" href="' + (Esc $fmFb) + '" target="_blank" rel="noopener">Skomentuj na Facebooku ' + [char]0x2192 + '</a></div>'
+    }
+    $page = $page.Replace("{{FBPOST}}", $fbHtml)
     $canonical = $DOMENA + "/" + $slug + ".html"
     $aobj = [ordered]@{ "@context"="https://schema.org"; "@type"="BlogPosting"; "headline"=$title; "description"=$excerpt; "author"=[ordered]@{ "@type"="Person"; "name"="Natalia" }; "publisher"=[ordered]@{ "@type"="Organization"; "name"=$siteName }; "mainEntityOfPage"=$canonical }
     if ($date -ne "") { $aobj["datePublished"] = $date }

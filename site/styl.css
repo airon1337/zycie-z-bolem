@@ -422,6 +422,9 @@ blockquote.cytat {
 .udostepnij-btn.fb { background: #0b5ed7; color: #fff; border-color: #0b5ed7; text-decoration: none; }
 .udostepnij-btn.fb:hover { background: #0a53be; }
 .udostepnij-btn.kopiuj:hover { background: var(--akcent-jasny); }
+.fb-post { margin: 18px 0 0; }
+.fb-post-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 999px; font-size: .96rem; font-weight: 700; text-decoration: none; background: #0b5ed7; color: #fff; border: 1px solid #0b5ed7; }
+.fb-post-btn:hover { background: #0a53be; }
 
 /* ---------- Kategorie ---------- */
 .kat-pasek { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 760px; margin: 0 auto; padding: 4px 0 0; }
