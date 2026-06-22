@@ -366,6 +366,8 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $raw = Get-Content -Raw -Encoding UTF8 $f.FullName
     $title = ""
     if ($raw -match '(?m)^tytul:\s*"(.*)"\s*$') { $title = $matches[1] -replace '\\"','"' }
+    elseif ($raw -match "(?m)^tytul:\s*'(.*)'\s*$") { $title = $matches[1] }
+    elseif ($raw -match '(?m)^tytul:\s*(\S.*?)\s*$') { $title = $matches[1] }
     if ($title -eq "") { $title = ($f.BaseName -replace '^\d+-','') -replace '-',' ' }
     if ($title.EndsWith("...")) { $title = Get-CleanTitle $raw }
     $numKey = if ($f.BaseName -match '^(\d{3})-') { $matches[1] } else { "" }

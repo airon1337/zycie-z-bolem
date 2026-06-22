@@ -1,0 +1,25 @@
+content:
+  - name: artykuly
+    label: Artykuły
+    type: collection
+    path: artykuly
+    format: yaml-frontmatter
+    filename:
+      template: '{fields.tytul}.md'
+      field: create
+    view:
+      primary: tytul
+    fields:
+      - name: tytul
+        label: Tytuł
+        type: string
+        required: true
+      - name: data
+        label: Data publikacji
+        type: date
+        options:
+          format: yyyy-MM-dd
+        required: true
+      - name: body
+        label: Treść artykułu
+        type: rich-text
