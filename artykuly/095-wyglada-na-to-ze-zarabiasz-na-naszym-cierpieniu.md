@@ -1,10 +1,7 @@
 ---
-tytul: "\"Wygląda na to, że zarabiasz na naszym cierpieniu"
+tytul: Wygląda na to, że zarabiasz na naszym cierpieniu
 data: 2026-02-26
-zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
-status: szkic
 ---
-
 # "Wygląda na to, że zarabiasz na naszym cierpieniu
 
 *Data publikacji: 2026-02-26*
