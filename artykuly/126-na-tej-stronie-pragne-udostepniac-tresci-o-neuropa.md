@@ -1,10 +1,9 @@
 ---
-tytul: "Na tej stronie pragnę udostępniać treści o NEUROPATII NERWU TRÓJDZIELNEGO oraz życiu z prz..."
-data: "2026-06-17T00:00"
-zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
-status: szkic
+tytul: Na tej stronie pragnę udostępniać treści o NEUROPATII NERWU TRÓJDZIELNEGO
+  oraz życiu z prz...
+data: 2026-06-17T00:00
+fb: https://www.facebook.com/zyciezbolem/posts/pfbid0c96yrphogChUxyJv4dh46Bv7QLFi7Y3EjszhKbuAxjRYnCh8WkYzjMhhwNDjc7bdl?__cft__[0]=AZaDEJPSA1g5beUAhhjwgLohFxmxLRfAkO-1wspYLqGBBr3PMPyVUGQ7IoMJrUwCdZfG3McYOJqSVmEEMkq1W7yW1I-QUpNcUBL4Izq4W3fh-q_A5db4IcoVZAvbQxIMTQARy9_oU1GPo6YTjZEtu-Qz8Jt9jUOyrL9STB1RM-Wmqw&__tn__=%2CO%2CP-R
 ---
-
 # Na tej stronie pragnę udostępniać treści o NEUROPATII NERWU TRÓJDZIELNEGO oraz życiu z prz...
 
 *Data publikacji: 2026-06-17*
