@@ -2,6 +2,7 @@
 tytul: LDN i ból przewlekły. Czy niskodawkowy naltrekson może pomóc osobom z
   neuropatią nerwu trójdzielnego?
 data: 2026-06-22T00:00
+obraz: /zdjecia/post 10.jpg
 fb: https://www.facebook.com/zyciezbolem/posts/pfbid0c96yrphogChUxyJv4dh46Bv7QLFi7Y3EjszhKbuAxjRYnCh8WkYzjMhhwNDjc7bdl?__cft__[0]=AZaDEJPSA1g5beUAhhjwgLohFxmxLRfAkO-1wspYLqGBBr3PMPyVUGQ7IoMJrUwCdZfG3McYOJqSVmEEMkq1W7yW1I-QUpNcUBL4Izq4W3fh-q_A5db4IcoVZAvbQxIMTQARy9_oU1GPo6YTjZEtu-Qz8Jt9jUOyrL9STB1RM-Wmqw&__tn__=%2CO%2CP-R
 ---
 # LDN i ból przewlekły. Czy niskodawkowy naltrekson może pomóc osobom z neuropatią nerwu trójdzielnego?
