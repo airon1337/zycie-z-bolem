@@ -2,6 +2,7 @@
 tytul: Na tej stronie pragnę udostępniać treści o NEUROPATII NERWU TRÓJDZIELNEGO
   oraz życiu z prz...
 data: 2026-06-17T00:00
+obraz: /zdjecia/Zrzut ekranu 2026-06-23 170555.png
 ---
 # Na tej stronie pragnę udostępniać treści o NEUROPATII NERWU TRÓJDZIELNEGO oraz życiu z prz..
 
