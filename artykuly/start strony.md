@@ -1,6 +1,7 @@
 ---
 tytul: Kilka słów o tym, co powstaje, czyli o miejscu, którego sama kiedyś szukałam
 data: 2026-06-24T16:05
+obraz: /zdjecia/post 11.jpg
 ---
 ## Trzy słowa, które zmieniają wszystko
 
