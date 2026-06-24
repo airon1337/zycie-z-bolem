@@ -2,17 +2,6 @@
 tytul: Kilka słów o tym, co powstaje, czyli o miejscu, którego sama kiedyś szukałam
 data: 2026-06-24T16:05
 ---
----
-
-## tytul: "Dziś post nie o bólu, a o miejscu dla bólu"  
-data: "2026-06-24T00:00"  
-zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'  
-status: gotowy-do-recenzji
-
-# Dziś post nie o bólu, a o miejscu dla bólu
-
-*Data publikacji: 2026-06-22*  
-
 ## Trzy słowa, które zmieniają wszystko
 
 Dziś post nie o bólu, a o miejscu dla bólu.  
