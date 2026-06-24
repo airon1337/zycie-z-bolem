@@ -7,7 +7,7 @@ obraz: /zdjecia/post 11.jpg
 
 Dziś post nie o bólu, a o miejscu dla bólu.  
 
-Nie wiedziałam, z czym przyjdzie mi się mierzyć, gdy pewna Pani Doktor wypowiedziała trzy słowa, „**neuralgia nerwu trójdzielnego**”. Trzy słowa, których moc była niewyobrażalna. Choć już wtedy wiedziałam, czym jest ból. To, że moje doznania dostały nazwę, nie zmieniło przecież tego, co działo się wcześniej. A czy ta nazwa rzeczywiście opowiadała moją historię? To już zupełnie inna opowieść, do której będę wracać. Bo pod tymi samymi trzema słowami kryje się wiele różnych doświadczeń, a niektóre z nich pozostają niemal niewidoczne, schowane w cieniu bardziej znanych obrazów tej choroby.  
+Nie wiedziałam, z czym przyjdzie mi się mierzyć, gdy pewna Pani Doktor wypowiedziała trzy słowa, „**neuralgia nerwu trójdzielnego**”. Trzy słowa, których moc była niewyobrażalna. Choć już wtedy wiedziałam, czym jest ból. To, że moje doznania dostały nazwę, nie zmieniło przecież tego, co działo się wcześniej. A czy ta nazwa rzeczywiście opowiadała moją historię? To już zupełnie inna opowieść, do której będę wracać. Bo pod tymi samymi trzema słowami kryje się wiele różnych doświadczeń, a niektóre z nich pozostają niemal niewidoczne, ukryte za bardziej znanymi obrazami tej choroby.
 
 ## Cień, który idzie za mną
 
