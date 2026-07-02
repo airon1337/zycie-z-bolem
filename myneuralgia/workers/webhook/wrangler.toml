@@ -5,7 +5,7 @@ compatibility_date = "2024-12-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "myneuralgia-cms"
-database_id = "REPLACE_WITH_YOUR_DB_ID"
+database_id = "a00d2161-cc39-4bdc-a78f-7a524ff49b96"
 
 [[queues.producers]]
 queue = "translation-queue"
