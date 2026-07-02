@@ -55,6 +55,9 @@ export default {
 
     // Parse event
     const event = request.headers.get('x-github-event');
+    if (event === 'ping') {
+      return new Response('Pong! Webhook connected successfully.', { status: 200 });
+    }
     if (event !== 'push') {
       return new Response('Event ignored', { status: 200 });
     }
