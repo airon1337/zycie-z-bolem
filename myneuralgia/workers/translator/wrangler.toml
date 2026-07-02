@@ -1,0 +1,20 @@
+name = "translation-consumer"
+main = "src/index.ts"
+compatibility_date = "2024-09-25"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "multilingual-cms"
+database_id = "" # Fill after creating D1 database
+
+[[queues.consumers]]
+queue = "translation-queue"
+max_batch_size = 1
+max_retries = 5
+dead_letter_queue = "translation-dlq"
+
+[vars]
+TARGET_REPO = "airon1337/myneuralgia"
+TARGET_CONTENT_PATH = "site/src/content/articles"
+SOURCE_REPO = "airon1337/zycie-z-bolem"
+SOURCE_CONTENT_PATH = "artykuly"

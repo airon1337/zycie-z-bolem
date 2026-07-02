@@ -1,0 +1,12 @@
+name = "translation-dashboard"
+main = "src/index.ts"
+compatibility_date = "2024-09-25"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "multilingual-cms"
+database_id = "" # Fill after creating D1 database
+
+[[queues.producers]]
+binding = "TRANSLATION_QUEUE"
+queue = "translation-queue"
