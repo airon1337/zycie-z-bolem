@@ -1,0 +1,115 @@
+/* Copy of the Polish site CSS — identical design, English site */
+/* This is a symlink-equivalent: same file as zyciezbolem.pl */
+
+:root {
+  --tlo: #fbfaf7;
+  --tlo-karta: #ffffff;
+  --tekst: #2b2b2e;
+  --tekst-jasny: #5d5d66;
+  --akcent: #3a7a6f;
+  --akcent-ciemny: #2c5d55;
+  --akcent-jasny: #e7f1ee;
+  --akcent-cieply: #c9805a;
+  --obwodka: #ece8e1;
+  --cien: 0 2px 10px rgba(43, 43, 46, 0.06);
+  --cien-mocny: 0 8px 30px rgba(43, 43, 46, 0.10);
+  --radius: 16px;
+  --szer-tekst: 720px;
+  --szer-strona: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; color: var(--tekst); background: var(--tlo); line-height: 1.75; font-size: 18px; -webkit-font-smoothing: antialiased; }
+a { color: var(--akcent-ciemny); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+.kontener { max-width: var(--szer-strona); margin: 0 auto; padding: 0 20px; }
+.waska { max-width: var(--szer-tekst); margin-left: auto; margin-right: auto; }
+
+.naglowek-strony { background: var(--tlo); border-bottom: 1px solid var(--obwodka); position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(6px); }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; max-width: var(--szer-strona); margin: 0 auto; flex-wrap: wrap; gap: 10px; }
+.logo { font-weight: 700; font-size: 1.2rem; color: var(--akcent-ciemny); display: flex; align-items: center; gap: 8px; }
+.logo:hover { text-decoration: none; }
+.logo .kropka { color: var(--akcent-cieply); }
+.menu { display: flex; gap: 22px; flex-wrap: wrap; }
+.menu a { color: var(--tekst-jasny); font-size: 1rem; font-weight: 500; }
+.menu a:hover, .menu a.aktywny { color: var(--akcent-ciemny); text-decoration: none; }
+
+.hero { background: linear-gradient(160deg, var(--akcent-jasny) 0%, var(--tlo) 70%); padding: 70px 0 60px; text-align: center; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 16px; color: var(--akcent-ciemny); }
+.hero p { font-size: 1.2rem; color: var(--tekst-jasny); margin: 0 auto 28px; max-width: 620px; }
+
+.btn { display: inline-block; padding: 13px 26px; border-radius: 999px; font-weight: 700; font-size: 1rem; cursor: pointer; border: 2px solid transparent; transition: all .15s ease; }
+.btn-glowny { background: var(--akcent-ciemny); color: #fff; }
+.btn-glowny:hover { background: #234a44; text-decoration: none; }
+
+section { padding: 50px 0; }
+.sekcja-tytul { text-align: center; margin-bottom: 8px; font-size: 1.9rem; color: var(--akcent-ciemny); }
+.sekcja-podtytul { text-align: center; color: var(--tekst-jasny); margin: 0 auto 36px; max-width: 600px; }
+
+.kafelki { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; align-items: start; }
+.karta-blog { display: flex; flex-direction: column; background: var(--tlo-karta); border: 1px solid var(--obwodka); border-radius: var(--radius); overflow: hidden; box-shadow: var(--cien); transition: transform .15s ease, box-shadow .15s ease; color: var(--tekst); }
+.karta-blog:hover { transform: translateY(-3px); box-shadow: var(--cien-mocny); text-decoration: none; }
+.karta-foto-wrap { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: var(--akcent-jasny); line-height: 0; }
+.karta-foto { width: 100%; height: 100%; object-fit: cover; display: block; }
+.karta-body { padding: 18px 20px; }
+.karta-tytul { font-size: 1.08rem; line-height: 1.35; margin: 0 0 8px; color: var(--akcent-ciemny); }
+.karta-zaj { margin: 0; color: var(--tekst-jasny); font-size: .92rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+.box-info { background: var(--akcent-jasny); border-left: 4px solid var(--akcent); padding: 18px 22px; border-radius: 10px; margin: 28px 0; color: var(--akcent-ciemny); }
+.box-uwaga { background: #fdf4ee; border-left: 4px solid var(--akcent-cieply); padding: 18px 22px; border-radius: 10px; margin: 28px 0; color: #7a4128; }
+
+.artykul-foto { width: 100%; height: auto; border-radius: var(--radius); margin: 0 0 28px; box-shadow: var(--cien); display: block; }
+.artykul-naglowek { padding: 50px 0 20px; background: linear-gradient(160deg, var(--akcent-jasny), var(--tlo) 80%); }
+.okruszki { font-size: .9rem; color: var(--tekst-jasny); margin-bottom: 14px; }
+.artykul-tresc { padding: 30px 0 50px; }
+.artykul-tresc h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.2; color: var(--akcent-ciemny); margin: 0 0 10px; }
+.artykul-tresc h2 { font-size: 1.5rem; color: var(--akcent-ciemny); margin: 36px 0 12px; }
+.artykul-tresc h3 { font-size: 1.2rem; margin: 26px 0 10px; }
+.artykul-tresc p { margin: 0 0 18px; }
+.artykul-tresc ul, .artykul-tresc ol { margin: 0 0 18px; padding-left: 24px; }
+.artykul-tresc li { margin-bottom: 8px; }
+.artykul-tresc strong { color: var(--akcent-ciemny); }
+.artykul-tresc a { color: var(--akcent-ciemny); text-decoration: underline; text-decoration-color: var(--akcent); text-underline-offset: 2px; }
+.disclaimer { background: #fdf4ee; border-left: 4px solid var(--akcent-cieply); padding: 16px 20px; border-radius: 10px; margin: 30px 0; color: #7a4128; font-size: .95rem; }
+
+blockquote.cytat { border-left: 4px solid var(--akcent); padding: 6px 22px; margin: 26px 0; font-style: italic; color: var(--akcent-ciemny); font-size: 1.15rem; }
+
+.profil { display: flex; gap: 36px; align-items: flex-start; flex-wrap: wrap; }
+.profil .awatar { width: 180px; height: 180px; border-radius: 50%; overflow: hidden; flex-shrink: 0; box-shadow: var(--cien); margin-top: 8px; }
+.profil .awatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.profil .opis { flex: 1; min-width: 280px; }
+
+.kroki { counter-reset: krok; list-style: none; padding: 0; }
+.kroki li { position: relative; padding: 0 0 22px 56px; }
+.kroki li::before { counter-increment: krok; content: counter(krok); position: absolute; left: 0; top: 0; width: 38px; height: 38px; background: var(--akcent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.kroki li strong { display: block; color: var(--akcent-ciemny); margin-bottom: 4px; }
+
+.stopka { background: var(--akcent-ciemny); color: #d9e6e2; padding: 50px 0 26px; margin-top: 40px; }
+.stopka a { color: #fff; }
+.stopka .kolumny { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+.stopka h4 { color: #fff; margin: 0 0 12px; font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; }
+.stopka ul { list-style: none; padding: 0; margin: 0; }
+.stopka li { margin-bottom: 8px; }
+.stopka .dol { border-top: 1px solid rgba(255,255,255,.15); padding-top: 20px; font-size: .85rem; color: #a9c4bd; text-align: center; }
+.stopka-social { text-align: center; margin: 6px 0 22px; }
+.fb-przycisk { display: inline-flex; align-items: center; gap: 9px; background: #0b5ed7; color: #fff; padding: 11px 20px; border-radius: 999px; font-weight: 700; font-size: .98rem; line-height: 1; white-space: nowrap; }
+.fb-przycisk:hover { background: #0a53be; color: #fff; text-decoration: none; }
+.fb-przycisk svg { width: 19px; height: 19px; flex-shrink: 0; }
+
+.newsletter { background: var(--akcent-ciemny); color: #fff; padding: 44px 0; margin-top: 10px; }
+.newsletter .nl-tytul { color: #fff; font-size: 1.5rem; margin: 0 0 8px; }
+.newsletter .nl-opis { color: #d9e6e2; margin: 0 auto 18px; max-width: 540px; }
+.nl-zgoda { display: block; color: #a9c4bd; font-size: .8rem; margin-top: 12px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.nl-fb { margin: 18px 0 0; }
+.nl-fb a { color: #fff; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .98rem; }
+.nl-fb a svg { width: 18px; height: 18px; }
+.nl-fb a:hover { color: #d9e6e2; text-decoration: none; }
+
+.paginacja { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+.paginacja a, .paginacja span { min-width: 40px; padding: 9px 13px; border-radius: 10px; text-align: center; border: 1px solid var(--obwodka); color: var(--akcent-ciemny); font-weight: 600; background: var(--tlo-karta); }
+.paginacja a:hover { background: var(--akcent-jasny); text-decoration: none; }
+.paginacja .akt { background: var(--akcent); color: #fff; border-color: var(--akcent); }
+
+@media (max-width: 600px) { body { font-size: 17px; } .menu { gap: 14px; } section { padding: 40px 0; } .profil { flex-direction: column; } }
