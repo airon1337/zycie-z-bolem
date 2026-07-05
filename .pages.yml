@@ -88,7 +88,7 @@ content:
       template: '{fields.numer}-{fields.slug}.md'
       field: create
     view:
-      fields: [numer, title, date, status]
+      fields: [slug, title, date, status]
       primary: title
       sort: [date, title]
       default:
