@@ -37,7 +37,7 @@ jobs:
         if: steps.gate.outputs.deploy == 'true'
         shell: pwsh
         run: |
-          ./myneuralgia/build-en.ps1
+          ./_tools/build-en.ps1
 
       - name: Opublikuj PL na Cloudflare Pages
         if: steps.gate.outputs.deploy == 'true'

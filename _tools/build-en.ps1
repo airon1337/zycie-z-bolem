@@ -1,8 +1,9 @@
 # Build English static site "My Neuralgia" from markdown articles
 $ErrorActionPreference = "Stop"
 $base    = $PSScriptRoot
-$srcDir  = Join-Path (Split-Path $base -Parent) "artykuly-en"
-$siteDir = Join-Path $base "site-en"
+$root   = Split-Path $base -Parent
+$srcDir  = Join-Path $root "artykuly-en"
+$siteDir = Join-Path $root "myneuralgia\site-en"
 $outArt  = $siteDir
 $tpls    = Join-Path $siteDir "_szablony"
 

@@ -52,7 +52,7 @@ content:
   - name: articles-en
     label: Articles (EN)
     type: collection
-    path: myneuralgia/content/en
+    path: artykuly-en
     format: yaml-frontmatter
     description: |
       🔄 TRANSLATION PROMPT — copy this + your Polish article text, paste to AI:
