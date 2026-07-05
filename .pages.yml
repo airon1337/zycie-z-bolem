@@ -45,12 +45,12 @@ content:
         type: rich-text
 
   - name: articles-en
-    label: Articles (EN)
+    label: Artykuły (EN)
     type: collection
     path: artykuly-en
     format: yaml-frontmatter
     description: |
-      🔄 TRANSLATION PROMPT — copy this + your Polish article text, paste to AI:
+      🔄 PROMPT DO TŁUMACZENIA — skopiuj poniższy tekst + treść polskiego artykułu i wklej do AI:
 
       You are a professional medical translator. Translate this Polish article about trigeminal neuralgia into natural English.
 
@@ -64,21 +64,19 @@ content:
       - Keep the article length similar — do not shorten or summarize.
       - The output should read naturally in English, not like a machine translation.
 
-      OUTPUT FORMAT — respond with the translated article in this exact format:
+      FORMAT ODPOWIEDZI — AI ma odpowiedzieć przetłumaczonym artykułem w tym formacie:
 
       ---
       title: "English title here"
       slug: "short-english-slug-with-dashes"
       date: "YYYY-MM-DDTHH:MM"
       status: published
-      meta_title: "SEO title (max 60 chars)"
-      meta_description: "SEO description (max 155 chars)"
       ---
 
-      (full translated article in markdown below the frontmatter)
+      (pełna przetłumaczona treść artykułu w markdown poniżej frontmatter)
 
-      ARTICLE TO TRANSLATE:
-      (paste Polish article here)
+      ARTYKUŁ DO PRZETŁUMACZENIA:
+      (wklej tutaj polski artykuł)
     filename:
       template: '{fields.title}.md'
       field: create
@@ -91,15 +89,11 @@ content:
         order: desc
     fields:
       - name: title
-        label: Title
+        label: Tytuł (po angielsku)
         type: string
         required: true
-      - name: slug
-        label: URL slug (optional — auto-generated from title if empty)
-        type: string
-        required: false
       - name: date
-        label: Publication date
+        label: Data publikacji
         type: date
         options:
           time: true
@@ -113,5 +107,5 @@ content:
         default: published
         required: true
       - name: body
-        label: Article content
+        label: Treść artykułu (po angielsku)
         type: rich-text
