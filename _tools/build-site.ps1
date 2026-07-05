@@ -2,6 +2,18 @@
 $ErrorActionPreference = "Stop"
 $base    = Split-Path -Parent $PSScriptRoot
 $srcDir  = Join-Path $base "artykuly"
+
+# --- Auto-numerowanie: pliki bez numeru NNN- na poczatku dostaną kolejny numer ---
+$existingNumbers = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -match '^\d{3}-' } | ForEach-Object { [int]($_.Name.Substring(0,3)) })
+$nextNum = if ($existingNumbers.Count -gt 0) { ($existingNumbers | Measure-Object -Maximum).Maximum + 1 } else { 1 }
+$unnumbered = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -notmatch '^\d{3}-' -and $_.Name -ne 'index.md' -and $_.Name -ne 'nie walczylam z bolem.md' -and $_.Name -ne 'start strony.md' } | Sort-Object Name)
+foreach ($uf in $unnumbered) {
+    $newName = "{0:D3}-{1}" -f $nextNum, $uf.Name
+    Rename-Item $uf.FullName $newName
+    Write-Host "  AUTO-NUM: $($uf.Name) -> $newName"
+    $nextNum++
+}
+
 $siteDir = Join-Path $base "site"
 $outArt  = $siteDir
 $tpls    = Join-Path $siteDir "_szablony"

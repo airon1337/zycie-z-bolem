@@ -9,21 +9,16 @@ content:
     path: artykuly
     format: yaml-frontmatter
     filename:
-      template: '{fields.numer}-{fields.tytul}.md'
+      template: '{fields.tytul}.md'
       field: create
     view:
-      fields: [numer, tytul, data]
+      fields: [tytul, data]
       primary: tytul
       sort: [data, tytul]
       default:
         sort: data
         order: desc
     fields:
-      - name: numer
-        label: Numer artykułu
-        type: string
-        description: "Wpisz kolejny numer (np. 129, 130...). Sprawdź ostatni numer w liście artykułów."
-        required: true
       - name: tytul
         label: Tytuł
         type: string
@@ -85,30 +80,24 @@ content:
       ARTICLE TO TRANSLATE:
       (paste Polish article here)
     filename:
-      template: '{fields.numer}-{fields.slug}.md'
+      template: '{fields.title}.md'
       field: create
     view:
-      fields: [slug, title, date, status]
+      fields: [title, date, status]
       primary: title
       sort: [date, title]
       default:
         sort: date
         order: desc
     fields:
-      - name: numer
-        label: Article number
-        type: string
-        description: "Enter the next number (e.g. 129, 130...). Should match the Polish article number."
-        required: true
       - name: title
         label: Title
         type: string
         required: true
       - name: slug
-        label: URL slug
+        label: URL slug (optional — auto-generated from title if empty)
         type: string
-        description: "Short English slug for URL, e.g. gabapentin-and-pregabalin. Lowercase, no spaces, use dashes."
-        required: true
+        required: false
       - name: date
         label: Publication date
         type: date
@@ -121,18 +110,8 @@ content:
         type: select
         options:
           values: [draft, published]
-        default: draft
+        default: published
         required: true
-      - name: meta_title
-        label: SEO Title (optional)
-        type: string
-        description: "Custom title for search engines. Leave empty to use the article title."
-        required: false
-      - name: meta_description
-        label: SEO Description (optional)
-        type: string
-        description: "Short description for Google (max 160 characters)."
-        required: false
       - name: body
         label: Article content
         type: rich-text
