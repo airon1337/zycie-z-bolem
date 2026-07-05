@@ -450,6 +450,10 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $dt = [datetime]::MinValue
     [void][datetime]::TryParse($date, [ref]$dt)
     if ($dt -ne [datetime]::MinValue -and $dt -gt $nowPL) { continue }   # zaplanowany na przyszlosc — pomijamy do czasu publikacji
+    # status: szkic — pomijamy (nie publikujemy)
+    $status = ""
+    if ($raw -match '(?m)^status:\s*"?([^"\r\n]+?)"?\s*$') { $status = $matches[1].Trim().ToLower() }
+    if ($status -eq "szkic") { continue }
     $dateDisplay = if ($dt -ne [datetime]::MinValue) { $dt.ToString('yyyy-MM-dd') } else { $date }
 
     $slug = $f.BaseName

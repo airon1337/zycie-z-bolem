@@ -31,6 +31,14 @@ content:
           time: true
           format: yyyy-MM-dd'T'HH:mm
         required: true
+      - name: status
+        label: Status
+        type: select
+        description: "Szkic nie będzie opublikowany na stronie, nawet jeśli data już minęła."
+        options:
+          values: [opublikowany, szkic]
+        default: opublikowany
+        required: true
       - name: obraz
         label: Okładka (zdjęcie)
         type: image

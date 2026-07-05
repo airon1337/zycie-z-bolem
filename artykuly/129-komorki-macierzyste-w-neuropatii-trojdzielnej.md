@@ -1,7 +1,6 @@
 ---
 tytul: "Komórki macierzyste w leczeniu neuropatii nerwu trójdzielnego – co naprawdę wiemy na podstawie badań naukowych?"
 data: "2026-07-05T00:00"
-zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---
 
