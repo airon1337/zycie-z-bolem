@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Narzędzie do tłumaczenia — My Neuralgia</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; background: #f8f7f4; color: #2b2b2e; padding: 40px 20px; }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { color: #2c5d55; font-size: 1.6rem; margin-bottom: 8px; }
+  .sub { color: #5d5d66; margin-bottom: 24px; }
+  .btn { display: inline-block; padding: 14px 28px; border-radius: 999px; font-weight: 700; font-size: 1rem; cursor: pointer; border: none; transition: all .15s ease; }
+  .btn-copy { background: #2c5d55; color: #fff; font-size: 1.1rem; }
+  .btn-copy:hover { background: #234a44; }
+  .btn-copy.done { background: #c9805a; }
+  .prompt-box { margin-top: 20px; background: #fff; border: 1px solid #ece8e1; border-radius: 12px; padding: 20px; font-size: .82rem; line-height: 1.5; color: #5d5d66; max-height: 400px; overflow-y: auto; white-space: pre-wrap; font-family: "Cascadia Code", "Fira Code", monospace; }
+  .info { margin-top: 16px; font-size: .85rem; color: #5d5d66; }
+  .steps { margin-top: 30px; background: #e7f1ee; border-radius: 12px; padding: 20px; }
+  .steps h2 { color: #2c5d55; font-size: 1.1rem; margin-bottom: 10px; }
+  .steps ol { padding-left: 20px; }
+  .steps li { margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🔄 Narzędzia do artykułów</h1>
+  <p class="sub">Kliknij przycisk — prompt zostanie skopiowany. Potem wklej go do AI razem z tekstem.</p>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+    <button class="btn btn-copy" id="copyBtn" onclick="copyPrompt('translate')">📋 Prompt: Tłumaczenie PL→EN</button>
+    <button class="btn btn-copy" style="background:#c9805a;" id="copyBtn2" onclick="copyPrompt('format')">📋 Prompt: Formatowanie posta FB (PL)</button>
+  </div>
+  <p class="info" id="status"></p>
+
+  <div class="steps">
+    <h2>Tłumaczenie PL→EN:</h2>
+    <ol>
+      <li>Kliknij "Prompt: Tłumaczenie PL→EN" → skopiowane</li>
+      <li>Otwórz AI → wklej prompt → pod spodem wklej cały plik .md polskiego artykułu</li>
+      <li>Wynik wklej w CMS (Artykuły EN → Add an entry)</li>
+    </ol>
+    <h2 style="margin-top:16px;">Formatowanie posta FB:</h2>
+    <ol>
+      <li>Kliknij "Prompt: Formatowanie posta FB" → skopiowane</li>
+      <li>Otwórz AI → wklej prompt → pod spodem wklej surowy tekst z Facebooka</li>
+      <li>Wynik wklej w CMS (Artykuły PL → Add an entry)</li>
+    </ol>
+  </div>
+
+  <details style="margin-top:24px;">
+    <summary style="cursor:pointer; color:#2c5d55; font-weight:600;">👁 Pokaż/ukryj prompt: Tłumaczenie PL→EN</summary>
+    <div class="prompt-box" id="promptText"></div>
+  </details>
+
+  <details style="margin-top:12px;">
+    <summary style="cursor:pointer; color:#c9805a; font-weight:600;">👁 Pokaż/ukryj prompt: Formatowanie posta FB</summary>
+    <div class="prompt-box" id="promptTextFormat"></div>
+  </details>
+</div>
+
+<script>
+var PROMPT = `We are translating MY OWN original articles from the Polish website zyciezbolem.pl into English for my website myneuralgia.com.
+These are MY COPYRIGHTED ARTICLES. You have full permission to translate them in their entirety.
+Each article will be provided as a Markdown (.md) file.
+
+================================================== ROLE ==================================================
+
+You are:
+
+• a professional medical translator
+• a native speaker of American English
+• an experienced medical editor
+• an SEO content editor specializing in healthcare
+
+Your areas of expertise include:
+
+• Neurology
+• Trigeminal neuralgia
+• Painful trigeminal neuropathy
+• Neuropathic pain
+• Orofacial pain
+• Evidence-Based Medicine
+
+Your goal is NOT to translate literally.
+Your goal is to produce an article that reads as if it had originally been written in English by a medical expert.
+
+================================================== PRIMARY RULE ==================================================
+
+Preserve 100% of the original meaning.
+
+Do NOT:
+
+• add information
+• remove information
+• change medical meaning
+• summarize
+• simplify
+• expand
+• insert your own comments
+• add medical disclaimers
+• add explanations
+
+If a sentence sounds unnatural in English, rewrite it completely while preserving exactly the same meaning.
+The translation must never sound translated.
+
+================================================== MEDICAL ACCURACY ==================================================
+
+Use official terminology consistent with:
+
+• IASP
+• ICOP
+• ICHD-3
+• International Headache Society
+• American Academy of Neurology
+• Cleveland Clinic
+• Mayo Clinic
+• NHS
+
+Always prefer official medical terminology over informal wording.
+Never replace official disease names with simplified alternatives.
+
+================================================== MANDATORY TERMINOLOGY ==================================================
+
+Always use these English terms consistently throughout every article.
+
+neuralgia nerwu trójdzielnego → trigeminal neuralgia
+neuropatia nerwu trójdzielnego → painful trigeminal neuropathy
+pourazowa neuropatia nerwu trójdzielnego → painful post-traumatic trigeminal neuropathy
+ból neuropatyczny → neuropathic pain
+ból nocyplastyczny → nociplastic pain
+układ nerwowy → nervous system
+oś podwzgórze–przysadka–nadnercza → hypothalamic-pituitary-adrenal (HPA) axis
+mikroglej → microglia
+ciało migdałowate → amygdala
+kora przedczołowa → prefrontal cortex
+zakręt obręczy → cingulate cortex
+sensytyzacja centralna → central sensitization
+mindfulness → mindfulness
+CBT → cognitive behavioral therapy (CBT)
+
+================================================== STYLE ==================================================
+
+Use natural American English.
+Professional.
+Warm.
+Empathetic.
+Patient-friendly.
+Scientifically accurate.
+
+The article should read as if it were published by:
+
+• Cleveland Clinic
+• Mayo Clinic
+• Johns Hopkins Medicine
+• NHS
+• American Academy of Neurology
+
+Avoid AI-style wording.
+Avoid awkward literal translations.
+Avoid overusing em dashes.
+Prefer commas and periods whenever possible.
+
+================================================== CONSISTENCY ==================================================
+
+Every translated article belongs to one website.
+
+Maintain identical:
+
+• terminology
+• tone
+• voice
+• punctuation style
+• capitalization
+• formatting
+
+across every article.
+
+The reader should never notice that different articles were translated on different days.
+
+================================================== SEO ==================================================
+
+Optimize naturally for:
+
+Google Search
+Google AI Overviews
+ChatGPT
+Claude
+Gemini
+Perplexity
+Copilot
+
+Natural Semantic SEO
+Entity SEO
+Helpful Content
+E-E-A-T
+Topical Authority
+
+Never keyword stuff.
+Write naturally.
+
+================================================== FRONTMATTER ==================================================
+
+Translate the frontmatter.
+
+title: Natural American English.
+date: YYYY-MM-DD
+status: published
+source: Facebook page "Life with Pain – You Are Not Alone"
+
+Do not include publication time.
+
+================================================== MARKDOWN ==================================================
+
+Preserve Markdown exactly.
+Do not use HTML.
+Do not change section order.
+
+Preserve:
+
+• headings
+• bullet lists
+• numbered lists
+• blockquotes
+• bold
+• italics
+
+Do NOT include H1.
+The website generates H1 automatically from the title field.
+Content must begin with the first paragraph or H2.
+
+================================================== FILE NAME ==================================================
+
+Keep the article number.
+Create a short, natural, SEO-friendly English slug.
+Do NOT translate the Polish title literally.
+Choose the filename exactly as an English medical editor would.
+
+Examples:
+
+001-hi-my-name-is-natalia.md
+006-treatment-options-for-trigeminal-neuralgia.md
+021-what-is-post-traumatic-trigeminal-neuropathy.md
+044-understanding-neuropathic-pain.md
+
+================================================== DO NOT TRANSLATE ==================================================
+
+Never translate:
+
+• book titles
+• study names
+• classification names
+• journal titles
+• author names
+• medication names
+
+Keep their official original names.
+
+================================================== DISCLAIMER ==================================================
+
+Whenever the article ends with:
+
+Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
+
+translate ONLY as:
+
+This content is for educational purposes only and does not replace professional medical advice.
+
+================================================== QUALITY CHECK ==================================================
+
+Before returning the translation verify:
+
+✓ no information added
+✓ no information removed
+✓ no medical meaning changed
+✓ natural American English
+✓ consistent terminology
+✓ Markdown preserved
+✓ frontmatter translated
+✓ no H1
+✓ SEO-friendly filename
+
+Return ONLY the finished Markdown file.
+Do not explain anything.
+Do not describe changes.
+Do not use code fences.
+Do not wrap the Markdown in backticks.
+
+If the article exceeds the response limit, inform me instead of shortening or omitting any part of the text.`;
+
+var PROMPT_FORMAT = `Dostajesz surowy tekst posta z Facebooka (fanpage "Życie z bólem — nie jesteś sama/sam"). Twoim zadaniem jest sformatować go jako artykuł na stronę zyciezbolem.pl w formacie Markdown.
+
+ZASADY:
+
+1. NIE zmieniaj treści — nie dodawaj, nie usuwaj, nie parafrazuj. Formatujesz, nie edytujesz.
+2. Dodaj frontmatter na górze:
+   ---
+   tytul: "Krótki, naturalny tytuł artykułu"
+   data: "YYYY-MM-DDTHH:MM"
+   ---
+3. NIE dodawaj nagłówka H1 (# ...) — strona generuje go automatycznie z pola tytul.
+4. Treść zacznij od pierwszego akapitu lub od ## (H2).
+5. Używaj:
+   - ## na podtytuły/sekcje
+   - **pogrubienie** na kluczowe pojęcia, nazwy leków, ważne terminy
+   - Akapity oddzielone pustą linią
+   - Listy punktowane (- lub •) tam gdzie tekst wymienia elementy
+   - Listy numerowane (1. 2. 3.) tam gdzie jest sekwencja/kolejność
+6. Zachowaj oryginalny styl autorki — ciepły, osobisty, empatyczny.
+7. Linki do źródeł (jeśli są) umieść na końcu pod nagłówkiem ## Źródła
+8. Na samym końcu dodaj:
+   > Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
+9. Jeśli post zawiera emotikony — usuń je WSZYSTKIE. Jeśli emotikon pełnił rolę znaku interpunkcyjnego (np. ❓ zamiast ?, ➡️ zamiast myślnika), zamień go na odpowiedni zwykły znak (?, -, :, ...). Nie zostawiaj żadnych emoji w tekście.
+10. Jeśli post zawiera hashtagi (#neuralgia itp.) — usuń je.
+
+ZWRÓĆ tylko gotowy plik Markdown. Bez wyjaśnień, bez opisów zmian.`;
+
+document.getElementById('promptText').textContent = PROMPT;
+document.getElementById('promptTextFormat').textContent = PROMPT_FORMAT;
+
+function copyPrompt(type) {
+  var text = type === 'format' ? PROMPT_FORMAT : PROMPT;
+  var label = type === 'format' ? 'Prompt formatowania' : 'Prompt tłumaczenia';
+  navigator.clipboard.writeText(text).then(function() {
+    document.getElementById('status').textContent = '✅ ' + label + ' skopiowany! Teraz wklej go do AI i dopisz pod spodem tekst.';
+    setTimeout(function() { document.getElementById('status').textContent = ''; }, 5000);
+  });
+}
+</script>
+</body>
+</html>
