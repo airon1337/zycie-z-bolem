@@ -1,0 +1,22 @@
+# My Neuralgia
+
+> An English-language patient blog about living with trigeminal neuralgia, trigeminal neuropathy, and chronic facial pain. Author: Natalia, living with trigeminal nerve pain since 2014. Content is educational and based on personal experience and medical literature — it does not replace medical consultation.
+
+## Key Pages
+
+- [Home](https://myneuralgia.com/index.html): all articles
+- [About](https://myneuralgia.com/about.html): author's story and blog mission
+- [Start Here](https://myneuralgia.com/start-here.html): where to begin if you live with pain
+- [Pain Diary (PDF)](https://myneuralgia.com/pain-diary.html): free printable template for tracking attacks, triggers, and medications
+- [Privacy Policy](https://myneuralgia.com/privacy-policy.html)
+
+## Topics
+
+- Trigeminal neuralgia (symptoms, diagnosis, treatment)
+- Trigeminal neuropathy and post-traumatic neuropathic facial pain
+- Pharmacological treatment (carbamazepine, gabapentin, pregabalin), procedures (pulsed radiofrequency, microvascular decompression MVD), nerve blocks
+- Living with chronic pain: daily life, emotions, support
+
+## Note
+
+Educational content only, not medical advice. In an emergency call 911. Mental health crisis: 988.

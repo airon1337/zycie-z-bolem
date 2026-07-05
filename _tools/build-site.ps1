@@ -545,6 +545,18 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     }
     $page = $page.Replace("{{FBPOST}}", $fbHtml)
     $canonical = $DOMENA + "/" + $slug + ".html"
+    # hreflang: link do odpowiednika EN (slug EN z folderu content/en)
+    $enSlug = ""
+    $enDir = Join-Path $base "myneuralgia\content\en"
+    $numer = ""
+    if ($slug -match '^(\d{3})-') { $numer = $matches[1] }
+    if ($numer -ne "" -and (Test-Path $enDir)) {
+        $enFile = Get-ChildItem -Path $enDir -Filter "$numer-*.md" -ErrorAction SilentlyContinue | Select-Object -First 1
+        if ($enFile) { $enSlug = $enFile.BaseName }
+    }
+    $hreflangEn = if ($enSlug -ne "") { "https://myneuralgia.com/" + $enSlug + ".html" } else { "" }
+    $page = $page.Replace("{{HREFLANG_PL}}", $canonical)
+    $page = $page.Replace("{{HREFLANG_EN}}", $hreflangEn)
     $aobj = [ordered]@{ "@context"="https://schema.org"; "@type"="BlogPosting"; "headline"=$title; "description"=$excerpt; "author"=[ordered]@{ "@type"="Person"; "name"="Natalia" }; "publisher"=[ordered]@{ "@type"="Organization"; "name"=$siteName }; "mainEntityOfPage"=$canonical }
     if ($date -ne "") { $aobj["datePublished"] = $date }
     if ($imgWeb -ne "") { $aobj["image"] = $DOMENA + $imgWeb } else { $aobj["image"] = $DOMENA + "/placeholder.svg" }

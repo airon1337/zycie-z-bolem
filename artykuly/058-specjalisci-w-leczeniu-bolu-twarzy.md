@@ -1,11 +1,11 @@
 ---
-tytul: "1"
+tytul: "Do jakiego specjalisty zgłosić się z bólem twarzy"
 data: "2025-11-03T00:00"
 zrodlo: fanpage 'Zycie z bolem - nie jestes sama/sam'
 status: szkic
 ---
 
-# 1
+# Do jakiego specjalisty zgłosić się z bólem twarzy
 
 *Data publikacji: 2025-11-03*
 

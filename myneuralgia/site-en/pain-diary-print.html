@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pain Diary — My Neuralgia</title>
+<style>
+  @page { size: A4; margin: 12mm 10mm 14mm 10mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #2b2b2e; font-size: 9.5pt; line-height: 1.4; }
+  
+  /* Brand colors matching myneuralgia.com */
+  :root {
+    --accent: #3a7a6f;
+    --accent-dark: #2c5d55;
+    --accent-light: #e7f1ee;
+    --warm: #c9805a;
+    --text: #2b2b2e;
+    --text-light: #5d5d66;
+    --border: #d4cfc7;
+    --bg-soft: #fbfaf7;
+  }
+
+  h1 { color: var(--accent-dark); font-size: 22pt; margin: 0 0 1.5mm; letter-spacing: -0.02em; }
+  h2 { color: var(--accent-dark); font-size: 12pt; margin: 5mm 0 2mm; padding-bottom: 1mm; border-bottom: 1.5px solid var(--accent); }
+  h3 { color: var(--accent-dark); font-size: 10pt; margin: 4mm 0 1.5mm; }
+
+  .brand { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3mm; }
+  .brand-name { color: var(--accent-dark); font-weight: 700; font-size: 11pt; letter-spacing: .03em; }
+  .brand-name .dot { color: var(--warm); }
+  .brand-url { color: var(--text-light); font-size: 8.5pt; }
+
+  .subtitle { color: var(--text-light); font-size: 10.5pt; margin: 0 0 3mm; }
+  .lead { color: var(--text); margin: 0 0 3mm; font-size: 9.5pt; }
+
+  .box { border: 1px solid var(--border); background: var(--bg-soft); border-radius: 4px; padding: 2.5mm 3.5mm; margin: 2mm 0 3mm; }
+  .box strong { color: var(--accent-dark); }
+  .box ul { margin: 1mm 0 0 4mm; padding: 0; }
+  .box li { margin-bottom: 0.8mm; }
+
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0; }
+  th, td { border: 1px solid var(--border); padding: 2mm 2mm; font-size: 9pt; text-align: left; vertical-align: top; }
+  th { background: var(--accent-light); color: var(--accent-dark); font-weight: 600; font-size: 8.5pt; }
+  .row td { height: 8mm; }
+  .field { border-bottom: 1px dotted #9a9590; min-height: 5.5mm; display: block; }
+
+  .scale-table th { text-align: center; width: 12%; }
+  .scale-table td:first-child { text-align: center; font-weight: 700; color: var(--accent-dark); width: 12%; }
+
+  .opts { font-size: 8.5pt; color: var(--text); }
+  .impact-table td { height: 6mm; text-align: center; }
+  .impact-table td:first-child { text-align: left; font-weight: 600; }
+
+  .tip { background: var(--accent-light); border-left: 3px solid var(--accent); padding: 2mm 3mm; margin: 2mm 0; font-size: 8.5pt; color: var(--accent-dark); border-radius: 0 4px 4px 0; }
+
+  .disc { font-size: 7.5pt; color: #7a4128; background: #fdf4ee; border-left: 3px solid var(--warm); padding: 2mm 3mm; margin: 4mm 0 0; border-radius: 0 4px 4px 0; }
+
+  .page-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4mm; padding-top: 2mm; border-top: 0.5px solid var(--border); font-size: 7.5pt; color: var(--text-light); }
+
+  .pagebreak { page-break-before: always; }
+
+  .about-section { display: flex; gap: 4mm; align-items: flex-start; margin-top: 4mm; padding: 3mm; background: var(--accent-light); border-radius: 4px; }
+  .about-section .about-text { flex: 1; }
+  .about-section .about-text strong { color: var(--accent-dark); display: block; margin-bottom: 1mm; }
+  .about-section .about-text p { font-size: 8.5pt; margin: 0; color: var(--text); }
+
+  .qr-section { text-align: center; margin-top: 4mm; padding: 3mm; }
+  .qr-section p { font-size: 8.5pt; color: var(--text-light); margin: 1.5mm 0 0; }
+  .qr-placeholder { width: 22mm; height: 22mm; border: 1.5px solid var(--accent); border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; font-size: 7pt; color: var(--accent); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .two-col > div { break-inside: avoid; }
+
+  .why-box { background: linear-gradient(135deg, var(--accent-light) 0%, #fff 100%); border: 1px solid var(--accent); border-radius: 6px; padding: 3mm 4mm; margin: 2mm 0 3mm; }
+  .why-box strong { color: var(--accent-dark); font-size: 10pt; display: block; margin-bottom: 1mm; }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="brand">
+  <span class="brand-name">My Neuralgia<span class="dot">.</span></span>
+  <span class="brand-url">myneuralgia.com</span>
+</div>
+
+<h1>Pain Diary</h1>
+<p class="subtitle">A tool for monitoring, understanding, and managing chronic pain</p>
+
+<div class="why-box">
+  <strong>Why keep a pain diary?</strong>
+  <p class="lead">It helps you better understand your condition, notice recurring patterns, and identify what increases or decreases your symptoms. Regular entries make it easier to evaluate treatment effectiveness and prepare for your doctor's appointment. This gives your doctor a clearer picture of the course of your illness. <strong style="color:var(--warm);">The most important thing is consistency.</strong></p>
+</div>
+
+<h2>Tips and Pain Scale</h2>
+<p class="lead"><strong>Record at fixed times:</strong> Ideally morning, midday, and evening. If an unusually severe attack occurs, record it as well.</p>
+<p class="lead" style="margin-bottom:2mm;"><strong>Pay attention to:</strong> sleep, stress, fatigue, cold, wind, weather, exertion, eating, or talking.</p>
+
+<table class="scale-table">
+  <tr><th>Level</th><th colspan="2">Pain intensity description (Scale 0–4)</th></tr>
+  <tr><td>0</td><td colspan="2"><strong>No pain</strong> – full comfort.</td></tr>
+  <tr><td>1</td><td colspan="2"><strong>Mild</strong> – noticeable but does not interfere with daily activities.</td></tr>
+  <tr><td>2</td><td colspan="2"><strong>Moderate</strong> – clearly felt, impairs concentration or some activities.</td></tr>
+  <tr><td>3</td><td colspan="2"><strong>Severe</strong> – very distressing, dominates attention, significantly limits functioning.</td></tr>
+  <tr><td>4</td><td colspan="2"><strong>Unbearable</strong> – prevents all activity, requires urgent intervention.</td></tr>
+</table>
+
+<div class="tip"><strong>Why 0–4?</strong> Unlike the traditional 0–10 scale, this five-level Verbal Rating Scale (VRS) reduces subjectivity and makes it quick, intuitive, and reproducible — crucial when filling in the diary multiple times daily during severe fatigue.</div>
+
+<h2>Section 1 · Baseline Information <span style="font-weight:400; font-size:9pt; color:var(--text-light);">(fill in once)</span></h2>
+<table>
+  <tr><td style="width:50%">Diagnosis (if known):<span class="field"></span></td><td>Pain present since (date/year):<span class="field"></span></td></tr>
+  <tr><td>Side of face: right / left / both<span class="field"></span></td><td>Main area: V1 (forehead, eye) / V2 (cheek, jaw) / V3 (lower jaw)<span class="field"></span></td></tr>
+  <tr><td>Probable cause (e.g. extraction, implant, shingles, trauma):<span class="field"></span></td><td>Allergies:<span class="field"></span></td></tr>
+  <tr><td>Regular medications (name, dose, times):<span class="field"></span><span class="field"></span></td><td>Rescue medications (for attacks):<span class="field"></span><span class="field"></span></td></tr>
+</table>
+
+<div class="page-footer"><span>Page 1</span><span>© My Neuralgia · myneuralgia.com · Free for personal use</span></div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="pagebreak"></div>
+<div class="brand">
+  <span class="brand-name">My Neuralgia<span class="dot">.</span></span>
+  <span class="brand-url">myneuralgia.com</span>
+</div>
+
+<h2>Section 2 · Daily Symptom Log</h2>
+
+<table>
+  <tr>
+    <th style="width:14%">Date / Day</th><th style="width:8%">Time</th><th style="width:11%">Intensity<br>0–4</th><th style="width:14%">Constant /<br>attacks</th><th style="width:9%">No. of<br>attacks</th><th style="width:24%">Rescue med (name/dose/time)</th><th style="width:10%">Helped?</th><th style="width:10%">Triggers</th>
+  </tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>AM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>Noon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="row"><td></td><td>PM</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<table style="margin-top:2mm;">
+  <tr><td style="width:33%">Sleep (hours / quality):<span class="field"></span></td><td style="width:34%">Stress 0–4: ___ · Fatigue 0–4: ___</td><td>Weather / wind / cold:<span class="field"></span></td></tr>
+  <tr><td colspan="3">What brought relief?<span class="field"></span></td></tr>
+  <tr><td colspan="3">Emotions accompanying the pain:<span class="field"></span></td></tr>
+</table>
+
+<div class="tip">You can print this page multiple times. Neuropathic pain can spread to adjacent areas — if it was unusually severe or atypical, describe it in detail on the next page.</div>
+
+<div class="page-footer"><span>Page 2</span><span>© My Neuralgia · myneuralgia.com · Free for personal use</span></div>
+
+<!-- ==================== PAGE 3 ==================== -->
+<div class="pagebreak"></div>
+<div class="brand">
+  <span class="brand-name">My Neuralgia<span class="dot">.</span></span>
+  <span class="brand-url">myneuralgia.com</span>
+</div>
+
+<h2>Section 3 · Detailed Attack Description</h2>
+<p style="margin-bottom:2mm; font-size:8.5pt; color:var(--text-light);">Complete when a more severe or atypical pain attack occurs.</p>
+
+<table>
+  <tr><td style="width:50%"><strong>Date and time:</strong><span class="field"></span></td><td><strong>Pain intensity (0–4):</strong> ___</td></tr>
+  <tr><td><strong>Side:</strong> right / left / both</td><td><strong>Area:</strong> V1 / V2 / V3 / multiple · radiating? ___</td></tr>
+  <tr><td colspan="2"><strong>Character:</strong> <span class="opts">stabbing · electric ("like a shock") · burning · searing · throbbing · dull · other: ........................</span></td></tr>
+  <tr><td colspan="2"><strong>Duration:</strong> <span class="opts">seconds · minutes · hours · most of the day</span></td></tr>
+  <tr><td colspan="2"><strong>Possible triggers:</strong> <span class="opts">eating · talking · brushing teeth · touching face · cold air · wind · weather change · stress · fatigue · no clear cause · other: ........................</span></td></tr>
+  <tr><td colspan="2"><strong>Accompanying symptoms:</strong> <span class="opts">tingling · numbness · hypersensitivity · eye tearing · muscle tension · difficulty eating · difficulty speaking · other: ........................</span></td></tr>
+  <tr><td colspan="2"><strong>What you tried and did it help?</strong> (medication/dose/time, warmth, cold, rest, breathing, sleep, avoiding trigger)<span class="field"></span><span class="field"></span></td></tr>
+</table>
+
+<h3>Impact on daily functioning</h3>
+<table class="impact-table">
+  <tr><th style="text-align:left;">Area</th><th>Mild</th><th>Moderate</th><th>Severe</th></tr>
+  <tr><td>Sleep</td><td></td><td></td><td></td></tr>
+  <tr><td>Eating</td><td></td><td></td><td></td></tr>
+  <tr><td>Talking</td><td></td><td></td><td></td></tr>
+  <tr><td>Work / responsibilities</td><td></td><td></td><td></td></tr>
+  <tr><td>Mood</td><td></td><td></td><td></td></tr>
+</table>
+
+<h3>My observations (what brought relief, additional symptoms):</h3>
+<table><tr><td style="height:18mm;"><span class="field"></span><span class="field"></span><span class="field"></span></td></tr></table>
+
+<div class="tip" style="margin-top:3mm;"><strong>Relief may come from:</strong> rescue medication · rest · sleep · relaxation · physical activity · warmth · cold · avoiding the trigger · other — write them down.</div>
+
+<div class="page-footer"><span>Page 3</span><span>© My Neuralgia · myneuralgia.com · Free for personal use</span></div>
+
+<!-- ==================== PAGE 4 ==================== -->
+<div class="pagebreak"></div>
+<div class="brand">
+  <span class="brand-name">My Neuralgia<span class="dot">.</span></span>
+  <span class="brand-url">myneuralgia.com</span>
+</div>
+
+<h2>Section 4 · Summary for Your Doctor</h2>
+<p style="margin-bottom:2mm; font-size:8.5pt; color:var(--text-light);">Fill in before your appointment to help your doctor assess the course of your condition.</p>
+
+<table>
+  <tr><td style="width:50%"><strong>Observation period:</strong> From: ___________ To: ___________</td><td><strong>Days with pain:</strong> ___ / ___</td></tr>
+  <tr><td><strong>Average number of attacks:</strong> ___ per day</td><td><strong>Intensity:</strong> typical ___ / max ___</td></tr>
+  <tr><td colspan="2"><strong>Course of pain:</strong> constant · paroxysmal · mixed</td></tr>
+  <tr><td colspan="2"><strong>Most common character:</strong> <span class="opts">electric · stabbing · burning · throbbing · dull · mixed · other: ............</span></td></tr>
+  <tr><td colspan="2"><strong>Most common triggers:</strong> <span class="opts">stress · fatigue · eating · talking · brushing teeth · cold/wind · touching face · no pattern · other: ............</span></td></tr>
+  <tr><td colspan="2"><strong>What helps / what doesn't:</strong><span class="field"></span></td></tr>
+  <tr><td colspan="2"><strong>Medications + doses:</strong><span class="field"></span></td></tr>
+  <tr><td colspan="2"><strong>Days rescue med was used:</strong> ___ · <strong>Side effects:</strong><span class="field"></span></td></tr>
+  <tr><td colspan="2"><strong>Greatest impact on life</strong> (sleep / eating / work / mood):<span class="field"></span></td></tr>
+</table>
+
+<h3>Questions for your doctor:</h3>
+<table>
+  <tr><td>1.<span class="field"></span></td></tr>
+  <tr><td>2.<span class="field"></span></td></tr>
+  <tr><td>3.<span class="field"></span></td></tr>
+</table>
+
+<div style="margin-top:5mm;"></div>
+
+<div class="about-section">
+  <div class="about-text">
+    <strong>About the author</strong>
+    <p>Hi, my name is Natalia. Since 2014, I've been living with chronic pain caused by damage to the trigeminal nerve. My story began suddenly — I was barely 25 when, after surgery to remove a tumor, my nerve was damaged. Overnight, severe pain appeared in my jaw area and has stayed with me ever since. To understand it, I began studying everything about pain, and now I want to share that knowledge with you.</p>
+  </div>
+</div>
+
+<div class="qr-section">
+  <p style="font-weight:600; color:var(--accent-dark); margin-bottom:2mm;">Want to manage your condition more effectively?</p>
+  <p>Visit the blog, get free resources, and join the community.</p>
+  <div style="margin-top:3mm;">
+    <div class="qr-placeholder">QR CODE<br>myneuralgia.com</div>
+  </div>
+  <p style="margin-top:2mm;">Scan to visit <strong>myneuralgia.com</strong></p>
+</div>
+
+<div class="disc">
+  <strong>Legal disclaimer:</strong> This material is for informational and educational purposes only and cannot replace professional medical advice, diagnosis, or a treatment plan. All medical decisions should always be consulted with your treating physician. In an emergency call 911. Mental health crisis: 988.
+</div>
+
+<div class="page-footer"><span>Page 4</span><span>© My Neuralgia · myneuralgia.com · Free for personal use</span></div>
+
+</body>
+</html>

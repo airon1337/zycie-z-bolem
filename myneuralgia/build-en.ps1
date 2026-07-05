@@ -509,6 +509,18 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $page = $page.Replace("{{FBPOST}}", $fbHtml)
 
     $canonical = $DOMENA + "/" + $slug + ".html"
+    # hreflang: link do odpowiednika PL (artykuł o tym samym numerze)
+    $plSlug = ""
+    $plDir = Join-Path (Split-Path $base -Parent) "artykuly"
+    $numer = ""
+    if ($slug -match '^(\d{3})-') { $numer = $matches[1] }
+    if ($numer -ne "" -and (Test-Path $plDir)) {
+        $plFile = Get-ChildItem -Path $plDir -Filter "$numer-*.md" -ErrorAction SilentlyContinue | Select-Object -First 1
+        if ($plFile) { $plSlug = $plFile.BaseName }
+    }
+    $hreflangPl = if ($plSlug -ne "") { "https://zyciezbolem.pl/" + $plSlug + ".html" } else { "" }
+    $page = $page.Replace("{{HREFLANG_EN}}", $canonical)
+    $page = $page.Replace("{{HREFLANG_PL}}", $hreflangPl)
     # Schema.org BlogPosting
     $aobj = [ordered]@{ "@context"="https://schema.org"; "@type"="BlogPosting"; "headline"=$title; "description"=$excerpt; "inLanguage"="en"; "author"=[ordered]@{ "@type"="Person"; "name"="Natalia" }; "publisher"=[ordered]@{ "@type"="Organization"; "name"=$siteName }; "mainEntityOfPage"=$canonical }
     if ($date -ne "") { $aobj["datePublished"] = $date }

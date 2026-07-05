@@ -127,9 +127,9 @@ Każdy deployment poda Ci URL. Zanotuj URL **webhook workera** (np. `https://myn
 1. Zaloguj się na Cloudflare Dashboard → Pages
 2. Create project → Connect to Git → Wybierz repo `myneuralgia`
 3. Build settings:
-   - **Framework preset:** Astro
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
+   - **Framework preset:** None
+   - **Build command:** (puste — build robisz lokalnie skryptem `build-en.ps1`, output wrzucasz do repo)
+   - **Build output directory:** `site-en`
 4. **Custom domain:** myneuralgia.com (lub jakąkolwiek domenę kupisz)
 5. Kliknij **Save and Deploy**
 

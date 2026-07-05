@@ -57,7 +57,7 @@
 - 2025-10-30 - [Po zabiegach stomatologicznych, chirurgicznych, implantach, ekstrakcjach zębów czy uraz...](055-pourazowa-neuropatia-trojdzielna-ptnp.md)
 - 2025-10-30 - [Życie z bólem przewlekłym to codzienna walka, którą trudno zrozumieć komuś, kto nigdy j...](056-codzienna-walka-z-bolem.md)
 - 2025-11-03 - [Ból to jedno z najbardziej podstawowych, a zarazem najbardziej złożonych ludzkich doznań](057-bol-trojdzielny-najsilniejszy-bol.md)
-- 2025-11-03 - [1](058-specjalisci-w-leczeniu-bolu-twarzy.md)
+- 2025-11-03 - [Do jakiego specjalisty zgłosić się z bólem twarzy](058-specjalisci-w-leczeniu-bolu-twarzy.md)
 - 2025-11-05 - [Czym jest depresja maskowana – i dlaczego tak łatwo ją przeoczyć](059-depresja-maskowana.md)
 - 2025-11-05 - [Neuralgia nerwu trójdzielnego nie zawsze wygląda tak samo](060-postacie-neuralgii-trojdzielnej.md)
 - 2025-11-12 - [Ból to nie tylko sygnał ostrzegawczy](061-bol-neuropatyczny-jako-choroba.md)

@@ -26,17 +26,31 @@ jobs:
           "deploy=$d" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           Write-Host "deploy=$d (event=$($env:GITHUB_EVENT_NAME))"
 
-      - name: Zbuduj strone (PowerShell)
+      - name: Zbuduj strone PL (PowerShell)
         if: steps.gate.outputs.deploy == 'true'
         shell: pwsh
         run: |
           ./_tools/build-site.ps1
           ./_tools/package.ps1
 
-      - name: Opublikuj na Cloudflare Pages
+      - name: Zbuduj strone EN (PowerShell)
+        if: steps.gate.outputs.deploy == 'true'
+        shell: pwsh
+        run: |
+          ./myneuralgia/build-en.ps1
+
+      - name: Opublikuj PL na Cloudflare Pages
         if: steps.gate.outputs.deploy == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy publish --project-name=zyciezbolem --branch=main
+
+      - name: Opublikuj EN na Cloudflare Pages
+        if: steps.gate.outputs.deploy == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy myneuralgia/site-en --project-name=myneuralgia-en --branch=main

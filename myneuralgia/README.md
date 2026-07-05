@@ -4,7 +4,7 @@ English-language blog about Trigeminal Neuralgia, automatically translated from 
 
 ## Architecture
 
-- **Astro** static site deployed to Cloudflare Pages
+- **PowerShell static-site generator** (`build-en.ps1`) deployed to Cloudflare Pages
 - **Cloudflare Workers** for webhook handling, translation queue processing, and admin dashboard
 - **Cloudflare D1** for article tracking, translation history, and cost monitoring
 - **Cloudflare Queues** for reliable background translation

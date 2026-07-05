@@ -4,7 +4,7 @@ media:
 
 content:
   - name: artykuly
-    label: Artykuły
+    label: Artykuły (PL)
     type: collection
     path: artykuly
     format: yaml-frontmatter
@@ -47,4 +47,92 @@ content:
         required: false
       - name: body
         label: Treść artykułu
+        type: rich-text
+
+  - name: articles-en
+    label: Articles (EN)
+    type: collection
+    path: myneuralgia/content/en
+    format: yaml-frontmatter
+    description: |
+      🔄 TRANSLATION PROMPT — copy this + your Polish article text, paste to AI:
+
+      You are a professional medical translator. Translate this Polish article about trigeminal neuralgia into natural English.
+
+      RULES:
+      - Localize, don't translate literally. Adapt for English-speaking patients.
+      - Keep the warm, empathetic first-person tone.
+      - Keep medical terms accurate in English (trigeminal neuralgia, neuropathic pain, carbamazepine, gabapentin, pregabalin, microvascular decompression, etc.)
+      - Do NOT translate drug brand names or Latin medical terms.
+      - Preserve all markdown formatting (## headings, **bold**, bullet lists, [links](url)).
+      - Generate an English URL slug (short, lowercase, dashes, no Polish characters).
+      - Keep the article length similar — do not shorten or summarize.
+      - The output should read naturally in English, not like a machine translation.
+
+      OUTPUT FORMAT — respond with the translated article in this exact format:
+
+      ---
+      title: "English title here"
+      slug: "short-english-slug-with-dashes"
+      date: "YYYY-MM-DDTHH:MM"
+      status: published
+      meta_title: "SEO title (max 60 chars)"
+      meta_description: "SEO description (max 155 chars)"
+      ---
+
+      (full translated article in markdown below the frontmatter)
+
+      ARTICLE TO TRANSLATE:
+      (paste Polish article here)
+    filename:
+      template: '{fields.numer}-{fields.slug}.md'
+      field: create
+    view:
+      fields: [numer, title, date, status]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: numer
+        label: Article number
+        type: string
+        description: "Enter the next number (e.g. 129, 130...). Should match the Polish article number."
+        required: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        description: "Short English slug for URL, e.g. gabapentin-and-pregabalin. Lowercase, no spaces, use dashes."
+        required: true
+      - name: date
+        label: Publication date
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm
+        required: true
+      - name: status
+        label: Status
+        type: select
+        options:
+          values: [draft, published]
+        default: draft
+        required: true
+      - name: meta_title
+        label: SEO Title (optional)
+        type: string
+        description: "Custom title for search engines. Leave empty to use the article title."
+        required: false
+      - name: meta_description
+        label: SEO Description (optional)
+        type: string
+        description: "Short description for Google (max 160 characters)."
+        required: false
+      - name: body
+        label: Article content
         type: rich-text
