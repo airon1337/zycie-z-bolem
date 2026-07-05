@@ -1,9 +1,9 @@
 ---
-tytul: "Komórki macierzyste w leczeniu neuropatii nerwu trójdzielnego – co naprawdę wiemy na podstawie badań naukowych?"
-data: "2026-07-05T00:00"
+tytul: Komórki macierzyste w leczeniu neuropatii nerwu trójdzielnego – co
+  naprawdę wiemy na podstawie badań naukowych?
+data: 2026-07-05T00:00
 status: szkic
 ---
-
 # Komórki macierzyste w leczeniu neuropatii nerwu trójdzielnego – co naprawdę wiemy na podstawie badań naukowych?
 
 *Data publikacji: 2026-07-05*
@@ -37,11 +37,8 @@ Wiele osób wyobraża sobie, że komórki macierzyste „naprawiają" nerwy tak,
 MSC działają głównie poprzez tzw. **efekt parakrynny** – czyli nie tyle same „zamieniają się" w nowy nerw, co wydzielają substancje biologicznie czynne, które wpływają na otoczenie:
 
 1. **Czynniki przeciwzapalne** – MSC wydzielają cytokiny (np. IL-10, TGF-β), które tłumią nadmierną reakcję zapalną wokół uszkodzonego nerwu. W bólu neuropatycznym właśnie stan zapalny podtrzymywany przez komórki glejowe (mikroglej, astrocyty) jest jednym z kluczowych mechanizmów utrwalających ból.
-
 2. **Czynniki neurotroficzne** – substancje takie jak BDNF, NGF czy GDNF wspierają przetrwanie i regenerację komórek nerwowych. To jakby „odżywka" dla uszkodzonych neuronów.
-
 3. **Modulacja mikrogleju** – MSC mogą wpływać na zmianę „trybu" mikrogleju z prozapalnego (M1) na przeciwzapalny (M2), co zmniejsza neurozapalenie w ośrodkowym układzie nerwowym.
-
 4. **Hamowanie sensytyzacji centralnej** – poprzez redukcję stanu zapalnego i nadmiernej pobudliwości neuronów, MSC mogą teoretycznie zmniejszać zjawisko „przestrojenia mózgu na ból", o którym pisałam w artykule o stresie i układzie nerwowym.
 
 Można to porównać do sytuacji, w której zamiast naprawiać uszkodzony przewód (nerw), MSC „wyciszają alarm" (stan zapalny) i dostarczają materiały budowlane (czynniki wzrostu), żeby organizm mógł sam spróbować naprawy.
@@ -87,11 +84,8 @@ Autorzy zbadali, czy iniekcje **autologicznych** (własnych) mezenchymalnych kom
 ### Jak przeprowadzono zabieg?
 
 1. Z brzucha pacjenta pobrano niewielką ilość tkanki tłuszczowej (liposukcja).
-
 2. Z tkanki wyizolowano komórki macierzyste (frakcja naczyniowo-zrębowa – SVF, bogata w MSC).
-
 3. Komórki wstrzyknięto bezpośrednio w miejsca bólu – w tkanki jamy ustnej i twarzy (łącznie 41 miejsc iniekcji u 9 pacjentów).
-
 4. Pacjentów obserwowano przez 6 miesięcy.
 
 ### Wyniki – co się stało?
@@ -227,13 +221,9 @@ Chcę to powiedzieć wprost, bo jako osoba żyjąca z bólem od ponad 11 lat –
 Ale nauka wymaga uczciwości. A uczciwość oznacza przyznanie, że:
 
 1. **Badania przedkliniczne na zwierzętach nie zawsze przekładają się na ludzi.** Wiele terapii, które „działały" na szczurach, zawiodło w badaniach klinicznych. To standardowa bariera w medycynie.
-
 2. **Badania pilotażowe bez grupy kontrolnej mają ograniczoną wartość dowodową.** Efekt placebo w bólu przewlekłym jest silny – sama nadzieja na poprawę, obecność lekarza, procedura zabiegu mogą chwilowo zmniejszyć ból.
-
 3. **Standaryzacja preparatów MSC to ogromne wyzwanie.** Komórki od jednego pacjenta mogą różnić się jakością, żywotnością i potencjałem terapeutycznym od komórek innego pacjenta.
-
 4. **Brak regulacji i komercyjne „kliniki stem cell"** – na świecie istnieją prywatne kliniki oferujące terapie komórkami macierzystymi poza oficjalnymi badaniami klinicznymi. Często za ogromne pieniądze, bez odpowiedniego nadzoru naukowego i bez gwarancji skuteczności. To niebezpieczne zjawisko, które może narażać pacjentów na ryzyko zdrowotne i finansowe.
-
 5. **Nie ma jeszcze żadnych wytycznych klinicznych** rekomendujących MSC w leczeniu bólu neuropatycznego twarzy.
 
 ---
@@ -281,9 +271,8 @@ Na razie – trzymajmy się tego, co wiemy na pewno. I trzymajmy się nawzajem.
 ## Źródła
 
 1. Vickers ER, Karsten E, Flood J, Lilischkis R. *A preliminary report on stem cell therapy for neuropathic pain in humans.* Journal of Pain Research. 2014;7:255-263. [PMC4020887](https://pmc.ncbi.nlm.nih.gov/articles/PMC4020887/)
-
 2. Park HJ, Ahn JM, Ryu JW. *Post-Traumatic Trigeminal Neuropathic Pain: A Narrative Review of Understanding, Management, and Prognosis.* Biomedicines. 2024;12(9):2058. [PMC11428572](https://pmc.ncbi.nlm.nih.gov/articles/PMC11428572/)
-
 3. *Preclinical and Clinical Evidence on MSC Efficacy and Mechanism of Action in Neuropathic Pain Reduction.* International Journal of Molecular Sciences. 2026;27(5):2397. [PMC12985437](https://pmc.ncbi.nlm.nih.gov/articles/PMC12985437/)
 
 > Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
+
