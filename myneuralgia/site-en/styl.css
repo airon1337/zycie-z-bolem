@@ -464,3 +464,29 @@ blockquote.cytat {
 .artykul-tresc a.fb-przycisk:hover,
 a.fb-przycisk,
 a.fb-przycisk:hover { color: #fff !important; text-decoration: none !important; }
+
+/* ---------- Komentarze i reakcje ---------- */
+.komentarze-sekcja { margin-top: 40px; border-top: 1px solid var(--obwodka); padding-top: 26px; }
+.reakcje-box { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.reakcje-label { font-weight: 600; color: var(--tekst); font-size: .95rem; }
+.reak-btn { display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--obwodka); background: var(--tlo-karta); cursor: pointer; font-size: 1rem; font-family: inherit; transition: all .15s ease; }
+.reak-btn:hover { background: var(--akcent-jasny); border-color: var(--akcent); }
+.reak-btn:disabled { opacity: .6; cursor: default; }
+.reak-count { font-size: .9rem; font-weight: 600; color: var(--akcent-ciemny); }
+.kom-tytul { font-size: 1.3rem; color: var(--akcent-ciemny); margin: 0 0 14px; }
+.kom-count { font-size: .85rem; font-weight: 400; color: var(--tekst-jasny); }
+.kom-lista { margin-bottom: 20px; }
+.kom-item { background: var(--tlo-karta); border: 1px solid var(--obwodka); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+.kom-meta { font-size: .82rem; color: var(--tekst-jasny); margin-bottom: 6px; }
+.kom-meta strong { color: var(--akcent-ciemny); }
+.kom-content { margin: 0; font-size: .95rem; line-height: 1.6; }
+.kom-form { margin-top: 16px; }
+.kom-name { width: 100%; max-width: 280px; padding: 10px 14px; border: 1px solid var(--obwodka); border-radius: 10px; font-size: .95rem; font-family: inherit; margin-bottom: 10px; }
+.kom-name:focus { outline: none; border-color: var(--akcent); }
+.kom-text { width: 100%; padding: 12px 14px; border: 1px solid var(--obwodka); border-radius: 10px; font-size: .95rem; font-family: inherit; resize: vertical; min-height: 80px; }
+.kom-text:focus { outline: none; border-color: var(--akcent); }
+.kom-actions { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
+.kom-info { font-size: .8rem; color: var(--tekst-jasny); }
+.kom-submit { padding: 10px 22px; font-size: .95rem; }
+.kom-error { color: #b3402a; font-size: .88rem; margin-top: 8px; }
+.kom-full { background: var(--akcent-jasny); border: 1px solid var(--akcent); border-radius: 10px; padding: 12px 16px; color: var(--akcent-ciemny); font-size: .92rem; }

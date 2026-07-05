@@ -1,0 +1,14 @@
+name = "myneuralgia-comments"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "myneuralgia-comments"
+database_id = "3fb1d910-a829-47ea-9885-13dfd1a0d44c"
+
+[vars]
+MAX_COMMENTS_PER_ARTICLE = "10"
+RATE_LIMIT_COUNT = "3"
+RATE_LIMIT_WINDOW_SEC = "300"
+ALLOWED_ORIGIN = "https://myneuralgia.com"
