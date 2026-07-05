@@ -1,0 +1,183 @@
+{
+  "faqHeading": "Frequently Asked Questions",
+  "uiPrev": "\u2190 Previous",
+  "uiNext": "Next \u2192",
+  "links": [
+    { "pattern": "neuropathic pain",                              "slug": "003-chronic-neuropathic-pain" },
+    { "pattern": "antidepressants?.{0,8}neuropathic|why.{0,8}antidepressant", "slug": "005-why-antidepressants-are-used-for-neuropathic-pain" },
+    { "pattern": "trigeminal nerve(?! block| pain)",              "slug": "010-the-trigeminal-nerve-explained" },
+    { "pattern": "first.line treatment|treatment of choice",      "slug": "011-first-line-treatment-for-trigeminal-neuralgia" },
+    { "pattern": "side effects?.{0,12}medication",                "slug": "012-side-effects-of-trigeminal-neuralgia-medications" },
+    { "pattern": "opioid",                                        "slug": "013-opioids-for-neuropathic-pain" },
+    { "pattern": "medical cannabis|marijuana",                    "slug": "014-medical-cannabis-for-trigeminal-neuralgia" },
+    { "pattern": "supplement",                                    "slug": "015-supplements-for-trigeminal-neuralgia" },
+    { "pattern": "nerve block",                                   "slug": "016-trigeminal-nerve-blocks" },
+    { "pattern": "neuralgia vs.{0,4}neuropathy|difference.{0,15}neuralgia.{0,10}neuropathy", "slug": "017-neuralgia-vs-neuropathy-explained" },
+    { "pattern": "ichd.?3|classification",                        "slug": "018-types-of-trigeminal-neuralgia-ichd3" },
+    { "pattern": "pulsed radiofrequency",                         "slug": "019-pulsed-radiofrequency-for-trigeminal-neuralgia" },
+    { "pattern": "mistaken.{0,10}toothache|tooth.{0,5}mistaken",  "slug": "021-when-facial-pain-is-mistaken-for-a-toothache" },
+    { "pattern": "tmj|temporomandibular",                         "slug": "023-facial-pain-tmj-vs-trigeminal-neuralgia" },
+    { "pattern": "omega[- ]?3",                                   "slug": "024-omega-3-for-neuropathic-pain" },
+    { "pattern": "b[- ]?vitamins?|vitamin b",                     "slug": "025-b-vitamins-and-trigeminal-neuropathy" },
+    { "pattern": "invisible.{0,5}(pain|illness)",                 "slug": "026-living-with-invisible-pain" },
+    { "pattern": "stress.{0,10}nervous system|hpa axis",          "slug": "028-stress-and-the-nervous-system" },
+    { "pattern": "biopsychosocial",                               "slug": "033-biopsychosocial-approach-to-trigeminal-neuropathy" },
+    { "pattern": "vagus nerve|nervous system regulation",         "slug": "034-nervous-system-regulation-in-trigeminal-neuropathy" },
+    { "pattern": "talk.{0,8}doctor|communicat.{0,8}doctor",       "slug": "035-how-to-talk-to-your-doctor-about-neuropathic-pain" },
+    { "pattern": "support group",                                 "slug": "043-power-of-support-groups-for-trigeminal-pain" },
+    { "pattern": "glossopharyngeal",                              "slug": "044-glossopharyngeal-neuralgia" },
+    { "pattern": "acupuncture",                                   "slug": "046-acupuncture-for-trigeminal-pain" },
+    { "pattern": "painful trigeminal neuropathy",                 "slug": "048-painful-trigeminal-neuropathy-overview" },
+    { "pattern": "cervicogenic.{0,5}(pain|headache)",             "slug": "049-cervicogenic-facial-pain" },
+    { "pattern": "yoga",                                          "slug": "050-yoga-and-chronic-pain" },
+    { "pattern": "atypical odontalgia|phantom tooth",             "slug": "051-atypical-odontalgia" },
+    { "pattern": "low[- ]?dose naltrexone|\\bldn\\b",             "slug": "054-low-dose-naltrexone-for-chronic-pain" },
+    { "pattern": "post.?traumatic trigeminal",                    "slug": "055-post-traumatic-trigeminal-neuropathy" },
+    { "pattern": "pain diary|pain journal",                       "slug": "056-how-to-keep-a-pain-diary" },
+    { "pattern": "which (specialist|doctor)",                     "slug": "058-which-specialist-to-see-for-trigeminal-pain" },
+    { "pattern": "masked depression",                             "slug": "059-masked-depression-and-chronic-facial-pain" },
+    { "pattern": "gate control",                                  "slug": "060-gate-control-theory-and-trigeminal-pain" },
+    { "pattern": "sleep.{0,10}(neuralgia|pain|trigeminal)",       "slug": "062-sleep-and-trigeminal-neuralgia" },
+    { "pattern": "dental.{0,10}(neuropath|nerve damage)",         "slug": "063-neuropathic-pain-after-dental-procedures" },
+    { "pattern": "progressive muscle relaxation",                 "slug": "065-progressive-muscle-relaxation-for-chronic-pain" },
+    { "pattern": "guided imagery|visualization",                  "slug": "067-guided-imagery-for-chronic-pain" },
+    { "pattern": "gabapentin",                                    "slug": "068-gabapentin-and-pregabalin-for-trigeminal-neuralgia" },
+    { "pattern": "pregabalin",                                    "slug": "083-pregabalin-and-weight-gain" },
+    { "pattern": "central sensitization",                         "slug": "069-neuropathic-pain-stress-and-the-brain" },
+    { "pattern": "automatic thoughts|catastrophiz",               "slug": "070-automatic-thoughts-and-trigeminal-pain" },
+    { "pattern": "carbamazepin",                                  "slug": "109-carbamazepine-for-trigeminal-neuralgia" },
+    { "pattern": "oxcarbazepin",                                  "slug": "012-side-effects-of-trigeminal-neuralgia-medications" },
+    { "pattern": "ashwagandha",                                   "slug": "077-ashwagandha-and-trigeminal-neuralgia-safety-concerns" },
+    { "pattern": "microvascular decompression|\\bmvd\\b",         "slug": "011-first-line-treatment-for-trigeminal-neuralgia" },
+    { "pattern": "gamma knife|radiosurgery",                      "slug": "042-treatment-strategy-for-trigeminal-neuralgia" },
+    { "pattern": "radiofrequency ablation|thermocoagulation",     "slug": "089-new-radiofrequency-ablation-system-for-trigeminal-neuralgia" },
+    { "pattern": "postherpetic|shingles|herpes zoster",           "slug": "119-postherpetic-trigeminal-neuralgia" },
+    { "pattern": "eagle.?s? syndrome|styloid",                    "slug": "122-eagle-syndrome-a-rare-cause-of-throat-and-jaw-pain" },
+    { "pattern": "occipital neuralgia",                           "slug": "093-occipital-neuralgia-overview" },
+    { "pattern": "cervicogenic headache",                         "slug": "097-cervicogenic-headache-when-neck-causes-head-pain" },
+    { "pattern": "cognitive decline|brain fog|memory.{0,10}pain", "slug": "098-chronic-pain-and-cognitive-decline" },
+    { "pattern": "sensory retraining",                            "slug": "106-sensory-retraining-after-trigeminal-nerve-damage" },
+    { "pattern": "mindfulness",                                   "slug": "105-mindfulness-and-chronic-pain-changing-your-relationship-with-pain" },
+    { "pattern": "cognitive behavioral therapy|\\bcbt\\b",        "slug": "070-automatic-thoughts-and-trigeminal-pain" },
+    { "pattern": "neuroplasticity",                               "slug": "113-neuroplasticity-and-living-with-chronic-pain" },
+    { "pattern": "alpha[- ]?lipoic acid",                         "slug": "116-alpha-lipoic-acid-and-trigeminal-neuropathy" },
+    { "pattern": "breathing.{0,10}(technique|exercise)|diaphragmatic breath", "slug": "110-breathing-techniques-for-neuropathic-pain" },
+    { "pattern": "physical activity.{0,10}(pain|brain)|exercise.{0,10}(chronic|neuro)", "slug": "088-physical-activity-brain-health-and-trigeminal-pain" }
+  ],
+  "keywords": [
+    { "label": "trigeminal neuralgia", "pattern": "trigeminal neuralgia|trigeminal nerve pain" },
+    { "label": "neuropathy", "pattern": "neuropath" },
+    { "label": "neuropathic pain", "pattern": "neuropathic" },
+    { "label": "chronic pain", "pattern": "chronic pain|persistent pain" },
+    { "label": "trigeminal nerve", "pattern": "trigeminal" },
+    { "label": "carbamazepine", "pattern": "carbamazepin" },
+    { "label": "gabapentin", "pattern": "gabapentin" },
+    { "label": "pregabalin", "pattern": "pregabalin" },
+    { "label": "LDN (naltrexone)", "pattern": "naltrexone|\\bldn\\b" },
+    { "label": "neurovascular conflict", "pattern": "neurovascular conflict|vascular compression" },
+    { "label": "microvascular decompression (MVD)", "pattern": "microvascular decompression|\\bmvd\\b" },
+    { "label": "MRI", "pattern": "\\bmri\\b|magnetic resonance" },
+    { "label": "multiple sclerosis", "pattern": "multiple sclerosis|\\bms\\b" },
+    { "label": "shingles", "pattern": "shingles|herpes zoster|postherpetic" },
+    { "label": "alpha-lipoic acid", "pattern": "alpha.lipoic|\\bala\\b" },
+    { "label": "pain diary", "pattern": "diary|journal" }
+  ],
+  "kategorie": [
+    { "label": "Medication & Supplements", "slug": "medication-and-supplements", "pattern": "carbamazepin|gabapentin|pregabalin|naltrexone|\\bldn\\b|lipoic|vitamin|supplement|tablet|dos(e|age|ing)|botox|botulinum|magnesium|opioid|amitriptyline|duloxetine|capsaicin|oxcarbazepin|medication|drug|pharma" },
+    { "label": "Treatment & Procedures", "slug": "treatment-and-procedures", "pattern": "treatment|procedure|surgery|radiofrequenc|microvascular decompression|\\bmvd\\b|nerve block|gamma knife|neuromodulat|ablat|surgical|rhizotom|stimulat|injection|therap" },
+    { "label": "Symptoms & Diagnosis", "slug": "symptoms-and-diagnosis", "pattern": "symptom|diagnos|mri|magnetic resonance|examinat|paroxysm|allodyni|hypersensitiv|numbness|stabbing|electric|burning|trigger" },
+    { "label": "Living with Pain", "slug": "living-with-pain", "pattern": "everyday|daily life|emotion|accept|lonel|support|depress|relationship|hope|holiday|famil|psych|fatigu|anxiety|fear|my story|my journey|coping|mental health" }
+  ],
+  "faqs": [
+    {
+      "q": "What is trigeminal neuralgia?",
+      "a": "Trigeminal neuralgia is a chronic facial pain condition. It manifests as sudden, severe, usually one-sided pain attacks — often described as an electric shock. A single attack typically lasts from a few seconds to about two minutes.",
+      "triggers": ["neuralgia", "trigeminal"]
+    },
+    {
+      "q": "What is the difference between neuralgia and neuropathy?",
+      "a": "In simple terms: neuralgia primarily involves paroxysmal pain along a nerve, usually without loss of sensation. Neuropathy involves nerve damage that more often causes constant pain along with numbness and sensory loss.",
+      "triggers": ["neuropath"]
+    },
+    {
+      "q": "Do regular painkillers help with neuropathic pain?",
+      "a": "Usually not. Neuropathic pain responds poorly to paracetamol or anti-inflammatory drugs. Instead, medications that act on nerves are used, such as anticonvulsants like carbamazepine.",
+      "triggers": ["neuropathic", "painkiller", "analgesic"]
+    },
+    {
+      "q": "How does carbamazepine work for trigeminal neuralgia?",
+      "a": "Carbamazepine is the first-line medication for trigeminal neuralgia. In a large proportion of patients, it provides effective pain control. It requires gradual dose adjustment and medical supervision.",
+      "triggers": ["carbamazepin"]
+    },
+    {
+      "q": "What is the difference between gabapentin and pregabalin?",
+      "a": "Both are anticonvulsant medications used for neuropathic pain. They differ in absorption and dosing characteristics. The choice and dosage should be determined by a physician.",
+      "triggers": ["gabapentin", "pregabalin"]
+    },
+    {
+      "q": "What is neurovascular conflict (vascular compression)?",
+      "a": "This is the most common cause of classical trigeminal neuralgia — a blood vessel compresses the nerve root at the base of the brain, damaging its myelin sheath and triggering pain.",
+      "triggers": ["neurovascular", "vascular compression"]
+    },
+    {
+      "q": "What is microvascular decompression (MVD)?",
+      "a": "MVD is a neurosurgical procedure in which the vessel compressing the trigeminal nerve is moved away. In eligible patients, it provides the most durable pain relief. The decision is made by the treating team.",
+      "triggers": ["microvascular decompression", "mvd"]
+    },
+    {
+      "q": "Why is an MRI performed?",
+      "a": "MRI helps detect neurovascular conflict and rule out other causes of pain, such as tumors or multiple sclerosis. The diagnosis of neuralgia itself is primarily clinical.",
+      "triggers": ["mri", "magnetic resonance"]
+    },
+    {
+      "q": "What is postherpetic neuralgia?",
+      "a": "This is chronic nerve pain following shingles (herpes zoster), resulting from nerve damage caused by the virus. It is a distinct condition and can be challenging to treat.",
+      "triggers": ["shingles", "postherpetic", "herpes zoster"]
+    },
+    {
+      "q": "Does alpha-lipoic acid (ALA) help with neuropathy?",
+      "a": "Some people use ALA as a supportive supplement, but evidence is limited and comes mainly from studies on diabetic neuropathy. It is considered a supplement, not a proven therapy. Always consult your doctor.",
+      "triggers": ["alpha-lipoic", "ala"]
+    },
+    {
+      "q": "What is a pain diary and why keep one?",
+      "a": "It is a record of pain attacks: when they occur, what triggers them, how long they last, and what medications you take. It greatly helps your doctor in making a diagnosis and choosing treatment.",
+      "triggers": ["diary", "journal"]
+    },
+    {
+      "q": "Which doctor should I see for facial pain?",
+      "a": "First, see a neurologist. If surgery is being considered, a neurosurgeon. If a dental cause is suspected, it is also worth ruling it out with a dentist.",
+      "triggers": ["neurologist", "doctor", "diagnos"]
+    },
+    {
+      "q": "Can trigeminal neuralgia be cured?",
+      "a": "In many people, pain can be effectively controlled with medications or procedures, and MVD provides the most durable results in eligible patients. The course varies — with periods of remission and relapse. Decisions are made together with your doctor.",
+      "triggers": ["cure", "treatment"]
+    },
+    {
+      "q": "What is guided imagery and can it help with pain?",
+      "a": "Guided imagery (visualization) is a relaxation technique where you use imagination to mentally visit a calm, safe place. Research shows it can lower stress, calm the nervous system, and reduce pain perception — especially helpful for chronic facial pain.",
+      "triggers": ["guided imagery", "visualization", "relax"]
+    },
+    {
+      "q": "What is Eagle syndrome?",
+      "a": "Eagle syndrome is a rare condition caused by an elongated styloid process or calcified stylohyoid ligament that irritates nearby nerves and vessels. It causes pain in the throat, neck, jaw, or ear — often worsening with swallowing or head movements.",
+      "triggers": ["eagle", "styloid"]
+    },
+    {
+      "q": "Can chronic pain affect memory and concentration?",
+      "a": "Yes. Research shows that chronic pain, including trigeminal neuralgia, can lead to measurable changes in brain function — affecting memory, attention, processing speed, and executive function. This is sometimes called 'brain fog' and has a real neurobiological basis.",
+      "triggers": ["memory", "concentration", "cognitive", "brain fog"]
+    },
+    {
+      "q": "What is sensory retraining for trigeminal neuropathy?",
+      "a": "Sensory retraining is a technique based on cognitive behavioral therapy that helps the brain relearn how to interpret signals from a damaged area. Using gentle, repetitive stimuli (feather, brush) it can reduce hypersensitivity and improve comfort over time.",
+      "triggers": ["sensory retraining", "reeduc"]
+    },
+    {
+      "q": "Is ashwagandha safe for people with trigeminal neuralgia?",
+      "a": "Ashwagandha has been restricted in several European countries due to liver toxicity concerns and hormonal effects. For people already taking strong medications, adding ashwagandha may pose additional risks. Discuss with your doctor before use.",
+      "triggers": ["ashwagandha"]
+    }
+  ]
+}

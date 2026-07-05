@@ -90,13 +90,16 @@ function Auto-Link([string]$html, [string]$curSlug) {
         if ($lnk.slug -eq $curSlug) { continue }   # nie linkuj artykulu do samego siebie
         $rx = [regex]::new("(?i)(?<![\p{L}])(" + $lnk.pattern + ")(?![\p{L}])")
         $m = $rx.Match($html)
-        while ($m.Success) {
+        $linked = 0
+        while ($m.Success -and $linked -lt 2) {
             if (-not (Is-InsideTagOrAnchor $html $m.Index)) {
                 $rep = '<a class="link-wew" href="/' + $lnk.slug + '.html">' + $m.Value + '</a>'
                 $html = $html.Substring(0, $m.Index) + $rep + $html.Substring($m.Index + $m.Length)
-                break
+                $linked++
+                $m = $rx.Match($html, $m.Index + $rep.Length)
+            } else {
+                $m = $m.NextMatch()
             }
-            $m = $m.NextMatch()
         }
     }
     return $html

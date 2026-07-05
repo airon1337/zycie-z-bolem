@@ -3,22 +3,25 @@
   "uiPrev": "← Poprzednia",
   "uiNext": "Następna →",
   "links": [
-    { "pattern": "witamin\\w* b",                                "slug": "025-chociaz-witaminy-z-grupy-b-zwlaszcza-b12-i-b6-odgr" },
-    { "pattern": "kwas\\w* alfa-liponow\\w*|alfa-liponow\\w*",   "slug": "116-dzis-pod-lupe-pragne-wziac-kwas-alfa-liponowy-ala" },
-    { "pattern": "naltrekson\\w*|ldn",                            "slug": "066-low-dose-naltrexone-ldn-wzbudza-coraz-wieksze-zain" },
-    { "pattern": "gabapentyn\\w*",                                "slug": "068-gabapentyna-i-pregabalina-sa-lekami-przeciwpadaczk" },
-    { "pattern": "pregabalin\\w*",                                "slug": "068-gabapentyna-i-pregabalina-sa-lekami-przeciwpadaczk" },
-    { "pattern": "karbamazepin\\w*",                              "slug": "109-jakis-czas-temu-napisalam-posty-o-gabapentynie-i-p" },
-    { "pattern": "ashwagandh\\w*",                                "slug": "077-czy-w-poszukiwaniu-ulgi-w-bolu-trafiliscie-kiedys" },
-    { "pattern": "termolezj\\w*",                                 "slug": "019-na-czym-polega-termolezja-pulsacyjna" },
-    { "pattern": "blokad\\w*",                                    "slug": "016-blokady-w-neuralgii-nerwu-trojdzielnego-to-szybki" },
-    { "pattern": "popółpa\\w*|półpa\\w*",                         "slug": "119-neuralgia-nerwu-trojdzielnego-po-polpascu-stanowi" },
-    { "pattern": "zespół eagle\\w*|eagle",                        "slug": "122-zespol-eagle-a-stanowi-rzadka-przyczyne-bolu-w-obr" },
-    { "pattern": "atypow\\w* odontalgi\\w*|odontalgi\\w*",        "slug": "051-atypowa-odontalgia-ao-to-przewlekly-bol-zeba-lub-o" },
-    { "pattern": "językowo-gardłow\\w*",                          "slug": "044-neuralgia-nerwu-jezykowo-gardlowego-ang" },
-    { "pattern": "potyliczn\\w*",                                 "slug": "093-neuralgia-potyliczna-przez-wiele-lat-byla-okreslan" },
-    { "pattern": "depresj\\w* maskowan\\w*",                      "slug": "059-czym-jest-depresja-maskowana-i-dlaczego-tak-latwo" },
-    { "pattern": "dziennik\\w* b\\w*|dzienniczek\\w* b\\w*",      "slug": "dziennik-bolu" }
+    { "pattern": "witamin\\w* b",                                "slug": "025-witaminy-b-w-neuropatii-trojdzielnej" },
+    { "pattern": "kwas\\w* alfa-liponow\\w*|alfa-liponow\\w*",   "slug": "116-kwas-alfa-liponowy-ala" },
+    { "pattern": "naltrekson\\w*|ldn",                            "slug": "066-ldn-naltrekson-badania-i-mechanizm" },
+    { "pattern": "gabapentyn\\w*",                                "slug": "068-gabapentyna-i-pregabalina" },
+    { "pattern": "pregabalin\\w*",                                "slug": "068-gabapentyna-i-pregabalina" },
+    { "pattern": "karbamazepin\\w*",                              "slug": "109-karbamazepina" },
+    { "pattern": "ashwagandh\\w*",                                "slug": "077-ashwagandha-a-bol-neuropatyczny" },
+    { "pattern": "termolezj\\w*",                                 "slug": "019-termolezja-pulsacyjna" },
+    { "pattern": "blokad\\w*",                                    "slug": "016-blokady-nerwu-trojdzielnego" },
+    { "pattern": "popółpa\\w*|półpa\\w*",                         "slug": "119-neuralgia-popolpascowa" },
+    { "pattern": "zespół eagle\\w*|eagle",                        "slug": "122-zespol-eagle-a" },
+    { "pattern": "atypow\\w* odontalgi\\w*|odontalgi\\w*",        "slug": "051-atypowa-odontalgia" },
+    { "pattern": "językowo-gardłow\\w*",                          "slug": "044-neuralgia-nerwu-jezykowo-gardlowego" },
+    { "pattern": "potyliczn\\w*",                                 "slug": "093-neuralgia-potyliczna" },
+    { "pattern": "depresj\\w* maskowan\\w*",                      "slug": "059-depresja-maskowana" },
+    { "pattern": "dziennik\\w* b\\w*|dzienniczek\\w* b\\w*",      "slug": "dziennik-bolu" },
+    { "pattern": "ptnp|pourazow\\w* neuropat\\w*",                "slug": "055-pourazowa-neuropatia-trojdzielna-ptnp" },
+    { "pattern": "szyjnopochodn\\w*|cervicogenic",                "slug": "097-szyjnopochodny-bol-glowy" },
+    { "pattern": "neuroplastyczn\\w*|bdnf",                       "slug": "088-neuroplastycznosc-ruch-a-bol" }
   ],
   "keywords": [
     { "label": "neuralgia nerwu trójdzielnego", "pattern": "neuralgia" },
@@ -36,7 +39,10 @@
     { "label": "stwardnienie rozsiane", "pattern": "stwardnienie rozsian" },
     { "label": "półpasiec", "pattern": "półpas|półpaśc" },
     { "label": "kwas alfa-liponowy", "pattern": "alfa-liponow" },
-    { "label": "dziennik bólu", "pattern": "dziennik" }
+    { "label": "dziennik bólu", "pattern": "dziennik" },
+    { "label": "PTNP (neuropatia pourazowa)", "pattern": "ptnp|pourazow" },
+    { "label": "szyjnopochodny ból głowy", "pattern": "szyjnopochodn|cervicogenic" },
+    { "label": "neuroplastyczność", "pattern": "neuroplastyczn|bdnf" }
   ],
   "kategorie": [
     { "label": "Leki i suplementy", "slug": "leki-i-suplementy", "pattern": "karbamazepin|gabapentyn|pregabalin|naltrekson|\\bldn\\b|liponow|witamin|suplement|tabletk|dawk|botulin|magnez|opioid|amitryptylin|duloksetyn|kapsaicyn" },
@@ -109,6 +115,31 @@
       "q": "Czy neuralgia nerwu trójdzielnego jest wyleczalna?",
       "a": "U wielu osób ból można skutecznie kontrolować lekami lub zabiegami, a mikrodekompresja daje u kwalifikujących się pacjentów najtrwalszy efekt. Przebieg bywa różny — z okresami remisji i nawrotami; decyzje podejmuje się z lekarzem.",
       "triggers": ["wyleczal", "leczenie"]
+    },
+    {
+      "q": "Czym jest pourazowa neuropatia nerwu trójdzielnego (PTNP)?",
+      "a": "PTNP to przewlekły ból neuropatyczny twarzy, który utrzymuje się ponad 3 miesiące po uszkodzeniu nerwu trójdzielnego — najczęściej po zabiegach stomatologicznych, implantach, ekstrakcjach lub urazach twarzy. Objawia się pieczeniem, kłuciem, drętwieniem lub nadwrażliwością na dotyk.",
+      "triggers": ["ptnp", "pourazow", "po zabiegu", "po ekstrakcji"]
+    },
+    {
+      "q": "Czym jest szyjnopochodny ból głowy?",
+      "a": "To ból głowy, którego źródło znajduje się w strukturach szyi (stawy, krążki, mięśnie kręgosłupa szyjnego). Często jest jednostronny, nasila się przy ruchach głową i bywa mylony z migreną. Diagnostyka opiera się na blokadzie nerwów szyjnych.",
+      "triggers": ["szyjnopochodn", "cervicogenic", "ból głowy"]
+    },
+    {
+      "q": "Czy aktywność fizyczna pomaga w bólu przewlekłym?",
+      "a": "Badania pokazują, że regularny, dostosowany do możliwości ruch zwiększa poziom BDNF (czynnika wzrostu neuronów), poprawia neuroplastyczność, reguluje neuroprzekaźniki i obniża stan zapalny. Nawet krótki spacer może wspierać mózg w radzeniu sobie z bólem.",
+      "triggers": ["ruch", "aktywność fizyczn", "neuroplastyczn", "ćwiczeni"]
+    },
+    {
+      "q": "Czy karbamazepinę można stosować w ciąży?",
+      "a": "Karbamazepina należy do kategorii D — istnieje udowodnione ryzyko dla płodu. Jej stosowanie w ciąży wymaga bardzo dokładnej oceny lekarza i rozważenia alternatyw. Planując ciążę, koniecznie porozmawiaj z lekarzem przed kontynuacją terapii.",
+      "triggers": ["ciąż", "karbamazepin"]
+    },
+    {
+      "q": "Co to jest neuralgia potyliczna?",
+      "a": "To napadowy, przeszywający ból z tyłu głowy w obszarze nerwów potylicznych. Może przypominać migrenę, ale wyróżnia go tkliwość w punkcie wyjścia nerwu i dobra odpowiedź na blokadę diagnostyczną. Jest rzadka (ok. 3/100 000 osób), ale bardzo dokuczliwa.",
+      "triggers": ["potyliczn", "arnold"]
     }
   ]
 }

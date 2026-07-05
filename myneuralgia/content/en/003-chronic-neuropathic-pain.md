@@ -1,30 +1,32 @@
 ---
-title: "Chronic Neuropathic Pain"
+title: "Chronic Neuropathic Pain — Types, Mechanisms, and Treatment"
 date: "2025-09-23"
-source: "Facebook page 'Life with Pain – You Are Not Alone'"
 status: published
+source: Facebook page "Life with Pain – You Are Not Alone"
 ---
 
-**Cause:** Damage to or disease affecting the peripheral or central nervous system.
+## Neuropathic Pain
 
-**Mechanism:** Damaged nerves send abnormal pain signals, even in the absence of a painful stimulus.
+**Cause:** damage to or disease of the nervous system (peripheral or central).
 
-**Pain characteristics:** Burning, stinging, stabbing pain, tingling, numbness, and electric shock-like sensations.
+**Mechanism:** nerves send abnormal pain signals even in the absence of a stimulus.
 
-**Examples:** Postherpetic neuralgia, painful post-traumatic trigeminal neuropathy, post-stroke pain, diabetic polyneuropathy, and sciatica.
+**Character:** burning, stinging, tingling, numbness, electric shock-like sensations.
 
-**Treatment:** Antiepileptic medications (**gabapentin**, **pregabalin**), antidepressants (**duloxetine**, **amitriptyline**), sometimes nerve blocks, and physiotherapy.
+**Examples:** postherpetic neuralgia, painful post-traumatic trigeminal neuropathy, post-stroke pain, diabetic polyneuropathy, sciatica.
+
+**Treatment:** anticonvulsants (**gabapentin**, **pregabalin**), antidepressants (duloxetine, amitriptyline), nerve blocks in some cases, and physiotherapy.
 
 ## Psychosomatic Pain
 
-**Cause:** Psychological factors such as stress, anxiety, or depression that intensify or trigger real physical pain.
+**Cause:** psychological factors (stress, anxiety, depression) that amplify or trigger real physical pain.
 
-**Mechanism:** The body responds physically to psychological distress, for example through muscle tension, gastrointestinal disturbances, or headaches.
+**Mechanism:** the body responds physically to a psychological state (e.g., muscle tension, gastrointestinal disturbances, headaches).
 
-**Pain characteristics:** Highly variable, ranging from headaches, abdominal pain, and back pain to muscle pain. In many cases, no clear cause can be identified during diagnostic testing.
+**Character:** highly variable — from headaches, abdominal pain, and back pain to muscle pain. Often no identifiable cause is found on examination.
 
-**Examples:** Tension-type headaches, irritable bowel syndrome, and neck pain associated with chronic stress.
+**Examples:** tension-type headaches, irritable bowel syndrome, neck pain associated with chronic stress.
 
-**Treatment:** Psychotherapy, relaxation techniques, treatment of anxiety and depressive disorders, and pharmacological support when needed.
+**Treatment:** psychotherapy, relaxation techniques, management of anxiety and depressive disorders, pharmacological support when needed.
 
-> This content is intended for educational purposes only and does not replace professional medical advice.
+> This content is for educational purposes only and does not replace professional medical advice.

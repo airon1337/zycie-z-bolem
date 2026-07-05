@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Życie z bólem">
+  <defs>
+    <linearGradient id="tlo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f1ee"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#tlo)"/>
+  <circle cx="1010" cy="140" r="220" fill="#3a7a6f" opacity="0.06"/>
+  <circle cx="180" cy="640" r="180" fill="#3a7a6f" opacity="0.06"/>
+  <circle cx="600" cy="248" r="78" fill="#3a7a6f"/>
+  <path d="M600 296 C600 296 564 272 564 246 C564 233 573 225 583 225 C590 225 597 230 600 236 C603 230 610 225 617 225 C627 225 636 233 636 246 C636 272 600 296 600 296 Z" fill="#ffffff"/>
+  <text x="600" y="430" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="86" font-weight="700" fill="#2c5d55">Życie z bólem</text>
+  <text x="600" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#3a7a6f">neuralgia i neuropatia nerwu trójdzielnego</text>
+  <rect x="500" y="540" width="200" height="5" rx="2.5" fill="#c9805a"/>
+</svg>

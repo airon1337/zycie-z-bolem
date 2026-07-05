@@ -1,35 +1,35 @@
 ---
-title: "Treatment Options for Trigeminal Neuralgia"
+title: "Treatment Options for Trigeminal Neuralgia — Beyond Medication"
 date: "2025-09-24"
-source: "Facebook page 'Life with Pain – You Are Not Alone'"
 status: published
+source: Facebook page "Life with Pain – You Are Not Alone"
 ---
 
-Treatment for trigeminal neuralgia often requires a combination of medications, interventional procedures, and psychological support. When medication alone is not sufficient, additional options include:
+Treating trigeminal neuralgia often requires a combination of approaches — medications, interventional procedures, and psychological support. When pharmacotherapy alone is not sufficiently effective, the following options may be considered:
 
-## Additional Pharmacological Therapy
+## 1. Additional Pharmacotherapy
 
-- Topical pain relief, such as lidocaine patches or capsaicin cream.
-- Opioids, reserved for severe pain that does not respond to other treatments.
-- Emerging therapies, including medical cannabinoids in selected countries.
+- **Topical analgesics** — e.g., lidocaine patches, capsaicin creams (though used less frequently in trigeminal neuralgia than in peripheral neuropathy).
+- **Opioid medications** — used exceptionally, in very severe pain refractory to other methods, but not as first-line treatment.
+- **Newer therapies** — e.g., medical cannabis (available in some countries).
 
-## Interventional Treatments
+## 2. Interventional and Surgical Treatment
 
-- Nerve blocks using a local anesthetic, often combined with a corticosteroid.
-- Radiofrequency ablation to interrupt pain transmission.
-- **Microvascular decompression (MVD)**.
-- Gamma Knife or stereotactic radiosurgery.
+- **Nerve blocks** — injection of a local anesthetic or steroid around the branches of the trigeminal nerve.
+- **Radiofrequency ablation (thermoablation)** — "burning" selected nerve fibers to interrupt pain conduction.
+- **Microvascular decompression (MVD)** — a neurosurgical procedure that separates a blood vessel compressing the trigeminal nerve.
+- **Gamma Knife / stereotactic radiosurgery** — precise irradiation of a segment of the nerve to reduce pain transmission.
 
-## Rehabilitation and Supportive Therapies
+## 3. Rehabilitation and Supportive Methods
 
-- Physiotherapy and neuromodulation, including TENS.
-- Relaxation techniques and mindfulness training.
-- Psychological support for anxiety, insomnia, and stress.
+- **Physiotherapy and neuromodulation** — e.g., TENS (transcutaneous electrical nerve stimulation) or other electrostimulation techniques.
+- **Relaxation techniques and mindfulness training** — they do not eliminate the cause of pain, but they help reduce pain perception and muscle tension.
+- **Psychological support** — addressing anxiety, insomnia, and stress, all of which amplify pain.
 
-## Lifestyle Changes
+## 4. Lifestyle Modifications
 
 - Regular sleep and good sleep hygiene.
-- Avoiding personal pain triggers such as cold, wind, sudden movements, or specific foods.
-- Cognitive behavioral therapy (CBT) and other chronic pain coping strategies.
+- Avoiding individual attack triggers (cold, wind, sudden movements, certain foods — in trigeminal neuralgia, each patient has their own "triggers").
+- Chronic pain coping strategies (e.g., CBT programs — cognitive behavioral therapy for pain).
 
-> This content is intended for educational purposes only and does not replace professional medical advice.
+> This content is for educational purposes only and does not replace professional medical advice.
