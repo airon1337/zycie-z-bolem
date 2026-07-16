@@ -52,13 +52,13 @@ img { max-width: 100%; height: auto; }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 20px; max-width: var(--szer-strona); margin: 0 auto;
-  flex-wrap: wrap; gap: 10px;
+  flex-wrap: nowrap; gap: 10px;
 }
-.logo { font-weight: 700; font-size: 1.2rem; color: var(--akcent-ciemny); display: flex; align-items: center; gap: 8px; }
+.logo { font-weight: 700; font-size: 1.1rem; color: var(--akcent-ciemny); display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .logo:hover { text-decoration: none; }
 .logo .kropka { color: var(--akcent-cieply); }
-.menu { display: flex; gap: 22px; flex-wrap: wrap; }
-.menu a { color: var(--tekst-jasny); font-size: 1rem; font-weight: 500; }
+.menu { display: flex; gap: 14px; flex-wrap: nowrap; }
+.menu a { color: var(--tekst-jasny); font-size: .88rem; font-weight: 500; white-space: nowrap; }
 .menu a:hover, .menu a.aktywny { color: var(--akcent-ciemny); text-decoration: none; }
 
 /* ---------- Hero ---------- */
