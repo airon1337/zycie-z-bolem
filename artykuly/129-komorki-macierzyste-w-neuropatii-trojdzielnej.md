@@ -198,7 +198,7 @@ Na dzień dzisiejszy, stan wiedzy można ująć następująco:
 
 ✓ Istnieją biologiczne przesłanki, dlaczego MSC mogłyby pomagać w bólu neuropatycznym – głównie poprzez modulację stanu zapalnego i wsparcie regeneracji.
 
-✓ Pojedyncze przypadki kliniczne (case reports) opisują poprawę po podaniu MSC u pacjentów z neuralgią trójdzielną – w tym przypadek z 2024 roku z zastosowaniem iniekcji MSC pod kontrolą CT do otworu owalnego.
+✓ Pojedyncze doniesienia kliniczne sugerują możliwość redukcji bólu po podaniu MSC u pacjentów z bólem neuropatycznym twarzy.
 
 **Czego NIE wiemy:**
 

@@ -216,11 +216,11 @@ function Build-Pag([int]$cur, [int]$pages) {
     $sb = New-Object System.Text.StringBuilder
     [void]$sb.Append('<nav class="paginacja">')
     if ($cur -gt 1) {
-        $h = if (($cur - 1) -eq 1) { "/index.html#artykuly" } else { "/artykuly-" + ($cur - 1) + ".html" }
+        $h = if (($cur - 1) -eq 1) { "/#artykuly" } else { "/artykuly-" + ($cur - 1) + ".html" }
         [void]$sb.Append('<a href="' + $h + '">' + $script:faq.uiPrev + '</a>')
     }
     for ($i = 1; $i -le $pages; $i++) {
-        $h = if ($i -eq 1) { "/index.html#artykuly" } else { "/artykuly-" + $i + ".html" }
+        $h = if ($i -eq 1) { "/#artykuly" } else { "/artykuly-" + $i + ".html" }
         if ($i -eq $cur) { [void]$sb.Append('<span class="akt">' + $i + '</span>') }
         else { [void]$sb.Append('<a href="' + $h + '">' + $i + '</a>') }
     }
@@ -581,7 +581,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $bcArt = "Artyku" + [char]0x142 + "y"
     $bcObj = [ordered]@{ "@context"="https://schema.org"; "@type"="BreadcrumbList"; "itemListElement"=@(
         [ordered]@{ "@type"="ListItem"; "position"=1; "name"="Start"; "item"=$DOMENA + "/" },
-        [ordered]@{ "@type"="ListItem"; "position"=2; "name"=$bcArt; "item"=$DOMENA + "/index.html" },
+        [ordered]@{ "@type"="ListItem"; "position"=2; "name"=$bcArt; "item"=$DOMENA + "/" },
         [ordered]@{ "@type"="ListItem"; "position"=3; "name"=$title }
     ) }
     $bcLd = '<script type="application/ld+json">' + ($bcObj | ConvertTo-Json -Depth 6) + '</script>'
