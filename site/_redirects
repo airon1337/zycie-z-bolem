@@ -1,0 +1,18 @@
+# Redirect old truncated slugs to correct URLs (without .html)
+/026-zycie-z-bolem-nerwu-trojdzielnego-to-cos-czego-tru /026-niewidzialny-bol-twarzy 301
+/086-dla-osob-ktore-dopiero-wsiadaja-na-ten-bolowy-roll /086-poradnik-dla-nowo-zdiagnozowanych 301
+/017-wiele-osob-slyszac-te-dwa-pojecia-neuralgia-i-neur /017-neuralgia-a-neuropatia-roznice 301
+/035-rozmowa-z-lekarzem-o-bolu-neuropatycznym-szczegoln /035-jak-rozmawiac-z-lekarzem-o-bolu 301
+
+# Redirect old truncated slugs to correct URLs (with .html)
+/026-zycie-z-bolem-nerwu-trojdzielnego-to-cos-czego-tru.html /026-niewidzialny-bol-twarzy 301
+/086-dla-osob-ktore-dopiero-wsiadaja-na-ten-bolowy-roll.html /086-poradnik-dla-nowo-zdiagnozowanych 301
+/017-wiele-osob-slyszac-te-dwa-pojecia-neuralgia-i-neur.html /017-neuralgia-a-neuropatia-roznice 301
+/035-rozmowa-z-lekarzem-o-bolu-neuropatycznym-szczegoln.html /035-jak-rozmawiac-z-lekarzem-o-bolu 301
+
+# Old slug for article 095 (renamed file)
+/095-wyglada-na-to-ze-zarabiasz-na-naszym-cierpieniu /095-hejt-wobec-edukatorow-bolu 301
+/095-wyglada-na-to-ze-zarabiasz-na-naszym-cierpieniu.html /095-hejt-wobec-edukatorow-bolu 301
+
+# Fix Cloudflare email protection 404 (catch attempts to access obfuscated email)
+/cdn-cgi/l/email-protection /o-mnie 302

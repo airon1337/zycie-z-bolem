@@ -105,7 +105,7 @@ function Auto-Link([string]$html, [string]$curSlug) {
         $linked = 0
         while ($m.Success -and $linked -lt 2) {
             if (-not (Is-InsideTagOrAnchor $html $m.Index)) {
-                $rep = '<a class="link-wew" href="/' + $lnk.slug + '.html">' + $m.Value + '</a>'
+                $rep = '<a class="link-wew" href="/' + $lnk.slug + '">' + $m.Value + '</a>'
                 $html = $html.Substring(0, $m.Index) + $rep + $html.Substring($m.Index + $m.Length)
                 $linked++
                 $m = $rx.Match($html, $m.Index + $rep.Length)
@@ -156,7 +156,7 @@ function Build-Kafelek($it) {
     } else {
         $foto = '<div class="karta-foto-wrap"><img class="karta-foto" src="/placeholder.svg" alt="' + $tt + '" loading="lazy"></div>'
     }
-    return '<a class="karta-blog" href="/' + $it.slug + '.html">' + $foto + '<div class="karta-body"><h3 class="karta-tytul">' + $tt + '</h3><p class="karta-zaj">' + $ex + '</p></div></a>'
+    return '<a class="karta-blog" href="/' + $it.slug + '">' + $foto + '<div class="karta-body"><h3 class="karta-tytul">' + $tt + '</h3><p class="karta-zaj">' + $ex + '</p></div></a>'
 }
 
 function Make-Cover([string]$title, [string]$raw, [string]$outPath) {
@@ -216,16 +216,16 @@ function Build-Pag([int]$cur, [int]$pages) {
     $sb = New-Object System.Text.StringBuilder
     [void]$sb.Append('<nav class="paginacja">')
     if ($cur -gt 1) {
-        $h = if (($cur - 1) -eq 1) { "/#artykuly" } else { "/artykuly-" + ($cur - 1) + ".html" }
+        $h = if (($cur - 1) -eq 1) { "/#artykuly" } else { "/artykuly-" + ($cur - 1) }
         [void]$sb.Append('<a href="' + $h + '">' + $script:faq.uiPrev + '</a>')
     }
     for ($i = 1; $i -le $pages; $i++) {
-        $h = if ($i -eq 1) { "/#artykuly" } else { "/artykuly-" + $i + ".html" }
+        $h = if ($i -eq 1) { "/#artykuly" } else { "/artykuly-" + $i }
         if ($i -eq $cur) { [void]$sb.Append('<span class="akt">' + $i + '</span>') }
         else { [void]$sb.Append('<a href="' + $h + '">' + $i + '</a>') }
     }
     if ($cur -lt $pages) {
-        [void]$sb.Append('<a href="/artykuly-' + ($cur + 1) + '.html">' + $script:faq.uiNext + '</a>')
+        [void]$sb.Append('<a href="/artykuly-' + ($cur + 1) + '">' + $script:faq.uiNext + '</a>')
     }
     [void]$sb.Append('</nav>')
     return $sb.ToString()
@@ -525,7 +525,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
         $catMap[$katSlug].items.Add($thisItem)
     }
     $katHtml = ""
-    if ($katSlug -ne "") { $katHtml = '<div class="artykul-kat">Kategoria: <a class="kat-label" href="/kategoria-' + $katSlug + '.html">' + (Esc $katLabel) + '</a></div>' }
+    if ($katSlug -ne "") { $katHtml = '<div class="artykul-kat">Kategoria: <a class="kat-label" href="/kategoria-' + $katSlug + '">' + (Esc $katLabel) + '</a></div>' }
 
     # tagi (klikalne chipy + mapa tag -> artykuly)
     $slowaHtml = ""
@@ -534,7 +534,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
         [void]$sbT.Append('<div class="slowa-sekcja"><div class="slowa-label">Tematy w tym artykule</div><div class="slowa">')
         foreach ($tg in $tags) {
             $tgSlug = Tag-Slug $tg
-            [void]$sbT.Append('<a class="chip-tag" href="/tag-' + $tgSlug + '.html">').Append((Esc $tg)).Append('</a>')
+            [void]$sbT.Append('<a class="chip-tag" href="/tag-' + $tgSlug + '">').Append((Esc $tg)).Append('</a>')
             if (-not $tagMap.ContainsKey($tg)) { $tagMap[$tg] = New-Object System.Collections.Generic.List[object] }
             [void]$tagMap[$tg].Add($thisItem)
         }
@@ -561,7 +561,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
         $fbHtml = '<a class="udostepnij-btn fb" href="' + (Esc $fmFb) + '" target="_blank" rel="noopener">Skomentuj na FB</a>'
     }
     $page = $page.Replace("{{FBPOST}}", $fbHtml)
-    $canonical = $DOMENA + "/" + $slug + ".html"
+    $canonical = $DOMENA + "/" + $slug
     # hreflang: link do odpowiednika EN (slug EN z folderu content/en)
     $enSlug = ""
     $enDir = Join-Path $base "myneuralgia\content\en"
@@ -571,7 +571,7 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
         $enFile = Get-ChildItem -Path $enDir -Filter "$numer-*.md" -ErrorAction SilentlyContinue | Select-Object -First 1
         if ($enFile) { $enSlug = $enFile.BaseName }
     }
-    $hreflangEn = if ($enSlug -ne "") { "https://myneuralgia.com/" + $enSlug + ".html" } else { "" }
+    $hreflangEn = if ($enSlug -ne "") { "https://myneuralgia.com/" + $enSlug } else { "" }
     $page = $page.Replace("{{HREFLANG_PL}}", $canonical)
     $page = $page.Replace("{{HREFLANG_EN}}", $hreflangEn)
     $aobj = [ordered]@{ "@context"="https://schema.org"; "@type"="BlogPosting"; "headline"=$title; "description"=$excerpt; "author"=[ordered]@{ "@type"="Person"; "name"="Natalia" }; "publisher"=[ordered]@{ "@type"="Organization"; "name"=$siteName }; "mainEntityOfPage"=$canonical }
@@ -604,7 +604,7 @@ $katPills = ""
 $sbK = New-Object System.Text.StringBuilder
 foreach ($kc in $faq.kategorie) {
     if ($catMap.ContainsKey($kc.slug)) {
-        [void]$sbK.Append('<a class="kat-pill" href="/kategoria-' + $kc.slug + '.html">').Append((Esc $kc.label)).Append('</a>')
+        [void]$sbK.Append('<a class="kat-pill" href="/kategoria-' + $kc.slug + '">').Append((Esc $kc.label)).Append('</a>')
     }
 }
 if ($sbK.Length -gt 0) { $katPills = '<div class="kontener"><div class="kat-pasek">' + $sbK.ToString() + '</div></div>' }
@@ -687,7 +687,7 @@ for ($p = 1; $p -le $pages; $p++) {
     } else {
         $lp = $tplLista
         $lp = $lp.Replace("{{NRSTRONY}}", [string]$p)
-        $lp = $lp.Replace("{{CANONICAL}}", $DOMENA + "/artykuly-" + $p + ".html")
+        $lp = $lp.Replace("{{CANONICAL}}", $DOMENA + "/artykuly-" + $p)
         $lp = $lp.Replace("{{KARTY}}", $cards.ToString())
         $lp = $lp.Replace("{{PAGINACJA}}", $pag)
         $lp | Out-File -Encoding UTF8 (Join-Path $siteDir ("artykuly-" + $p + ".html"))
@@ -702,7 +702,7 @@ foreach ($tag in $tagMap.Keys) {
     foreach ($it in $list) { [void]$kf.Append((Build-Kafelek $it) + "`n") }
     $tp = $tplTag
     $tp = $tp.Replace("{{TAG}}", (Esc $tag))
-    $tp = $tp.Replace("{{CANONICAL}}", $DOMENA + "/tag-" + (Tag-Slug $tag) + ".html")
+    $tp = $tp.Replace("{{CANONICAL}}", $DOMENA + "/tag-" + (Tag-Slug $tag))
     $tp = $tp.Replace("{{LICZBA}}", [string]$list.Count)
     $tp = $tp.Replace("{{KAFELKI}}", $kf.ToString())
     $tp | Out-File -Encoding UTF8 (Join-Path $siteDir ("tag-" + (Tag-Slug $tag) + ".html"))
@@ -718,7 +718,7 @@ foreach ($cslug in $catMap.Keys) {
     foreach ($it in $clist) { [void]$ckf.Append((Build-Kafelek $it) + "`n") }
     $cp = $tplKat
     $cp = $cp.Replace("{{KATEGORIA}}", (Esc $centry.label))
-    $cp = $cp.Replace("{{CANONICAL}}", $DOMENA + "/kategoria-" + $cslug + ".html")
+    $cp = $cp.Replace("{{CANONICAL}}", $DOMENA + "/kategoria-" + $cslug)
     $cp = $cp.Replace("{{LICZBA}}", [string]$clist.Count)
     $cp = $cp.Replace("{{KAFELKI}}", $ckf.ToString())
     $cp | Out-File -Encoding UTF8 (Join-Path $siteDir ("kategoria-" + $cslug + ".html"))
@@ -729,13 +729,13 @@ foreach ($cslug in $catMap.Keys) {
 $sm = New-Object System.Text.StringBuilder
 [void]$sm.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n")
 [void]$sm.Append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "`n")
-foreach ($u in @("/", "/dla-ciebie.html", "/o-mnie.html", "/dziennik-bolu.html", "/polityka-prywatnosci.html")) {
+foreach ($u in @("/", "/dla-ciebie", "/o-mnie", "/dziennik-bolu", "/polityka-prywatnosci")) {
     [void]$sm.Append('<url><loc>' + $DOMENA + $u + '</loc></url>' + "`n")
 }
-for ($p = 2; $p -le $pages; $p++) { [void]$sm.Append('<url><loc>' + $DOMENA + "/artykuly-" + $p + ".html" + '</loc></url>' + "`n") }
-foreach ($it in $itemsSorted) { [void]$sm.Append('<url><loc>' + $DOMENA + "/" + $it.slug + ".html" + '</loc></url>' + "`n") }
-foreach ($tag in $tagMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/tag-" + (Tag-Slug $tag) + ".html" + '</loc></url>' + "`n") }
-foreach ($cslug in $catMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/kategoria-" + $cslug + ".html" + '</loc></url>' + "`n") }
+for ($p = 2; $p -le $pages; $p++) { [void]$sm.Append('<url><loc>' + $DOMENA + "/artykuly-" + $p + '</loc></url>' + "`n") }
+foreach ($it in $itemsSorted) { [void]$sm.Append('<url><loc>' + $DOMENA + "/" + $it.slug + '</loc></url>' + "`n") }
+foreach ($tag in $tagMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/tag-" + (Tag-Slug $tag) + '</loc></url>' + "`n") }
+foreach ($cslug in $catMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/kategoria-" + $cslug + '</loc></url>' + "`n") }
 [void]$sm.Append('</urlset>' + "`n")
 $enc = New-Object System.Text.UTF8Encoding($false)
 [System.IO.File]::WriteAllText((Join-Path $siteDir "sitemap.xml"), $sm.ToString(), $enc)
@@ -751,7 +751,7 @@ $rss = New-Object System.Text.StringBuilder
 $rcnt = 0
 foreach ($it in $itemsSorted) {
     if ($rcnt -ge 30) { break }
-    $u = $DOMENA + "/" + $it.slug + ".html"
+    $u = $DOMENA + "/" + $it.slug
     [void]$rss.Append('<item>')
     [void]$rss.Append('<title>').Append((Esc $it.title)).Append('</title>')
     [void]$rss.Append('<link>').Append($u).Append('</link>')

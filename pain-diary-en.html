@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pain Diary – Beyond Face Pain</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; color: #222; line-height: 1.4; }
+@page { size: A4; margin: 10mm 12mm; }
+@media print {
+  .page-break { page-break-before: always; }
+  @page { margin: 8mm 10mm; }
+}
+
+.page { max-width: 210mm; min-height: 277mm; margin: 0 auto; padding: 10mm 14mm 8mm; display: flex; flex-direction: column; position: relative; }
+.page-content { flex: 1; }
+.footer { font-size: 8.5pt; color: #666; padding-top: 5px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; margin-top: auto; }
+h1 { font-size: 24pt; font-weight: 800; margin-bottom: 4px; }
+h2 { font-size: 13pt; font-weight: 700; color: #1a8a7a; margin: 14px 0 8px; padding-bottom: 3px; border-bottom: 2px solid #1a8a7a; }
+h3 { font-size: 11pt; font-weight: 700; color: #1a8a7a; margin: 12px 0 6px; }
+
+.header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.header-site { font-size: 10pt; font-weight: 700; }
+.subtitle { font-style: italic; color: #555; margin-bottom: 16px; font-size: 10.5pt; }
+
+.info-box { background: #f0f9f7; border: 1px solid #cce8e3; border-radius: 6px; padding: 10px 14px; margin-bottom: 12px; font-size: 10pt; }
+.info-box p { margin-bottom: 5px; }
+.info-box strong { font-weight: 700; }
+
+table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 9.5pt; }
+th { background: #1a8a7a; color: #fff; padding: 5px 6px; text-align: left; font-weight: 600; font-size: 9pt; }
+td { border: 1px solid #ccc; padding: 4px 6px; vertical-align: top; }
+tr:nth-child(even) td { background: #fafafa; }
+
+.scale-table td:first-child { font-weight: 700; text-align: center; width: 50px; }
+.scale-table td:nth-child(2) { font-weight: 700; }
+
+.checkbox { display: inline-block; width: 13px; height: 13px; border: 1.5px solid #555; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+.field-line { border-bottom: 1px solid #999; display: inline-block; min-width: 200px; height: 18px; margin-left: 4px; }
+.field-line-full { border-bottom: 1px solid #999; width: 100%; height: 20px; margin: 4px 0 10px; }
+
+.form-row { margin-bottom: 8px; }
+.form-label { font-weight: 600; display: inline-block; min-width: 170px; }
+
+.footer { display: flex; justify-content: space-between; margin-top: 12px; font-size: 8.5pt; color: #666; padding-top: 5px; border-top: 1px solid #ddd; }
+
+.hint-box { background: #fff8e1; border: 1px solid #f0d860; border-radius: 5px; padding: 8px 12px; margin: 10px 0; font-size: 9pt; }
+
+.impact-table td { height: 24px; text-align: center; }
+.impact-table td:first-child { text-align: left; font-weight: 500; }
+
+.about-box { background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 10px 14px; margin-top: 12px; font-size: 9.5pt; }
+.about-box strong { display: block; margin-bottom: 4px; }
+
+.disclaimer { font-size: 8.5pt; color: #666; margin-top: 10px; font-style: italic; }
+
+.daily-table td { height: 24px; }
+.daily-table .day-cell { font-weight: 700; vertical-align: middle; font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <div class="page-content">
+  <div class="header">
+    <span class="header-site">BEYOND FACE PAIN</span>
+    <span class="header-site">www.beyondfacepain.com</span>
+  </div>
+  <h1>PAIN DIARY</h1>
+  <p class="subtitle">A tool for monitoring, understanding, and treating chronic pain</p>
+
+  <div class="info-box">
+    <p><strong>Why keep a diary?</strong> It helps you better understand your condition, notice recurring patterns, and identify what makes symptoms worse or better. Regular entries also make it easier to assess treatment effectiveness and prepare for appointments with your doctor. This gives your doctor a more structured picture of your disease progression. <strong>Consistency is key.</strong></p>
+  </div>
+
+  <h2>Guidelines and Pain Scale</h2>
+  <p style="margin-bottom:10px;"><strong>Record at consistent times:</strong> Ideally in the morning, during the day, and in the evening. If an unusually severe pain attack occurs, record it separately. Pay attention to factors such as: sleep, stress, fatigue, cold, wind, weather, physical effort, eating, or talking.</p>
+
+  <table class="scale-table">
+    <tr><th style="width:60px">Level</th><th>Pain intensity description (Scale 0–4)</th></tr>
+    <tr><td>0</td><td><strong>No pain</strong> – complete comfort.</td></tr>
+    <tr><td>1</td><td><strong>Mild pain</strong> – noticeable but does not interfere with daily activities.</td></tr>
+    <tr><td>2</td><td><strong>Moderate pain</strong> – clearly felt, impairs concentration or some activities.</td></tr>
+    <tr><td>3</td><td><strong>Severe pain</strong> – very distressing, dominates attention, significantly limits functioning.</td></tr>
+    <tr><td>4</td><td><strong>Unbearable pain</strong> – prevents any activity, requires urgent intervention.</td></tr>
+  </table>
+
+  <div class="info-box" style="background:#f8f8f8; border-color:#ddd;">
+    <p><strong>Why a 0–4 scale?</strong> Unlike the traditional 0–10 scale, the five-level Verbal Rating Scale (VRS) significantly reduces subjectivity and eliminates the patient's dilemma of choosing a specific number. It is a clinically validated approach that allows for quick, intuitive, and reproducible pain assessment – which is crucial for daily, repeated diary entries during states of severe fatigue or symptom exhaustion.</p>
+  </div>
+
+  <h2>Basic Information (fill in once)</h2>
+  <div class="form-row"><span class="form-label">Diagnosis:</span><span class="field-line" style="min-width:350px"></span></div>
+  <div class="form-row"><span class="form-label">Pain present since:</span><span class="field-line" style="min-width:300px"></span></div>
+  <div class="form-row"><span class="form-label">Side of face:</span> <span class="checkbox"></span> right &nbsp; <span class="checkbox"></span> left &nbsp; <span class="checkbox"></span> both sides</div>
+  <div class="form-row"><span class="form-label">Main pain area:</span> <span class="checkbox"></span> forehead &amp; eye (V1) &nbsp; <span class="checkbox"></span> cheek &amp; jaw (V2) &nbsp; <span class="checkbox"></span> lower jaw (V3) &nbsp; <span class="checkbox"></span> multiple areas</div>
+  <div class="form-row"><span class="form-label">Probable cause:</span><span class="field-line" style="min-width:350px"></span></div>
+  <div class="form-row"><span class="form-label">Regular medications:</span><span class="field-line" style="min-width:320px"></span></div>
+  <div class="form-row"><span class="form-label">As-needed medications:</span><span class="field-line" style="min-width:300px"></span></div>
+  <div class="form-row"><span class="form-label">Allergies:</span><span class="field-line" style="min-width:380px"></span></div>
+
+  </div>
+  <div class="footer"><span>Page 1</span><span>www.beyondfacepain.com</span></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page page-break">
+  <div class="page-content">
+  <h1 style="font-size:20pt; margin-bottom:12px;">DAILY SYMPTOM LOG</h1>
+
+  <table class="daily-table">
+    <tr>
+      <th style="width:75px">Date/Day</th>
+      <th style="width:65px">Time of day</th>
+      <th style="width:60px">Pain level (0-4)</th>
+      <th>Pain character</th>
+      <th>Triggers<br><span style="font-weight:normal;font-size:8pt">Observed? If not, also worth noting</span></th>
+      <th>What brought relief?</th>
+      <th style="width:75px">Emotions accompanying pain</th>
+      <th style="width:80px">As-needed meds<br><span style="font-weight:normal;font-size:8pt">Did they help? (yes/partially/no)</span></th>
+    </tr>
+    <!-- Day 1-7, 3 rows each -->
+    <tr><td rowspan="3" class="day-cell">Day 1<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td rowspan="3" class="day-cell">Day 2<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td rowspan="3" class="day-cell">Day 3<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td rowspan="3" class="day-cell">Day 4<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td rowspan="3" class="day-cell">Day 5<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td rowspan="3" class="day-cell">Day 6<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td rowspan="3" class="day-cell">Day 7<br>___.___ </td><td>Morning</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Afternoon</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Evening</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <div class="hint-box">
+    <strong>Tip:</strong> You can print this page multiple times. Neuropathic pain may spread to adjacent areas – if an attack was unusually severe or atypical, describe it in detail on the next page.
+  </div>
+
+  <p><strong>Notes:</strong></p>
+  <div class="field-line-full"></div>
+  <div class="field-line-full"></div>
+
+  </div>
+  <div class="footer"><span>Page 2</span><span>www.beyondfacepain.com</span></div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page page-break">
+  <div class="page-content">
+  <h1 style="font-size:20pt; margin-bottom:4px;">DETAILED PAIN EPISODE</h1>
+  <p class="subtitle">Complete when a more severe or unusual pain attack occurs</p>
+
+  <div class="form-row"><span class="form-label">Date and time:</span><span class="field-line" style="min-width:300px"></span></div>
+  <div class="form-row"><span class="form-label">Pain intensity (0–4):</span><span class="field-line" style="min-width:100px"></span></div>
+
+  <h3>Pain location</h3>
+  <p><span class="checkbox"></span> forehead / eye &nbsp;&nbsp; <span class="checkbox"></span> cheek / jaw &nbsp;&nbsp; <span class="checkbox"></span> lower jaw &nbsp;&nbsp; <span class="checkbox"></span> multiple areas</p>
+
+  <h3>Pain character</h3>
+  <p><span class="checkbox"></span> stabbing &nbsp;&nbsp; <span class="checkbox"></span> electric ("like a shock") &nbsp;&nbsp; <span class="checkbox"></span> burning &nbsp;&nbsp; <span class="checkbox"></span> throbbing</p>
+  <p><span class="checkbox"></span> dull &nbsp;&nbsp; <span class="checkbox"></span> other: <span class="field-line" style="min-width:250px"></span></p>
+
+  <h3>Duration</h3>
+  <p><span class="checkbox"></span> seconds &nbsp;&nbsp; <span class="checkbox"></span> minutes &nbsp;&nbsp; <span class="checkbox"></span> hours &nbsp;&nbsp; <span class="checkbox"></span> most of the day</p>
+
+  <h3>Possible triggers</h3>
+  <p><span class="checkbox"></span> eating &nbsp;&nbsp; <span class="checkbox"></span> talking &nbsp;&nbsp; <span class="checkbox"></span> brushing teeth &nbsp;&nbsp; <span class="checkbox"></span> touching face</p>
+  <p><span class="checkbox"></span> cold air &nbsp;&nbsp; <span class="checkbox"></span> wind &nbsp;&nbsp; <span class="checkbox"></span> stress &nbsp;&nbsp; <span class="checkbox"></span> fatigue</p>
+  <p><span class="checkbox"></span> weather change &nbsp;&nbsp; <span class="checkbox"></span> no clear cause or other: <span class="field-line" style="min-width:180px"></span></p>
+
+  <h3>Accompanying symptoms</h3>
+  <p><span class="checkbox"></span> tingling &nbsp;&nbsp; <span class="checkbox"></span> numbness &nbsp;&nbsp; <span class="checkbox"></span> hypersensitivity &nbsp;&nbsp; <span class="checkbox"></span> eye tearing</p>
+  <p><span class="checkbox"></span> muscle tension &nbsp;&nbsp; <span class="checkbox"></span> difficulty eating &nbsp;&nbsp; <span class="checkbox"></span> difficulty speaking &nbsp;&nbsp; <span class="checkbox"></span> other: <span class="field-line" style="min-width:100px"></span></p>
+
+  <h3>Impact of pain on daily functioning</h3>
+  <table class="impact-table">
+    <tr><th style="text-align:left">Area</th><th>Minimal</th><th>Moderate</th><th>Significant</th></tr>
+    <tr><td>Sleep:</td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td></tr>
+    <tr><td>Eating:</td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td></tr>
+    <tr><td>Conversation:</td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td></tr>
+    <tr><td>Work / responsibilities:</td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td></tr>
+    <tr><td>Mood:</td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td><td><span class="checkbox"></span></td></tr>
+  </table>
+
+  <h3>My experiences and observations (what brought relief, additional symptoms):</h3>
+  <div class="field-line-full"></div>
+  <div class="field-line-full"></div>
+  <div class="field-line-full"></div>
+  <div class="field-line-full"></div>
+
+  <p style="font-size:9pt; color:#666; margin-top:10px;">(Relief may come from: as-needed medication (dulling the senses), rest, sleep, relaxation/calming, physical activity, warmth, cold, avoiding the trigger, other – write them down.)</p>
+
+  </div>
+  <div class="footer"><span>Page 3</span><span>www.beyondfacepain.com</span></div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page page-break">
+  <div class="page-content">
+  <h1 style="font-size:20pt; margin-bottom:4px;">SUMMARY FOR YOUR DOCTOR</h1>
+  <p class="subtitle">Complete before your appointment to help your doctor assess disease progression.</p>
+
+  <div class="form-row"><span class="form-label">Observation period:</span> From: <span class="field-line" style="min-width:120px"></span> &nbsp; To: <span class="field-line" style="min-width:120px"></span></div>
+  <div class="form-row"><span class="form-label">Number of days with pain:</span><span class="field-line" style="min-width:100px"></span></div>
+  <div class="form-row"><span class="form-label">Average number of attacks:</span><span class="field-line" style="min-width:80px"></span> per day (if applicable)</div>
+
+  <h3>General picture and pain character</h3>
+  <div class="form-row"><span class="form-label">Most frequent intensity:</span> <span class="checkbox"></span> 1 mild &nbsp; <span class="checkbox"></span> 2 moderate &nbsp; <span class="checkbox"></span> 3 severe &nbsp; <span class="checkbox"></span> 4 unbearable</div>
+  <div class="form-row"><span class="form-label">Pain pattern:</span> <span class="checkbox"></span> constant &nbsp; <span class="checkbox"></span> paroxysmal &nbsp; <span class="checkbox"></span> mixed</div>
+
+  <h3>Most common pain character and triggers</h3>
+  <p><span class="checkbox"></span> electric &nbsp; <span class="checkbox"></span> stabbing &nbsp; <span class="checkbox"></span> burning &nbsp; <span class="checkbox"></span> throbbing</p>
+  <p><span class="checkbox"></span> dull &nbsp; <span class="checkbox"></span> mixed &nbsp; <span class="checkbox"></span> other: <span class="field-line" style="min-width:180px"></span></p>
+  <p style="margin-top:8px;"><span class="checkbox"></span> stress &nbsp; <span class="checkbox"></span> fatigue &nbsp; <span class="checkbox"></span> eating &nbsp; <span class="checkbox"></span> talking</p>
+  <p><span class="checkbox"></span> brushing teeth &nbsp; <span class="checkbox"></span> cold / wind &nbsp; <span class="checkbox"></span> touching face &nbsp; <span class="checkbox"></span> no clear pattern</p>
+
+  <h3>Effectiveness of as-needed treatment</h3>
+  <div class="form-row"><span class="form-label">As-needed medications used:</span><span class="field-line" style="min-width:280px"></span></div>
+  <div class="form-row"><span class="form-label">Effectiveness:</span> <span class="checkbox"></span> very good &nbsp; <span class="checkbox"></span> partial &nbsp; <span class="checkbox"></span> minimal &nbsp; <span class="checkbox"></span> no improvement</div>
+
+  <h3>Questions for your doctor at the next appointment</h3>
+  <p>1. <span class="field-line" style="min-width:90%; display:inline-block;"></span></p>
+  <p style="margin-top:8px;">2. <span class="field-line" style="min-width:90%; display:inline-block;"></span></p>
+
+  <div class="about-box">
+    <strong>About the author</strong>
+    <p>Hi, my name is Natalia. Since 2014, I have been living with chronic pain caused by trigeminal nerve damage. My story began suddenly. I was barely 25 when nerve damage occurred after surgery to remove a tumor. Overnight, severe pain appeared in my jaw area – and it has stayed with me since. To understand it, I began studying pain in depth, and I want to share that knowledge.</p>
+  </div>
+
+  <p class="disclaimer">Legal disclaimer: This material is for informational and educational purposes only and cannot replace professional medical advice, diagnosis, or treatment plan. All medical decisions must be consulted with your treating physician.</p>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; margin-top:16px; padding-top:12px; border-top:1px solid #ddd;">
+    <div style="flex:1;">
+      <p style="font-size:9.5pt; color:#555;"><strong>Want to manage your condition more effectively?</strong> Visit the blog, get free resources, and join the community.</p>
+    </div>
+    <div style="width:80px; height:80px; border:2px solid #1a8a7a; border-radius:6px; display:flex; align-items:center; justify-content:center; margin-left:16px; flex-shrink:0;">
+      <span style="font-size:8pt; text-align:center; color:#1a8a7a; font-weight:600;">QR<br>CODE</span>
+    </div>
+    <div style="margin-left:10px; font-size:8.5pt; color:#555;">
+      <p>Scan and visit</p>
+      <p style="font-weight:600;">beyondfacepain.com</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="footer"><span>Page 4</span><span>www.beyondfacepain.com</span></div>
+</div>
+
+</body>
+</html>
