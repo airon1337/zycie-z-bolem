@@ -39,7 +39,7 @@ To miejsce będzie dla nas. Dla ludzi, którzy każdego dnia mierzą się z cien
 
 ## Strona i Dziennik Bólu
 
-Dlatego zapraszam Was również na stronę [zyciezbolem.pl](http://zyciezbolem.pl).  
+Dlatego zapraszam Was również na stronę [zyciezbolem.pl](https://zyciezbolem.pl).  
 
 Będzie ona swoistym lustrzanym odbiciem tego profilu, ale znajdzie się tam także coś więcej. Dodatkowe materiały do pracy z bólem przewlekłym, treści edukacyjne oraz teksty, których nie zawsze mogę publikować tutaj.  
 
