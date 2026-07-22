@@ -5,11 +5,18 @@ $srcDir  = Join-Path $base "artykuly"
 
 # --- Auto-numerowanie: pliki bez numeru NNN- na poczatku dostaną kolejny numer ---
 $existingNumbers = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -match '^\d{3}-' } | ForEach-Object { [int]($_.Name.Substring(0,3)) })
-$nextNum = if ($existingNumbers.Count -gt 0) { ($existingNumbers | Measure-Object -Maximum).Maximum + 1 } else { 1 }
+if ($existingNumbers.Count -gt 0) { [int]$nextNum = ($existingNumbers | Measure-Object -Maximum).Maximum + 1 } else { [int]$nextNum = 1 }
 $unnumbered = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -notmatch '^\d{3}-' -and $_.Name -ne 'index.md' -and $_.Name -ne 'nie walczylam z bolem.md' -and $_.Name -ne 'start strony.md' } | Sort-Object Name)
 foreach ($uf in $unnumbered) {
-    $newName = "{0:D3}-{1}" -f $nextNum, $uf.Name
-    Rename-Item $uf.FullName $newName
+    $prefix = $nextNum.ToString("D3")
+    # Slugify: remove Polish chars, lowercase, replace spaces with dashes
+    $baseName = [System.IO.Path]::GetFileNameWithoutExtension($uf.Name)
+    $slug = $baseName.ToLower()
+    $slug = $slug -replace '\u0105','a' -replace '\u0107','c' -replace '\u0119','e' -replace '\u0142','l' -replace '\u0144','n' -replace '\u00f3','o' -replace '\u015b','s' -replace '\u017a','z' -replace '\u017c','z'
+    $slug = $slug -replace '\u0104','a' -replace '\u0106','c' -replace '\u0118','e' -replace '\u0141','l' -replace '\u0143','n' -replace '\u00d3','o' -replace '\u015a','s' -replace '\u0179','z' -replace '\u017b','z'
+    $slug = $slug -replace '[^a-z0-9]+','-' -replace '(^-+|-+$)',''
+    $newName = "$prefix-$slug.md"
+    Rename-Item $uf.FullName (Join-Path $srcDir $newName)
     Write-Host "  AUTO-NUM: $($uf.Name) -> $newName"
     $nextNum++
 }

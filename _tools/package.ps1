@@ -11,25 +11,6 @@ Copy-Item $src $pub -Recurse
 $tpl = Join-Path $pub "_szablony"
 if (Test-Path $tpl) { Remove-Item $tpl -Recurse -Force }
 
-# Fix encoding: konwertuj pliki CP1250 na UTF-8 (zabezpieczenie przed krzaczkami)
-$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-$cp1250 = [System.Text.Encoding]::GetEncoding(1250)
-Get-ChildItem -Path $pub -Filter '*.html' -Recurse | ForEach-Object {
-    $bytes = [System.IO.File]::ReadAllBytes($_.FullName)
-    $needsFix = $false
-    for ($i = 0; $i -lt [Math]::Min($bytes.Length, 4000); $i++) {
-        if ($bytes[$i] -ge 0x80) {
-            if ($bytes[$i] -ge 0x80 -and $bytes[$i] -le 0xBF -and ($i -eq 0 -or $bytes[$i-1] -lt 0xC0)) { $needsFix = $true; break }
-            if ($bytes[$i] -ge 0xC0 -and $bytes[$i] -le 0xFD -and $i+1 -lt $bytes.Length -and ($bytes[$i+1] -lt 0x80 -or $bytes[$i+1] -gt 0xBF)) { $needsFix = $true; break }
-        }
-    }
-    if ($needsFix) {
-        $content = $cp1250.GetString($bytes)
-        [System.IO.File]::WriteAllText($_.FullName, $content, $utf8NoBom)
-        Write-Output ("  Encoding fix: " + $_.Name)
-    }
-}
-
 # Cache-busting: dolacz wersje (hash zawartosci styl.css) do KAZDEGO linku /styl.css we wszystkich stronach.
 # Dzieki temu po zmianie CSS adres sie zmienia i przegladarka pobiera swiezy plik (koniec z Ctrl+F5).
 $cssFile = Join-Path $pub "styl.css"
