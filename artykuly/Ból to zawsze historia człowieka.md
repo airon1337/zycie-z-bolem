@@ -2,10 +2,11 @@
 tytul: Ból to zawsze historia człowieka
 data: 2026-07-22T12:20
 status: opublikowany
+obraz: /zdjecia/post 14.jpg
 ---
 ---
 
-tytul: "Ból to zawsze historia człowieka"
+
 
 data: "2026-07-22T12:00"
 
@@ -59,8 +60,5 @@ Robię to dlatego, że wiem, jak wygląda świat z perspektywy osoby, która sł
 
 Nie mogę zmienić tego, co wydarzyło się lata temu. Mogę jednak zrobić wszystko, żeby kolejna osoba nie musiała przez tę samą drogę przechodzić samotnie. Jeżeli dzięki wiedzy, którą tutaj przekazuję, choć jedna osoba szybciej zrozumie, co się z nią dzieje, trafi do odpowiedniego specjalisty albo po prostu poczuje, że nie zwariowała i nie jest sama, to wiem, że to wszystko miało sens.
 
-## Źródła
-
-Brak.
-
 > Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
+
