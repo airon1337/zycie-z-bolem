@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ensure HTML and Markdown files are treated as UTF-8
+*.html text working-tree-encoding=UTF-8
+*.md text working-tree-encoding=UTF-8

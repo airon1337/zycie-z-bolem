@@ -591,7 +591,8 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $page = $page.Replace("{{FAQ}}", $extras.faq)
     $page = $page.Replace("{{FAQ_JSONLD}}", $extras.ld)
     $page = $page.Replace("{{TRESC}}", $bodyHtml)
-    $page | Out-File -Encoding UTF8 (Join-Path $outArt ($slug + ".html"))
+    $encUtf8 = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllText((Join-Path $outArt ($slug + ".html")), $page, $encUtf8)
 
     $items += $thisItem
 }
@@ -612,7 +613,8 @@ if ($sbK.Length -gt 0) { $katPills = '<div class="kontener"><div class="kat-pase
 # indeks wyszukiwarki (tytul, slug, zajawka)
 $searchData = @()
 foreach ($it in $itemsSorted) { $searchData += [ordered]@{ t = $it.title; s = $it.slug; e = $it.excerpt } }
-($searchData | ConvertTo-Json -Depth 3) | Out-File -Encoding UTF8 (Join-Path $siteDir "search-index.json")
+($searchData | ConvertTo-Json -Depth 3) | Set-Variable -Name _jsonOut
+[System.IO.File]::WriteAllText((Join-Path $siteDir "search-index.json"), $_jsonOut, (New-Object System.Text.UTF8Encoding($false)))
 
 # --- powiazane artykuly (wazone wspolne tagi: rzadkie/specyficzne tagi liczą się wiecej) ---
 $relHead = "Powi" + [char]0x105 + "zane artyku" + [char]0x142 + "y"
@@ -683,14 +685,14 @@ for ($p = 1; $p -le $pages; $p++) {
         $index = $index.Replace("{{KATEGORIE}}", $katPills)
         $index = $index.Replace("{{KARTY}}", $cards.ToString())
         $index = $index.Replace("{{PAGINACJA}}", $pag)
-        $index | Out-File -Encoding UTF8 (Join-Path $siteDir "index.html")
+        [System.IO.File]::WriteAllText((Join-Path $siteDir "index.html"), $index, (New-Object System.Text.UTF8Encoding($false)))
     } else {
         $lp = $tplLista
         $lp = $lp.Replace("{{NRSTRONY}}", [string]$p)
         $lp = $lp.Replace("{{CANONICAL}}", $DOMENA + "/artykuly-" + $p)
         $lp = $lp.Replace("{{KARTY}}", $cards.ToString())
         $lp = $lp.Replace("{{PAGINACJA}}", $pag)
-        $lp | Out-File -Encoding UTF8 (Join-Path $siteDir ("artykuly-" + $p + ".html"))
+        [System.IO.File]::WriteAllText((Join-Path $siteDir ("artykuly-" + $p + ".html")), $lp, (New-Object System.Text.UTF8Encoding($false)))
     }
 }
 
@@ -705,7 +707,7 @@ foreach ($tag in $tagMap.Keys) {
     $tp = $tp.Replace("{{CANONICAL}}", $DOMENA + "/tag-" + (Tag-Slug $tag))
     $tp = $tp.Replace("{{LICZBA}}", [string]$list.Count)
     $tp = $tp.Replace("{{KAFELKI}}", $kf.ToString())
-    $tp | Out-File -Encoding UTF8 (Join-Path $siteDir ("tag-" + (Tag-Slug $tag) + ".html"))
+    [System.IO.File]::WriteAllText((Join-Path $siteDir ("tag-" + (Tag-Slug $tag) + ".html")), $tp, (New-Object System.Text.UTF8Encoding($false)))
     $tagCount++
 }
 
@@ -721,7 +723,7 @@ foreach ($cslug in $catMap.Keys) {
     $cp = $cp.Replace("{{CANONICAL}}", $DOMENA + "/kategoria-" + $cslug)
     $cp = $cp.Replace("{{LICZBA}}", [string]$clist.Count)
     $cp = $cp.Replace("{{KAFELKI}}", $ckf.ToString())
-    $cp | Out-File -Encoding UTF8 (Join-Path $siteDir ("kategoria-" + $cslug + ".html"))
+    [System.IO.File]::WriteAllText((Join-Path $siteDir ("kategoria-" + $cslug + ".html")), $cp, (New-Object System.Text.UTF8Encoding($false)))
     $katCount++
 }
 
