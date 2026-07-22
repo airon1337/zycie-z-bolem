@@ -45,7 +45,8 @@
     <ol>
       <li>Kliknij "Prompt: Formatowanie posta FB" → skopiowane</li>
       <li>Otwórz AI → wklej prompt → pod spodem wklej surowy tekst z Facebooka</li>
-      <li>Wynik wklej w CMS (Artykuły PL → Add an entry)</li>
+      <li>W CMS (Artykuły PL → Add an entry) wpisz TYTUŁ i DATĘ w osobnych polach</li>
+      <li>Wynik z AI wklej TYLKO do pola "Treść artykułu" (bez --- na początku!)</li>
     </ol>
   </div>
 
@@ -289,32 +290,31 @@ Do not wrap the Markdown in backticks.
 
 If the article exceeds the response limit, inform me instead of shortening or omitting any part of the text.`;
 
-var PROMPT_FORMAT = `Dostajesz surowy tekst posta z Facebooka (fanpage "Życie z bólem — nie jesteś sama/sam"). Twoim zadaniem jest sformatować go jako artykuł na stronę zyciezbolem.pl w formacie Markdown.
+var PROMPT_FORMAT = `Dostajesz surowy tekst posta z Facebooka (fanpage "Życie z bólem — nie jesteś sama/sam"). Twoim zadaniem jest sformatować go jako treść artykułu na stronę zyciezbolem.pl w formacie Markdown.
+
+WAŻNE: Wynik będzie wklejany do CMS, który SAM dodaje tytuł i datę. Dlatego:
 
 ZASADY:
 
 1. NIE zmieniaj treści — nie dodawaj, nie usuwaj, nie parafrazuj. Formatujesz, nie edytujesz.
-2. Dodaj frontmatter na górze:
-   ---
-   tytul: "Krótki, naturalny tytuł artykułu"
-   data: "YYYY-MM-DDTHH:MM"
-   ---
-3. NIE dodawaj nagłówka H1 (# ...) — strona generuje go automatycznie z pola tytul.
+2. NIE dodawaj frontmatter (bez --- na początku i końcu, bez tytul/data/status).
+3. NIE dodawaj nagłówka H1 (# ...) — strona generuje go automatycznie z CMS.
 4. Treść zacznij od pierwszego akapitu lub od ## (H2).
-5. Używaj:
+5. Jeśli tekst zaczyna się od tytułu artykułu (tego samego co w temacie) — USUŃ go. Tytuł jest osobno w CMS.
+6. Używaj:
    - ## na podtytuły/sekcje
    - **pogrubienie** na kluczowe pojęcia, nazwy leków, ważne terminy
    - Akapity oddzielone pustą linią
    - Listy punktowane (- lub •) tam gdzie tekst wymienia elementy
    - Listy numerowane (1. 2. 3.) tam gdzie jest sekwencja/kolejność
-6. Zachowaj oryginalny styl autorki — ciepły, osobisty, empatyczny.
-7. Linki do źródeł (jeśli są) umieść na końcu pod nagłówkiem ## Źródła
-8. Na samym końcu dodaj:
+7. Zachowaj oryginalny styl autorki — ciepły, osobisty, empatyczny.
+8. Linki do źródeł (jeśli są) umieść na końcu pod nagłówkiem ## Źródła
+9. Na samym końcu dodaj:
    > Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
-9. Jeśli post zawiera emotikony — usuń je WSZYSTKIE. Jeśli emotikon pełnił rolę znaku interpunkcyjnego (np. ❓ zamiast ?, ➡️ zamiast myślnika), zamień go na odpowiedni zwykły znak (?, -, :, ...). Nie zostawiaj żadnych emoji w tekście.
-10. Jeśli post zawiera hashtagi (#neuralgia itp.) — usuń je.
+10. Jeśli post zawiera emotikony — usuń je WSZYSTKIE. Jeśli emotikon pełnił rolę znaku interpunkcyjnego (np. ❓ zamiast ?, ➡️ zamiast myślnika), zamień go na odpowiedni zwykły znak (?, -, :, ...).
+11. Jeśli post zawiera hashtagi (#neuralgia itp.) — usuń je.
 
-ZWRÓĆ tylko gotowy plik Markdown. Bez wyjaśnień, bez opisów zmian.`;
+ZWRÓĆ tylko gotową treść Markdown (BEZ frontmatter). Bez wyjaśnień, bez opisów zmian.`;
 
 document.getElementById('promptText').textContent = PROMPT;
 document.getElementById('promptTextFormat').textContent = PROMPT_FORMAT;

@@ -8,6 +8,9 @@ content:
     type: collection
     path: artykuly
     format: yaml-frontmatter
+    description: |
+      📝 FORMATOWANIE POSTÓW: Otwórz https://myneuralgia-en.pages.dev/translate-tool → kliknij "Prompt: Formatowanie posta FB" → wklej do AI razem z tekstem → wynik wklej tutaj do pola "Treść artykułu".
+      ⚠️ NIE wklejaj --- frontmatter — tytuł i datę ustaw w polach poniżej.
     filename:
       template: '{fields.tytul}.md'
       field: create
@@ -51,6 +54,7 @@ content:
       - name: body
         label: Treść artykułu
         type: rich-text
+        description: "WAŻNE: Wklej TYLKO treść artykułu (bez --- frontmatter na początku). Tytuł i datę ustaw w polach powyżej. Jeśli kopiujesz z ChatGPT — usuń blok --- na początku i na końcu (te linie z tytul/data/status). Tekst powinien zaczynać się od pierwszego akapitu lub nagłówka ##."
 
   - name: articles-en
     label: Artykuły (EN)

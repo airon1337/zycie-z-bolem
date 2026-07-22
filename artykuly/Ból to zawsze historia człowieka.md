@@ -4,13 +4,6 @@ data: 2026-07-22T12:20
 status: opublikowany
 obraz: /zdjecia/post 14.jpg
 ---
----
-
-
-
-data: "2026-07-22T12:00"
-
----
 
 Dziś przyszła książka, na którą od dawna polowałam. Oczywiście będzie musiała chwilę poczekać na swoją kolej, ale już cieszę się, że stanie się kolejnym klejnotem w mojej kolekcji „Życie z bólem”.
 

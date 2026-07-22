@@ -6,7 +6,7 @@ $srcDir  = Join-Path $base "artykuly"
 # --- Auto-numerowanie: pliki bez numeru NNN- na poczatku dostaną kolejny numer ---
 $existingNumbers = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -match '^\d{3}-' } | ForEach-Object { [int]($_.Name.Substring(0,3)) })
 if ($existingNumbers.Count -gt 0) { [int]$nextNum = ($existingNumbers | Measure-Object -Maximum).Maximum + 1 } else { [int]$nextNum = 1 }
-$unnumbered = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -notmatch '^\d{3}-' -and $_.Name -ne 'index.md' -and $_.Name -ne 'nie walczylam z bolem.md' -and $_.Name -ne 'start strony.md' } | Sort-Object Name)
+$unnumbered = @(Get-ChildItem -Path $srcDir -Filter "*.md" | Where-Object { $_.Name -notmatch '^\d{3}-' -and $_.Name -ne 'index.md' } | Sort-Object Name)
 foreach ($uf in $unnumbered) {
     $prefix = $nextNum.ToString("D3")
     # Slugify: remove Polish chars, lowercase, replace spaces with dashes
