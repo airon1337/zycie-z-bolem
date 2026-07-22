@@ -21,7 +21,16 @@
     { "pattern": "dziennik\\w* b\\w*|dzienniczek\\w* b\\w*",      "slug": "dziennik-bolu" },
     { "pattern": "ptnp|pourazow\\w* neuropat\\w*",                "slug": "055-pourazowa-neuropatia-trojdzielna-ptnp" },
     { "pattern": "szyjnopochodn\\w*|cervicogenic",                "slug": "097-szyjnopochodny-bol-glowy" },
-    { "pattern": "neuroplastyczn\\w*|bdnf",                       "slug": "088-neuroplastycznosc-ruch-a-bol" }
+    { "pattern": "neuroplastyczn\\w*|bdnf",                       "slug": "088-neuroplastycznosc-ruch-a-bol" },
+    { "pattern": "sensytyzacj\\w* ośrodkow\\w*|centraln\\w* sensytyzacj\\w*", "slug": "084-jak-powstaje-przewlekly-bol-neuropatyczny" },
+    { "pattern": "\\bmvd\\b|mikrodekompresj\\w*",                 "slug": "006-leczenie-neuralgii-nerwu-trojdzielnego" },
+    { "pattern": "stwardnieni\\w* rozsian\\w*|\\bsm\\b",          "slug": "073-neuralgia-a-stwardnienie-rozsiane" },
+    { "pattern": "drabina bólu|drabina analgetyczn\\w*",          "slug": "032-formy-bolu-neuropatycznego" },
+    { "pattern": "\\bcts\\b|stymulacj\\w* nerwu błędn\\w*",       "slug": "067-stymulacja-nerwu-blednego" },
+    { "pattern": "akceptacj\\w*|akceptować ból",                  "slug": "121-akceptacja-zycia-z-bolem" },
+    { "pattern": "cukier\\w*|dieta\\w* przeciwzapaln\\w*",         "slug": "104-cukier-a-bol-neuropatyczny" },
+    { "pattern": "oddech\\w*|technik\\w* oddechow\\w*",            "slug": "110-oddech-a-uklad-nerwowy" },
+    { "pattern": "komórk\\w* macierzyst\\w*|msc",                  "slug": "129-komorki-macierzyste-w-neuropatii-trojdzielnej" }
   ],
   "keywords": [
     { "label": "neuralgia nerwu trójdzielnego", "pattern": "neuralgia" },
@@ -42,7 +51,11 @@
     { "label": "dziennik bólu", "pattern": "dziennik" },
     { "label": "PTNP (neuropatia pourazowa)", "pattern": "ptnp|pourazow" },
     { "label": "szyjnopochodny ból głowy", "pattern": "szyjnopochodn|cervicogenic" },
-    { "label": "neuroplastyczność", "pattern": "neuroplastyczn|bdnf" }
+    { "label": "neuroplastyczność", "pattern": "neuroplastyczn|bdnf" },
+    { "label": "sensytyzacja ośrodkowa", "pattern": "sensytyzacj|centraln\\w* sensyt" },
+    { "label": "komórki macierzyste", "pattern": "macierzyst|\\bmsc\\b" },
+    { "label": "depresja", "pattern": "depresj|obniż\\w* nastroj" },
+    { "label": "oddech i relaksacja", "pattern": "oddech|relaksacj|medytacj" }
   ],
   "kategorie": [
     { "label": "Leki i suplementy", "slug": "leki-i-suplementy", "pattern": "karbamazepin|gabapentyn|pregabalin|naltrekson|\\bldn\\b|liponow|witamin|suplement|tabletk|dawk|botulin|magnez|opioid|amitryptylin|duloksetyn|kapsaicyn" },
@@ -140,6 +153,36 @@
       "q": "Co to jest neuralgia potyliczna?",
       "a": "To napadowy, przeszywający ból z tyłu głowy w obszarze nerwów potylicznych. Może przypominać migrenę, ale wyróżnia go tkliwość w punkcie wyjścia nerwu i dobra odpowiedź na blokadę diagnostyczną. Jest rzadka (ok. 3/100 000 osób), ale bardzo dokuczliwa.",
       "triggers": ["potyliczn", "arnold"]
+    },
+    {
+      "q": "Co to jest sensytyzacja ośrodkowa?",
+      "a": "To stan, w którym układ nerwowy staje się nadwrażliwy na bodźce — nawet lekki dotyk czy zimne powietrze mogą wywoływać silny ból. Występuje w wielu postaciach bólu przewlekłego, w tym w neuropatii trójdzielnej.",
+      "triggers": ["sensytyzacj", "nadwrażliw"]
+    },
+    {
+      "q": "Czy stres nasila ból nerwu trójdzielnego?",
+      "a": "Tak. Stres aktywuje oś podwzgórze–przysadka–nadnercza i zwiększa napięcie mięśni, co może obniżać próg bólowy i nasilać napady. Wiele osób zauważa, że ból jest gorszy w okresach silnego stresu.",
+      "triggers": ["stres", "napięci"]
+    },
+    {
+      "q": "Czym są blokady nerwu trójdzielnego?",
+      "a": "To zabiegi polegające na podaniu środka znieczulającego (czasem ze sterydem) w okolicę nerwu. Mogą dać ulgę trwającą od kilku dni do kilku tygodni; pomagają też w diagnostyce różnicowej.",
+      "triggers": ["blokad"]
+    },
+    {
+      "q": "Co to jest atypowa odontalgia?",
+      "a": "To przewlekły ból zęba lub wyrostka zębodołowego bez uchwytnej przyczyny stomatologicznej. Często jest bólem neuropatycznym — bywa mylony z problemem dentystycznym i prowadzi do niepotrzebnych zabiegów.",
+      "triggers": ["odontalgi", "ból zęba"]
+    },
+    {
+      "q": "Czy komórki macierzyste leczą neuropatię nerwu trójdzielnego?",
+      "a": "Badania są we wczesnej fazie. Komórki macierzyste mezenchymalne (MSC) wykazują działanie przeciwzapalne i neuroprotekcyjne w modelach zwierzęcych, ale nie ma jeszcze terapii zatwierdzonej dla neuropatii trójdzielnej u ludzi.",
+      "triggers": ["komórk", "macierzyst", "msc"]
+    },
+    {
+      "q": "Jak ból przewlekły wpływa na pamięć i koncentrację?",
+      "a": "Ból przewlekły obciąża zasoby poznawcze mózgu — utrudnia koncentrację, spowalnia przetwarzanie i może osłabiać pamięć roboczą. To nie 'wymysł', lecz udowodniony efekt ciągłego pobudzenia układu bólowego.",
+      "triggers": ["pamięć", "koncentracj", "mgła"]
     }
   ]
 }

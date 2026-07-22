@@ -738,11 +738,15 @@ foreach ($cslug in $catMap.Keys) {
 $sm = New-Object System.Text.StringBuilder
 [void]$sm.Append('<?xml version="1.0" encoding="UTF-8"?>' + "`n")
 [void]$sm.Append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "`n")
+$todayStr = $nowPL.ToString('yyyy-MM-dd')
 foreach ($u in @("/", "/dla-ciebie", "/o-mnie", "/dziennik-bolu", "/polityka-prywatnosci")) {
-    [void]$sm.Append('<url><loc>' + $DOMENA + $u + '</loc></url>' + "`n")
+    [void]$sm.Append('<url><loc>' + $DOMENA + $u + '</loc><lastmod>' + $todayStr + '</lastmod></url>' + "`n")
 }
-for ($p = 2; $p -le $pages; $p++) { [void]$sm.Append('<url><loc>' + $DOMENA + "/artykuly-" + $p + '</loc></url>' + "`n") }
-foreach ($it in $itemsSorted) { [void]$sm.Append('<url><loc>' + $DOMENA + "/" + $it.slug + '</loc></url>' + "`n") }
+for ($p = 2; $p -le $pages; $p++) { [void]$sm.Append('<url><loc>' + $DOMENA + "/artykuly-" + $p + '</loc><lastmod>' + $todayStr + '</lastmod></url>' + "`n") }
+foreach ($it in $itemsSorted) {
+    $lm = if ($it.dt -ne [datetime]::MinValue) { $it.dt.ToString('yyyy-MM-dd') } else { $todayStr }
+    [void]$sm.Append('<url><loc>' + $DOMENA + "/" + $it.slug + '</loc><lastmod>' + $lm + '</lastmod></url>' + "`n")
+}
 foreach ($tag in $tagMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/tag-" + (Tag-Slug $tag) + '</loc></url>' + "`n") }
 foreach ($cslug in $catMap.Keys) { [void]$sm.Append('<url><loc>' + $DOMENA + "/kategoria-" + $cslug + '</loc></url>' + "`n") }
 [void]$sm.Append('</urlset>' + "`n")
