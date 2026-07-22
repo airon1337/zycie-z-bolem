@@ -1,6 +1,8 @@
 ---
 tytul: Nie walczyłam z bólem. Walczyłam z niewiedzą
 data: 2026-07-02T19:23
+status: opublikowany
+obraz: /zdjecia/post 12.jpg
 ---
 Nastał upalny lipiec. Tak upalny, że czasami czuję się jak żółw w skorupie,w której nie ma wentylatora. Ból cały czas na najwyższych obrotach, na tej nieprzyjemnej, wkurzającej i frustrującej czwórce. Wspominałam wam już, że od wielu lat używam pięciostopniowej skali bólu? Dlaczego, wyjaśniam w Dzienniku bólu, który można pobrać ze strony [zyciezbolem.pl](https://zyciezbolem.pl)  
 
