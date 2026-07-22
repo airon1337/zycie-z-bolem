@@ -6,10 +6,9 @@ status: opublikowany
 obraz: /zdjecia/post 13.jpg
 ---
 ```
----
-tytul: "Komórki macierzyste w leczeniu neuropatii nerwu trójdzielnego – co wiemy na podstawie badań naukowych?"
-data: "2026-07-22T12:00"
----
+
+"Komórki macierzyste w leczeniu neuropatii nerwu trójdzielnego – co wiemy na podstawie badań naukowych?
+
 
 Temat komórek macierzystych w leczeniu bólu neuropatycznego pojawia się coraz częściej w mediach, na grupach wsparcia i w rozmowach między pacjentami.
 
