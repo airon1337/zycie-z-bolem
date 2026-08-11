@@ -1,6 +1,5 @@
 ---
-tytul: Dlaczego bolesna pourazowa neuropatia nerwu trójdzielnego jest tak często
-  rozpoznawana z dużym opóźnieniem?
+tytul: Neuropatia nerwu trójdzielnego – dlaczego tak trudno ją rozpoznać?
 data: 2026-08-11T19:47
 status: opublikowany
 obraz: /zdjecia/post 16.1.jpg
