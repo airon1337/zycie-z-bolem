@@ -74,5 +74,7 @@ Nie twierdzę, że medytacja będzie rozwiązaniem dla każdego. W moim przypadk
 
 ©Tekst autorski. Proszę nie kopiować bez oznaczenia źródła
 
+Na podstawie fragmentu książki „Ból. 99 pytań i odpowiedzi”, M. Pawlak, K. Leźnicka
+
 > Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
 
