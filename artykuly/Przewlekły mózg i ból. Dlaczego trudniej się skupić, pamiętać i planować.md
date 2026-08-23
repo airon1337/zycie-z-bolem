@@ -1,5 +1,5 @@
 ---
-tytul: Przewlekły mózg i ból. Dlaczego trudniej się skupić, pamiętać i planować
+tytul: Przewlekły ból i mózg. Dlaczego trudniej się skupić, pamiętać i planować
 data: 2026-08-11T20:02
 status: opublikowany
 obraz: /zdjecia/post 18.1.jpg
