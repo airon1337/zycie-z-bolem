@@ -2,6 +2,7 @@
 tytul: " Dzień Świadomości Neuralgii Nerwu Pośredniego"
 data: 2026-10-10T18:16
 status: opublikowany
+obraz: /zdjecia/file_000000008afc81f4ac141e24be0d7871.png
 ---
 ## 10 października – Dzień Świadomości Neuralgii Zwoju Kolankowatego (Nerwu Pośredniego)
 
