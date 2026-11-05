@@ -304,14 +304,14 @@ Przewlekły ból może zmieniać nasze relacje, potrzeby i sposób przeżywania 
   
 ## Źródła  
   
-1. O’Brien, C., Lynch, C., & Bryant, C. (2026). Exploring Sexual Wellbeing from the Perspective of Persons with Chronic Pain. *Sexuality and Disability*, 44, Article 13.  
-  
-2. Carter, B., Jordan, A., Forgeron, P., Qualter, P., & Saron, H. (2023). A shared love: reciprocity and hopefulness in romantic relationships of young adults with chronic pain. *Frontiers in Pain Research*, 4, 1179516.  
-  
-3. Santos-Iglesias, P., Estey, J. L., Crump, L., LaChapelle, D. L., & Byers, E. S. (2024). It's not all that bad: associations among pain characteristics and sexual well-being in people living with chronic pain. *The Journal of Sexual Medicine*, 21(12), 1159–1168.  
-  
-4. Kotlińska-Lemieszek, A., & Żylicz, Z. (2022). Less Well-Known Consequences of the Long-Term Use of Opioid Analgesics: A Comprehensive Literature Review. *Drug Design, Development and Therapy*, 16, 251–264.  
-  
-6. Tran, F. D., Bichai, G. H., Kravetz, Z., & Meriden, Z. (2025). Management of Antidepressant-Induced Sexual Dysfunction: A Literature Review. *Cureus*, 17(8), e90170.  
+1. O’Brien, C., Lynch, C., & Bryant, C. (2026). Exploring Sexual Wellbeing from the Perspective of Persons with Chronic Pain.
+
+2. Carter, B., Jordan, A., Forgeron, P., Qualter, P., & Saron, H. (2023). A shared love: reciprocity and hopefulness in romantic relationships of young adults with chronic pain.
+
+3. Santos-Iglesias, P., Estey, J. L., Crump, L., LaChapelle, D. L., & Byers, E. S. (2024). It's not all that bad: associations among pain characteristics and sexual well-being in people living with chronic pain.
+
+4. Kotlińska-Lemieszek, A., & Żylicz, Z. (2022). Less Well-Known Consequences of the Long-Term Use of Opioid Analgesics: A Comprehensive Literature Review.
+
+5. Tran, F. D., Bichai, G. H., Kravetz, Z., & Meriden, Z. (2025). Management of Antidepressant-Induced Sexual Dysfunction: A Literature Review.  
   
 > Treść ma charakter edukacyjny i nie zastępuje konsultacji lekarskiej.
