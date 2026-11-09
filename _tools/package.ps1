@@ -29,6 +29,17 @@ if (Test-Path $cssFile) {
     Write-Output ("Wersja CSS (cache-busting): " + $cssVer)
 }
 
+# Refresh cached search code immediately after a deployment.
+$searchFile = Join-Path $pub "szukaj.js"
+if (Test-Path $searchFile) {
+    $searchVer = (Get-FileHash $searchFile -Algorithm SHA256).Hash.Substring(0,8).ToLower()
+    Get-ChildItem -Path $pub -Filter '*.html' -Recurse | ForEach-Object {
+        $html = [System.IO.File]::ReadAllText($_.FullName)
+        $new = [regex]::Replace($html, '/szukaj\.js(?:\?v=[a-f0-9]+)?', ('/szukaj.js?v=' + $searchVer))
+        if ($new -ne $html) { [System.IO.File]::WriteAllText($_.FullName, $new, [System.Text.UTF8Encoding]::new($false)) }
+    }
+}
+
 if (Test-Path $zip) { Remove-Item $zip -Force }
 Compress-Archive -Path (Join-Path $pub "*") -DestinationPath $zip
 
