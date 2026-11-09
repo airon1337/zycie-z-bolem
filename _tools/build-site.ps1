@@ -571,14 +571,25 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     $canonical = $DOMENA + "/" + $slug
     # hreflang: link do odpowiednika EN (slug EN z folderu content/en)
     $enSlug = ""
-    $enDir = Join-Path $base "myneuralgia\content\en"
+    $enDir = Join-Path $base "artykuly-en"
     $numer = ""
     if ($slug -match '^(\d{3})-') { $numer = $matches[1] }
     if ($numer -ne "" -and (Test-Path $enDir)) {
         $enFile = Get-ChildItem -Path $enDir -Filter "$numer-*.md" -ErrorAction SilentlyContinue | Select-Object -First 1
-        if ($enFile) { $enSlug = $enFile.BaseName }
+        if ($enFile) {
+            $enRaw = Get-Content -Raw -Encoding UTF8 $enFile.FullName
+            $enDate = [datetime]::MinValue
+            if ($enRaw -match '(?m)^date:\s*"?([^"\r\n]+?)"?\s*$') { [void][datetime]::TryParse($matches[1].Trim(), [ref]$enDate) }
+            if ($enRaw -notmatch '(?m)^status:\s*draft\s*$' -and $enDate -le [datetime]::UtcNow) {
+                $enSlug = $enFile.BaseName
+                if ($enRaw -match '(?m)^slug:\s*"?([^"\r\n]+?)"?\s*$') { $enSlug = $matches[1].Trim().Trim('"') }
+            }
+        }
     }
     $hreflangEn = if ($enSlug -ne "") { "https://myneuralgia.com/" + $enSlug } else { "" }
+    if ($enSlug -eq "") {
+        $page = [regex]::Replace($page, '(?m)^<link rel="alternate" hreflang="[^"]+"[^>]*>\r?\n?', '')
+    }
     $page = $page.Replace("{{HREFLANG_PL}}", $canonical)
     $page = $page.Replace("{{HREFLANG_EN}}", $hreflangEn)
     $aobj = [ordered]@{ "@context"="https://schema.org"; "@type"="BlogPosting"; "headline"=$title; "description"=$excerpt; "author"=[ordered]@{ "@type"="Person"; "name"="Natalia" }; "publisher"=[ordered]@{ "@type"="Organization"; "name"=$siteName }; "mainEntityOfPage"=$canonical }

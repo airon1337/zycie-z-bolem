@@ -263,7 +263,7 @@ Przygotowanie pytań przed wizytą u lekarza ma jeszcze inne praktyczne znaczeni
 
 Dobra wizyta lekarska nie polega wyłącznie na otrzymaniu odpowiedzi. Rozpoczyna się od właściwej rozmowy. Im lepiej rozumiemy, my jako pacjenci, własne objawy i potrafimy je opisać, tym łatwiej lekarzowi zbudować pełniejszy obraz choroby.
 
-Zachęcam również do zapoznania się z postem “Neuralgia krok po kroku: do jakich lekarzy się zgłosić” pod linkiem **[https://www.zyciezbolem.pl/058-specjalisci-w-leczeniu...](https://www.zyciezbolem.pl/058-specjalisci-w-leczeniu)**
+Zachęcam również do zapoznania się z postem “Neuralgia krok po kroku: do jakich lekarzy się zgłosić” pod linkiem **[Do jakiego specjalisty zgłosić się z bólem twarzy](https://zyciezbolem.pl/058-specjalisci-w-leczeniu-bolu-twarzy)**
 
 Niestety, ale w przewlekłym bólu nie zawsze istnieją proste odpowiedzi. Są jednak pytania, które pomagają lepiej zrozumieć przebieg choroby, uporządkować diagnostykę i świadomie uczestniczyć w procesie leczenia. To właśnie one często stają się pierwszym krokiem do znalezienia rozwiązań najlepiej odpowiadających indywidualnej sytuacji pacjenta
 

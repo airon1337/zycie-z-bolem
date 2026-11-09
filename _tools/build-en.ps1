@@ -529,9 +529,18 @@ foreach ($f in (Get-ChildItem -Path $srcDir -Filter *.md | Where-Object { $_.Nam
     if ($slug -match '^(\d{3})-') { $numer = $matches[1] }
     if ($numer -ne "" -and (Test-Path $plDir)) {
         $plFile = Get-ChildItem -Path $plDir -Filter "$numer-*.md" -ErrorAction SilentlyContinue | Select-Object -First 1
-        if ($plFile) { $plSlug = $plFile.BaseName }
+        if ($plFile) {
+            $plRaw = Get-Content -Raw -Encoding UTF8 $plFile.FullName
+            $plDate = [datetime]::MinValue
+            if ($plRaw -match '(?m)^data:\s*"?([^"\r\n]+?)"?\s*$') { [void][datetime]::TryParse($matches[1].Trim(), [ref]$plDate) }
+            $plIsDraft = $plRaw -match '(?m)^status:\s*"?szkic"?\s*$' -and $plRaw -notmatch '(?m)^zrodlo:'
+            if (-not $plIsDraft -and $plDate -le $nowUTC) { $plSlug = $plFile.BaseName }
+        }
     }
     $hreflangPl = if ($plSlug -ne "") { "https://zyciezbolem.pl/" + $plSlug } else { "" }
+    if ($plSlug -eq "") {
+        $page = [regex]::Replace($page, '(?m)^<link rel="alternate" hreflang="[^"]+"[^>]*>\r?\n?', '')
+    }
     $page = $page.Replace("{{HREFLANG_EN}}", $canonical)
     $page = $page.Replace("{{HREFLANG_PL}}", $hreflangPl)
     # Schema.org BlogPosting

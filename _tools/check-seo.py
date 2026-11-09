@@ -31,4 +31,8 @@ for source, target in redirects.items():
     assert file.is_file(), f'Missing redirect target: {source} -> {target}'
 for source, expected in json.loads(Path(__file__).with_name('seo-legacy-urls.json').read_text()).items():
     assert redirects.get(source) == expected, f'Missing historical redirect: {source}'
+# Article 142 previously linked to a truncated URL that ended in a 404.
+article = (site / '142-jak-rozmawiac-z-lekarzem-i-zadawac-wlasciwe-pytania.html').read_text()
+assert 'href="https://zyciezbolem.pl/058-specjalisci-w-leczeniu-bolu-twarzy"' in article, 'Missing specialist article link'
+assert 'href="https://www.zyciezbolem.pl/058-specjalisci-w-leczeniu"' not in article, 'Truncated specialist link remains'
 print(f'SEO checks passed: {len(urls)} canonical sitemap URLs, {len(redirects)} redirects')

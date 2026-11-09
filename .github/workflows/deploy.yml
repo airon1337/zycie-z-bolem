@@ -40,6 +40,8 @@ jobs:
         shell: pwsh
         run: |
           ./_tools/build-en.ps1
+          python3 ./_tools/check-hreflang.py publish myneuralgia/site-en
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Opublikuj PL na Cloudflare Pages
         if: steps.gate.outputs.deploy == 'true'

@@ -100,3 +100,7 @@
 # Search Console canonical duplicate reported 2026-11-09
 /133-czym-jest-bol-przewlekly /135-czym-jest-bol-przewlekly 301
 /133-czym-jest-bol-przewlekly.html /135-czym-jest-bol-przewlekly 301
+
+# Truncated specialist article link used in article 142
+/058-specjalisci-w-leczeniu /058-specjalisci-w-leczeniu-bolu-twarzy 301
+/058-specjalisci-w-leczeniu.html /058-specjalisci-w-leczeniu-bolu-twarzy 301
