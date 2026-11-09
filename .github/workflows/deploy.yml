@@ -32,6 +32,8 @@ jobs:
         run: |
           ./_tools/build-site.ps1
           ./_tools/package.ps1
+          python3 ./_tools/check-seo.py publish
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Zbuduj strone EN (PowerShell)
         if: steps.gate.outputs.deploy == 'true'

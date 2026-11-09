@@ -8,6 +8,7 @@ $zip = Join-Path $base "zycie-z-bolem.zip"
 
 if (Test-Path $pub) { Remove-Item $pub -Recurse -Force }
 Copy-Item $src $pub -Recurse
+& (Join-Path $PSScriptRoot "normalize-urls.ps1") -SiteDir $pub
 $tpl = Join-Path $pub "_szablony"
 if (Test-Path $tpl) { Remove-Item $tpl -Recurse -Force }
 
